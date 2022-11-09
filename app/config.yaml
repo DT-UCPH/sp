@@ -1,0 +1,20 @@
+apiVersion: 3
+dataDisplay:
+  textFormats:
+    text-orig-full: 
+      method: layoutRich
+      style:  orig
+interfaceDefaults: {}
+provenanceSpec:
+  corpus: Samaritan Pentateuch - Genesis
+  version: '0.1'
+writing: hbo
+typeDisplay:
+  verse:
+    label: '{verse}'
+    template: '{verse}'
+    verselike: true
+  word:
+    features: lex
+  sign:
+    features: sign
