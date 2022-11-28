@@ -2,8 +2,7 @@ import logging
 import pytest
 
 from tf.app import use
-samp = use('DT-UCPH/SamP:clone', checkout='clone', version='1.3')
-sampF, sampT  = samp.api.F, samp.api.T
+A = use('DT-UCPH/sp:hot', hoist=globals())
 
 logging.basicConfig(
     filename='./logs/test_data_sp.log',
@@ -13,92 +12,125 @@ logging.basicConfig(
 
 def test_lexemes_nouns_ending():
     try:
-        assert all([sampF.lex.v(w)[-1] == '/' for w in sampF.otype.s('word') if sampF.sp.v(w) in {'subs','nmpr'} 
-                    and sampF.lex.v(w) !='absent'])
+        assert all([F.lex.v(w)[-1] == '/' for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr'} 
+                    and F.lex.v(w) !='absent'])
         logging.info("Testing lexemes_nouns_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing lexemes_nouns_ending: there is at least one word without '/' at the end")
         
 def test_lexemes_adjv_ending():
     try:
-        assert all([sampF.lex.v(w)[-1] == '/' for w in sampF.otype.s('word') if sampF.sp.v(w) == 'adjv'
-                   and sampF.lex.v(w) !='absent'])
+        assert all([F.lex.v(w)[-1] == '/' for w in F.otype.s('word') if F.sp.v(w) == 'adjv'
+                   and F.lex.v(w) !='absent'])
         logging.info("Testing lexemes_adjv_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing lexemes_adjv_ending: there is at least one word without '/' at the end")
         
 def test_lexemes_verb_ending():
     try:
-        assert all([sampF.lex.v(w)[-1] == '[' for w in sampF.otype.s('word') if sampF.sp.v(w) == 'verb'
-                   and sampF.lex.v(w) !='absent'])
+        assert all([F.lex.v(w)[-1] == '[' for w in F.otype.s('word') if F.sp.v(w) == 'verb'
+                   and F.lex.v(w) !='absent'])
         logging.info("Testing lexemes_verbs_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing lexemes_verbs_ending: there is at least one word without '[' at the end")
         
 def test_lexemes_advb_ending():
     try:
-        assert all([sampF.lex.v(w)[-1] not in {'/','['} for w in sampF.otype.s('word') if sampF.sp.v(w) == 'advb'
-                   and sampF.lex.v(w) !='absent'])
+        assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'advb'
+                   and F.lex.v(w) !='absent'])
         logging.info("Testing lexemes_advb_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing lexemes_advb_ending: there is at least one word with '/' or '[' at the end")
         
 def test_lexemes_conj_ending():
     try:
-        assert all([sampF.lex.v(w)[-1] not in {'/','['} for w in sampF.otype.s('word') if sampF.sp.v(w) == 'conj'
-                   and sampF.lex.v(w) !='absent'])
+        assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'conj'
+                   and F.lex.v(w) !='absent'])
         logging.info("Testing lexemes_conj_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing lexemes_conj_ending: there is at least one word with '/' or '[' at the end")
         
 def test_lexemes_art_ending():
     try:
-        assert all([sampF.lex.v(w)[-1] not in {'/','['} for w in sampF.otype.s('word') if sampF.sp.v(w) == 'art'
-                   and sampF.lex.v(w) !='absent'])
+        assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'art'
+                   and F.lex.v(w) !='absent'])
         logging.info("Testing lexemes_art_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing lexemes_art_ending: there is at least one word with '/' or '[' at the end")
         
 def test_lexemes_prep_ending():
     try:
-        assert all([sampF.lex.v(w)[-1] not in {'/','['} for w in sampF.otype.s('word') if sampF.sp.v(w) == 'prep'
-                   and sampF.lex.v(w) !='absent'])
+        assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'prep'
+                   and F.lex.v(w) !='absent'])
         logging.info("Testing lexemes_prep_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing lexemes_prep_ending: there is at least one word with '/' or '[' at the end")
         
 def test_lexemes_pron_ending():
     try:
-        assert all([sampF.lex.v(w)[-1] not in {'/','['} for w in sampF.otype.s('word') if sampF.sp.v(w) in {'prps','prde','prin'}
-                   and sampF.lex.v(w) !='absent'])
+        assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) in {'prps','prde','prin'}
+                   and F.lex.v(w) !='absent'])
         logging.info("Testing lexemes_pron_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing lexemes_pron_ending: there is at least one word with '/' or '[' at the end")
         
 def test_lexemes_intj_ending():
     try:
-        assert all([sampF.lex.v(w)[-1] not in {'/','['} for w in sampF.otype.s('word') if sampF.sp.v(w) == 'intj'
-                   and sampF.lex.v(w) !='absent'])
+        assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'intj'
+                   and F.lex.v(w) !='absent'])
         logging.info("Testing lexemes_intj_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing lexemes_intj_ending: there is at least one word with '/' or '[' at the end")
 
 def test_lexemes_nega_ending():
     try:
-        assert all([sampF.lex.v(w)[-1] not in {'/','['} for w in sampF.otype.s('word') if sampF.sp.v(w) == 'nega'
-                   and sampF.lex.v(w) !='absent'])
+        assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'nega'
+                   and F.lex.v(w) !='absent'])
         logging.info("Testing lexemes_nega_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing lexemes_nega_ending: there is at least one word with '/' or '[' at the end")
         
 def test_lexemes_inrg_ending():
     try:
-        assert all([sampF.lex.v(w)[-1] not in {'/','['} for w in sampF.otype.s('word') if sampF.sp.v(w) == 'inrg'
-                   and sampF.lex.v(w) !='absent'])
+        assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'inrg'
+                   and F.lex.v(w) !='absent'])
         logging.info("Testing lexemes_inrg_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing lexemes_inrg_ending: there is at least one word with '/' or '[' at the end")
+
+
+def test_expected_nominal_ending():
+    try:
+        assert all({F.g_nme.v(w)[0] == '/' for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr', 'adjv'}
+                     and F.g_nme.v(w) !='absent'})
+        logging.info("Testing expexted_nominal_ending: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing expexted_nominal_ending: there is at least one word without '/' in the nominal ending")
         
+def test_unexpected_nominal_ending():
+    try:
+        assert all({F.g_nme.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','nmpr', 'adjv','verb'}
+                     and F.g_nme.v(w) !='absent'})
+        logging.info("Testing unexpexted_nominal_ending: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing unexpexted_nominal_ending: there is at least one word with a nominal ending")
+
+def test_expected_verbal_ending():
+    try:
+        assert all({F.g_vbe.v(w)[0] == '[' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
+                     and F.g_vbe.v(w) !='absent'})
+        logging.info("Testing expexted_verbal_ending: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing expexted_verbal_ending: there is at least one verb without '[' in the verbal ending")
+        
+def test_unexpected_verbal_ending():
+    try:
+        assert all({F.g_vbe.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}
+                     and F.g_vbe.v(w) !='absent'})
+        logging.info("Testing unexpexted_verbal_ending: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing unexpexted_verbal_ending: there is at least one non-verb with a verbal ending")
+
 if __name__ == "__main__":
     test_lexemes_nouns_ending()
     test_lexemes_adjv_ending()
@@ -111,3 +143,7 @@ if __name__ == "__main__":
     test_lexemes_intj_ending()
     test_lexemes_nega_ending()
     test_lexemes_inrg_ending()
+    test_expected_nominal_ending()
+    test_unexpected_nominal_ending()
+    test_expected_verbal_ending()
+    test_unexpected_verbal_ending()
