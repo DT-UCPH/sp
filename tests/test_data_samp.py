@@ -99,37 +99,75 @@ def test_lexemes_inrg_ending():
         logging.error("Testing lexemes_inrg_ending: there is at least one word with '/' or '[' at the end")
 
 
+def test_nominal_ending():
+    try:
+        assert all({F.g_nme.v(w) for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr', 'adjv'}})
+        logging.info("Testing nominal_ending: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing nominal_ending: there is at least one noun, proper noun or adjective without nominal ending")
+
 def test_expected_nominal_ending():
     try:
         assert all({F.g_nme.v(w)[0] == '/' for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr', 'adjv'}
-                     and F.g_nme.v(w) !='absent'})
+                     and F.g_nme.v(w) and F.g_nme.v(w) !='absent'})
         logging.info("Testing expexted_nominal_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing expexted_nominal_ending: there is at least one word without '/' in the nominal ending")
         
 def test_unexpected_nominal_ending():
     try:
-        assert all({F.g_nme.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','nmpr', 'adjv','verb'}
-                     and F.g_nme.v(w) !='absent'})
+        assert all({not F.g_nme.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','nmpr', 'adjv','verb'}  and F.g_nme.v(w) != 'absent'})
         logging.info("Testing unexpexted_nominal_ending: SUCCES")
     except AssertionError as err:
-        logging.error("Testing unexpexted_nominal_ending: there is at least one word with a nominal ending")
+        logging.error("Testing unexpected_nominal_ending: there is at least one unexpected word with a nominal ending")
+        
+test_expected_nominal_ending()
 
+def test_verbal_ending():
+    try:
+        assert all({F.g_vbe.v(w) for w in F.otype.s('word') if F.sp.v(w) in {'verb'}})
+        logging.info("Testing verbal_ending: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing verbal_ending: there is at least one verb without verbal ending")
+        
 def test_expected_verbal_ending():
     try:
         assert all({F.g_vbe.v(w)[0] == '[' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
-                     and F.g_vbe.v(w) !='absent'})
+                    and F.g_vbe.v(w) and F.g_vbe.v(w) !='absent'})
         logging.info("Testing expexted_verbal_ending: SUCCES")
     except AssertionError as err:
-        logging.error("Testing expexted_verbal_ending: there is at least one verb without '[' in the verbal ending")
+        logging.error("Testing expexted_verbal_ending: there is at least one verb without verbal ending")
         
 def test_unexpected_verbal_ending():
     try:
-        assert all({F.g_vbe.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}
-                     and F.g_vbe.v(w) !='absent'})
+        assert all({not F.g_vbe.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb'} and F.g_vbe.v(w) != 'absent'})
         logging.info("Testing unexpexted_verbal_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing unexpexted_verbal_ending: there is at least one non-verb with a verbal ending")
+                    
+def test_expected_preformative_beginning():
+    try:
+        assert all({F.g_pfm.v(w)[0] == '!' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
+                    and F.g_pfm.v(w) and F.g_pfm.v(w) !='absent'})
+        logging.info("Testing expexted_preformative_beginning: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing expexted_preformative_beginning: there is at least one preformative without initial !")
+        
+def test_expected_preformative_ending():
+    try:
+        assert all({F.g_pfm.v(w)[-1] == '!' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
+                    and F.g_pfm.v(w) and F.g_pfm.v(w) !='absent'})
+        logging.info("Testing expexted_preformative_ending: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing expexted_preformative_ending: there is at least one preformative without final !")
+        
+def test_unexpected_preformative():
+    try:
+        assert all({not F.g_pfm.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
+        logging.info("Testing unexpexted_verbal_preformative: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing unexpexted_verbal_preformative: there is at least one non-verb with a verbal preformative")
+test_unexpected_preformative()
 
 if __name__ == "__main__":
     test_lexemes_nouns_ending()
@@ -143,7 +181,12 @@ if __name__ == "__main__":
     test_lexemes_intj_ending()
     test_lexemes_nega_ending()
     test_lexemes_inrg_ending()
+    test_nominal_ending()
     test_expected_nominal_ending()
     test_unexpected_nominal_ending()
+    test_verbal_ending()
     test_expected_verbal_ending()
     test_unexpected_verbal_ending()
+    test_expected_preformative_beginning()
+    test_expected_preformative_ending()
+    test_unexpected_preformative()
