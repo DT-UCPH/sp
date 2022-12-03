@@ -120,8 +120,6 @@ def test_unexpected_nominal_ending():
         logging.info("Testing unexpexted_nominal_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing unexpected_nominal_ending: there is at least one unexpected word with a nominal ending")
-        
-test_expected_nominal_ending()
 
 def test_verbal_ending():
     try:
@@ -140,7 +138,7 @@ def test_expected_verbal_ending():
         
 def test_unexpected_verbal_ending():
     try:
-        assert all({not F.g_vbe.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb'} and F.g_vbe.v(w) != 'absent'})
+        assert all({not F.g_vbe.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','absent'} and F.g_vbe.v(w) != 'absent'})
         logging.info("Testing unexpexted_verbal_ending: SUCCES")
     except AssertionError as err:
         logging.error("Testing unexpexted_verbal_ending: there is at least one non-verb with a verbal ending")
@@ -163,11 +161,33 @@ def test_expected_preformative_ending():
         
 def test_unexpected_preformative():
     try:
-        assert all({not F.g_pfm.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
+        assert all({not F.g_pfm.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb', 'absent'}})
         logging.info("Testing unexpexted_verbal_preformative: SUCCES")
     except AssertionError as err:
         logging.error("Testing unexpexted_verbal_preformative: there is at least one non-verb with a verbal preformative")
-test_unexpected_preformative()
+
+def test_expected_verbal_stem_beginning():
+    try:
+        assert all({F.g_vbs.v(w)[0] == ']' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
+                    and F.g_vbs.v(w) and F.g_vbs.v(w) !='absent'})
+        logging.info("Testing expexted_verbal_stem_beginning: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing expexted_verbal_stem_beginning: there is at least one verbal stem without initial ]")
+        
+def test_expected_verbal_stem_ending():
+    try:
+        assert all({F.g_vbs.v(w)[-1] == ']' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
+                    and F.g_vbs.v(w) and F.g_vbs.v(w) !='absent'})
+        logging.info("Testing expexted_verbal_stem_ending: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing expexted_verbal_stem_ending: there is at least one preformative without final ]")
+        
+def test_unexpected_verbal_stem():
+    try:
+        assert all({not F.g_vbs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','absent'}})
+        logging.info("Testing unexpexted_verbal_stem: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing unexpexted_verbal_stem: there is at least one non-verb with a verbal stem")
 
 if __name__ == "__main__":
     test_lexemes_nouns_ending()
@@ -190,3 +210,6 @@ if __name__ == "__main__":
     test_expected_preformative_beginning()
     test_expected_preformative_ending()
     test_unexpected_preformative()
+    test_expected_verbal_stem_beginning()
+    test_expected_verbal_stem_ending()
+    test_unexpected_verbal_stem()
