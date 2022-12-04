@@ -9,10 +9,10 @@
 @valueType=str
 @version=0.7.1
 @writtenBy=Text-Fabric
-@dateWritten=2022-12-04T14:33:35Z
+@dateWritten=2022-12-04T15:33:20Z
 
 1-100299	sign
 100300	book
 100301-100350	chapter
 100351-101886	verse
-101887-130817	word
+101887-130818	word
