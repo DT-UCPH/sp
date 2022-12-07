@@ -189,6 +189,20 @@ def test_unexpected_verbal_stem():
     except AssertionError as err:
         logging.error("Testing unexpexted_verbal_stem: there is at least one non-verb with a verbal stem")
 
+def expected_prs_beginning():
+    try:
+        assert all({F.g_prs.v(w)[0] == '+' for w in F.otype.s('word') if F.g_prs.v(w) and F.g_prs.v(w) !='absent'})
+        logging.info("Testing expected_prs_beginning: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing expected_prs_beginning: there is at least one pronominal suffix without initial +")
+        
+def unexpected_prs():
+    try:
+        assert all({not F.g_prs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','verb','prep','inrg','intj','adjv','absent'}})
+        logging.info("Testing unexpected_prs: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing unexpected_prs: there is at least one unexpected word with a pronominal suffix")
+
 if __name__ == "__main__":
     test_lexemes_nouns_ending()
     test_lexemes_adjv_ending()
@@ -213,3 +227,5 @@ if __name__ == "__main__":
     test_expected_verbal_stem_beginning()
     test_expected_verbal_stem_ending()
     test_unexpected_verbal_stem()
+    expected_prs_beginning()
+    unexpected_prs()
