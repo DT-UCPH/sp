@@ -189,19 +189,49 @@ def test_unexpected_verbal_stem():
     except AssertionError as err:
         logging.error("Testing unexpexted_verbal_stem: there is at least one non-verb with a verbal stem")
 
-def expected_prs_beginning():
+def test_expected_prs_beginning():
     try:
         assert all({F.g_prs.v(w)[0] == '+' for w in F.otype.s('word') if F.g_prs.v(w) and F.g_prs.v(w) !='absent'})
         logging.info("Testing expected_prs_beginning: SUCCES")
     except AssertionError as err:
         logging.error("Testing expected_prs_beginning: there is at least one pronominal suffix without initial +")
         
-def unexpected_prs():
+def test_unexpected_prs():
     try:
         assert all({not F.g_prs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','verb','prep','inrg','intj','adjv','absent'}})
         logging.info("Testing unexpected_prs: SUCCES")
     except AssertionError as err:
         logging.error("Testing unexpected_prs: there is at least one unexpected word with a pronominal suffix")
+
+def test_unexpected_verbal_tense():
+    try:
+        assert all({F.vt.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
+        logging.info("Testing unexpected_verbal_tense: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing unexpected_verbal_tense: there is at least one non-verb with verbal tense")
+        
+def test_expected_verbal_tense():
+    try:
+        assert all({F.vt.v(w) != 'NA' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}})
+        logging.info("Testing expected_verbal_tense: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing expected_verbal_tense: there is at least one verb without verbal tense")
+        
+def test_present_tense():
+    try:
+        assert all({F.vt.v(w) == 'perf' for w in F.sp.s('verb') if not F.g_pfm.v(w) and not F.g_nme.v(w)
+                    and F.sp.v(w) != 'absent'})
+        logging.info("Testing present_tense: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing present_tense: there is at least one verb without without expected perfect tense")
+        
+def test_imperfect_tense():
+    try:
+        assert all({F.vt.v(w) in {'impf','wayq'} for w in F.sp.s('verb') if F.g_pfm.v(w)
+                    and F.g_pfm.v(w) not in {'!!','!H!'} and not F.g_nme.v(w) and F.sp.v(w) != 'absent'})
+        logging.info("Testing imperfect_tense: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing imperfect_tense: there is at least one verb without without expected imperfect/wayiqtol tense")
 
 if __name__ == "__main__":
     test_lexemes_nouns_ending()
@@ -227,5 +257,9 @@ if __name__ == "__main__":
     test_expected_verbal_stem_beginning()
     test_expected_verbal_stem_ending()
     test_unexpected_verbal_stem()
-    expected_prs_beginning()
-    unexpected_prs()
+    test_expected_prs_beginning()
+    test_unexpected_prs()
+    test_unexpected_verbal_tense()
+    test_expected_verbal_tense()
+    test_present_tense()
+    test_imperfect_tense()
