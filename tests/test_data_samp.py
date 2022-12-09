@@ -217,21 +217,94 @@ def test_expected_verbal_tense():
     except AssertionError as err:
         logging.error("Testing expected_verbal_tense: there is at least one verb without verbal tense")
         
-def test_present_tense():
+def test_perf_tense():
     try:
         assert all({F.vt.v(w) == 'perf' for w in F.sp.s('verb') if not F.g_pfm.v(w) and not F.g_nme.v(w)
-                    and F.sp.v(w) != 'absent'})
-        logging.info("Testing present_tense: SUCCES")
+                    and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+        logging.info("Testing perf_tense: SUCCES")
     except AssertionError as err:
-        logging.error("Testing present_tense: there is at least one verb without without expected perfect tense")
+        logging.error("Testing perf_tense: there is at least one verb without expected perfect tense")
         
-def test_imperfect_tense():
+def test_perf_tense_morphemes():
+    try:
+        assert all({not F.g_pfm.v(w) and not F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) == 'perf' 
+     and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+        logging.info("Testing perf_tense_morphemes: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing perf_tense_morphemes: there is at least one perfect verb without expected morphemes")
+        
+def test_impf_tense():
     try:
         assert all({F.vt.v(w) in {'impf','wayq'} for w in F.sp.s('verb') if F.g_pfm.v(w)
-                    and F.g_pfm.v(w) not in {'!!','!H!'} and not F.g_nme.v(w) and F.sp.v(w) != 'absent'})
-        logging.info("Testing imperfect_tense: SUCCES")
+                    and F.g_pfm.v(w) not in {'!!','!H!'} and not F.g_nme.v(w) and F.sp.v(w) != 'absent'
+                    and F.vt.v(w) != 'absent'})
+        logging.info("Testing impf_tense: SUCCES")
     except AssertionError as err:
-        logging.error("Testing imperfect_tense: there is at least one verb without without expected imperfect/wayiqtol tense")
+        logging.error("Testing impf_tense: there is at least one verb without expected imperfect/wayq tense")
+        
+def test_impf_tense_morphemes():
+    try:
+        assert all({F.g_pfm.v(w) and not F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w) for w in F.sp.s('verb')
+                         if F.vt.v(w) in {'impf','wayq'} and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+        logging.info("Testing impf_tense_morphemes: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing impf_tense_morphemes: there is at least one impf/wayq verb without expected morphemes")
+        
+def test_impv_tense():
+    try:
+        assert all({F.vt.v(w) == 'impv' for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w)
+                    and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+        logging.info("Testing impv_tense: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing impv_tense: there is at least one verb without expected imperative tense")
+        
+def test_impv_tense_morphemes():
+    try:
+        assert all({F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w) for w in F.sp.s('verb')
+                     if F.vt.v(w) == 'impv' and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+        logging.info("Testing impv_tense_morphemes: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing impv_tense_morphemes: there is at least one imperative verb without expected morphemes")
+        
+def test_infinitive_tense():
+    try:
+        assert all({F.vt.v(w) in {'infc','infa'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'}
+                    and F.g_nme.v(w) and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+        logging.info("Testing infinitive_tense: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing infinitive_tense: there is at least one verb without expected infinitive tense")
+        
+def test_infinitive_tense_morphemes():
+    try:
+        assert all({F.g_pfm.v(w) in {'!!','!H!','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb')
+                     if F.vt.v(w) in {'infc','infa'} and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+        logging.info("Testing infinitive_tense_morphemes: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing infinitive_tense_morphemes: there is at least one infinitive verb without expected morphemes")
+        
+def test_participle_tense():
+    try:
+        assert all({F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!','!J!'}
+                    and F.g_nme.v(w) and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+        logging.info("Testing participle_tense: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing participle_tense: there is at least one verb without expected particple tense")
+        
+def test_participle_tense_morphemes():
+    try:
+        assert all({F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!'}
+                    and F.g_nme.v(w) and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+        logging.info("Testing participle_tense: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing participle_tense: there is at least one verb without expected particple tense")
+
+def test_participle_tense_morphemes():
+    try:
+        assert all({F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb')
+                 if F.vt.v(w) in {'ptca','ptcp'} and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+        logging.info("Testing participle_tense: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing participle_tense: there is at least one participle without expected morphemes")
 
 if __name__ == "__main__":
     test_lexemes_nouns_ending()
@@ -261,5 +334,13 @@ if __name__ == "__main__":
     test_unexpected_prs()
     test_unexpected_verbal_tense()
     test_expected_verbal_tense()
-    test_present_tense()
-    test_imperfect_tense()
+    test_perf_tense()
+    test_perf_tense_morphemes()
+    test_impf_tense()
+    test_impf_tense_morphemes()
+    test_impv_tense()
+    test_impv_tense_morphemes()
+    test_infinitive_tense()
+    test_infinitive_tense_morphemes()
+    test_participle_tense()
+    test_participle_tense_morphemes()
