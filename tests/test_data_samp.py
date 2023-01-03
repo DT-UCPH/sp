@@ -284,14 +284,6 @@ def test_infinitive_tense_morphemes():
         
 def test_participle_tense():
     try:
-        assert all({F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!','!J!'}
-                    and F.g_nme.v(w) and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
-        logging.info("Testing participle_tense: SUCCES")
-    except AssertionError as err:
-        logging.error("Testing participle_tense: there is at least one verb without expected particple tense")
-        
-def test_participle_tense_morphemes():
-    try:
         assert all({F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!'}
                     and F.g_nme.v(w) and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
         logging.info("Testing participle_tense: SUCCES")
@@ -305,6 +297,126 @@ def test_participle_tense_morphemes():
         logging.info("Testing participle_tense: SUCCES")
     except AssertionError as err:
         logging.error("Testing participle_tense: there is at least one participle without expected morphemes")
+
+def test_expected_person():
+    try:
+        assert all({F.ps.v(w) in {'p1','p2','p3','unknown'} for w in F.otype.s('word') if F.sp.v(w) in {'verb','prps'}
+                  and F.ps.v(w) != 'absent'})
+        logging.info("Testing expected_person: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing expected_person: there is at least one word with wrong grammatical person")
+        
+def test_unexpected_person():
+    try:
+        assert all({F.ps.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb','prps'}})
+        logging.info("Testing unexpected_person: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing unexpected_person: there is at least one word with unexpected grammatical person")
+        
+def test_first_person():
+    try:
+        assert all({F.g_pfm.v(w) in {'','!>!','!N!'} and F.g_vbe.v(w) in {'[', '[H', '[NW', '[TJ'} for w in F.sp.s('verb')
+                    if F.ps.v(w) == 'p1'})
+        logging.info("Testing first_person: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing first_person: there is at least one first person verb with wrong morphemes")
+        
+def test_second_person():
+    try:
+        assert all({F.g_pfm.v(w) in {'','!!','!H!','!T!'} and F.g_vbe.v(w) in {'[','[H','[J','[JN','[N','[T','[TH','[TJ',
+                '[TM','[TN','[W','[WN'} for w in F.sp.s('verb') if F.ps.v(w) == 'p2'})
+        logging.info("Testing second_person: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing second_person: there is at least one second person verb with wrong morphemes")
+        
+def test_third_person():
+    try:
+        assert all({F.g_pfm.v(w) in {'','!J!','!T!'} and F.g_vbe.v(w) in {'[','[H','[HN','[NH','[T','[TH','[W','[WN'} 
+                     for w in F.sp.s('verb') if F.ps.v(w) == 'p3'})
+        logging.info("Testing third_person: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing third_person: there is at least one third person verb with wrong morphemes")
+
+def test_unknown_person():
+    try:
+        assert all({F.g_pfm.v(w) in {'','!!','!H!','!M!'} and F.g_vbe.v(w) in {'['} and F.g_nme.v(w) 
+                    in {'/','/H','/J','/JM','/T','/TJ','/WT'} for w in F.otype.s('word') if F.ps.v(w) == 'unknown'})
+        logging.info("Testing unknown_person: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing unknown_person: there is at least one unknown word person with wrong morphemes")
+        
+def test_first_person_sfx():
+    try:
+        assert all({F.g_prs.v(w) in {'+','+J','+NJ','+NW','+W'} for w in F.otype.s('word') if F.prs_ps.v(w) == 'p1'})
+        logging.info("Testing first_person_sfx: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing first_person_sfx: there is at least one first person sfx with wrong morphemes")
+        
+def test_second_person_sfx():
+    try:
+        assert all({F.g_prs.v(w) in {'+K','+KH','+KM','+KN'} for w in F.otype.s('word') if F.prs_ps.v(w) == 'p2'})
+        logging.info("Testing second_person_sfx: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing second_person_sfx: there is at least one second person sfx with wrong morphemes")
+        
+def test_third_person_sfx():
+    try:
+        assert all({F.g_prs.v(w) in {'+H','+HM','+HN','+HW','+M','+MW','+NH','+W'} for w in F.otype.s('word') 
+                    if F.prs_ps.v(w) == 'p3'})
+        logging.info("Testing third_person_sfx: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing third_person_sfx: there is at least one third person sfx with wrong morphemes")
+        
+def test_expected_number():
+    try:
+        assert all({F.nu.v(w) in {'sg','du','pl','unknown'} for w in F.otype.s('word') if F.sp.v(w) 
+                    in {'subs','nmpr','adjv','verb','prps','prde','prin'} and F.nu.v(w) != 'absent'})
+        logging.info("Testing expected_number: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing expected_number: there is at least one word with wrong grammatical number")
+        
+def test_unexpected_number():
+    try:
+        assert all({F.nu.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) 
+                    not in {'subs','nmpr','adjv','verb','prps','prde','prin'} and F.nu.v(w) != 'absent'})
+        logging.info("Testing unexpected_number: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing unexpected_number: there is at least one word with unexpected grammatical number")
+        
+def test_singular_number():
+    try:
+        assert all({F.g_pfm.v(w) in {'','!!','!>!','!H!','!J!','!M!','!T!'} and F.g_vbe.v(w) 
+                    in {'','[','[H','[J','[JN','[T','[TH','[TJ'} and F.g_nme.v(w) in {'','/','/H','/J','/T'} 
+                    for w in F.otype.s('word') if F.nu.v(w) == 'sg'})
+        logging.info("Testing singular_number: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing singular_number: there is at least one singular word with wrong morphemes")
+        
+def test_dual_number():
+    try:
+        assert all({not F.g_pfm.v(w) and not F.g_vbe.v(w) and F.g_nme.v(w) in {'/J','/JM','/TJ','/TJM'} 
+     for w in F.otype.s('word') if F.nu.v(w) == 'du'})
+        logging.info("Testing dual_number: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing dual_number: there is at least one dual word with wrong morphemes")
+        
+def test_plural_number():
+    try:
+        assert all({F.g_pfm.v(w) in {'','!!','!H!','!J!','!M!','!N!','!T!'} and F.g_vbe.v(w) 
+                    in {'','[','[H','[HN','[N','[NH','[NW','[TM','[TN','[W','[WN'}
+                     and F.g_nme.v(w) in {'','/','/J','/JM','/M','/T','/TJ','/WT','/WTJ'}
+                     for w in F.otype.s('word') if F.nu.v(w) == 'pl'})
+        logging.info("Testing plural_number: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing plural_number: there is at least one plural word with wrong morphemes")
+
+def test_unknown_number():
+    try:
+        assert all({F.g_pfm.v(w) in {'','!!','!H!'} and F.g_vbe.v(w) in {'','['} and F.g_nme.v(w) in {'','/','/H','/T','/WT'}
+                     for w in F.otype.s('word') if F.nu.v(w) == 'unknown'})
+        logging.info("Testing unknown_number: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing unknown_number: there is at least one unknown word number with wrong morphemes")
 
 if __name__ == "__main__":
     test_lexemes_nouns_ending()
@@ -344,3 +456,18 @@ if __name__ == "__main__":
     test_infinitive_tense_morphemes()
     test_participle_tense()
     test_participle_tense_morphemes()
+    test_expected_person()
+    test_unexpected_person()
+    test_first_person()
+    test_second_person()
+    test_third_person()
+    test_unknown_person()
+    test_first_person_sfx()
+    test_second_person_sfx()
+    test_third_person_sfx()
+    test_expected_number()
+    test_unexpected_number()
+    test_singular_number()
+    test_dual_number()
+    test_plural_number()
+    test_unknown_number()
