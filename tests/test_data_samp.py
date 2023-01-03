@@ -418,6 +418,23 @@ def test_unknown_number():
     except AssertionError as err:
         logging.error("Testing unknown_number: there is at least one unknown word number with wrong morphemes")
 
+def test_singular_number_sfx():
+    try:
+        assert all({F.g_prs.v(w) in {'+','+H','+HW','+J','+K','+KH','+NJ','+W'} for w in F.otype.s('word') 
+                    if F.prs_nu.v(w) == 'sg'})
+        logging.info("Testing singular_number_sfx: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing singular_number_sfx: there is at least one singular number sfx with wrong morphemes")
+        
+def test_plural_number_sfx():
+    try:
+        assert all({F.g_prs.v(w) in {'+HM','+HN','+KM','+KN','+M','+MW','+NH','+NW','+W'} for w in F.otype.s('word') 
+                    if F.prs_nu.v(w) == 'pl'})
+        logging.info("Testing plural_number_sfx: SUCCES")
+    except AssertionError as err:
+        logging.error("Testing plural_number_sfx: there is at least one plural number sfx with wrong morphemes")
+
+
 if __name__ == "__main__":
     test_lexemes_nouns_ending()
     test_lexemes_adjv_ending()
@@ -471,3 +488,5 @@ if __name__ == "__main__":
     test_dual_number()
     test_plural_number()
     test_unknown_number()
+    test_singular_number_sfx()
+    test_plural_number_sfx()
