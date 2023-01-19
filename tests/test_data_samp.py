@@ -1,8 +1,6 @@
 import logging
 import pytest
 
-print('HIIIIIIIIIIIIIIIIIIIIIIIII')
-
 from tf.app import use
 A = use('DT-UCPH/sp:hot', hoist=globals())
 
