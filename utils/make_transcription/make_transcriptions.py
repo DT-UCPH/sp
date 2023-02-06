@@ -1,5 +1,6 @@
 """
 Running the script creates ETCBC transcriptions of the original word files.
+Make sure the word files are in the folder utils/make_transcriptions/hebrew_files.
 """
 import os
 
