@@ -6,11 +6,16 @@ import logging
 import os
 import pytest
 
-TRANSCRIPTIONS_FOLDER = './transcriptions'
-
+from utils import make_transcriptions
 
 from tf.app import use
 A = use('dt-ucph/sp:hot', hoist=globals())
+
+WORD_FILES_FOLDER = './utils/hebrew_files'
+
+BOOKS = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy']
+WORD_FILES = ['SP-1-Genesis.docx', 'SP-2-Exodus.docx', 'SP-3-Lev.docx', 'SP-4-Num.docx', 'SP-5-Deut.docx']
+
 
 logging.basicConfig(
     filename='./logs/test_sp_texts.log',
@@ -18,29 +23,30 @@ logging.basicConfig(
     filemode='w',
     format='%(name)s - %(levelname)s - %(message)s')
 
+
 def get_verse_transcriptions():
     """Make dict with transcription of each verse"""
-    file_names = ['SP_Genesis.trans']
-    text_dict = {}
-    for file_name in file_names:
-        with open(os.path.join(TRANSCRIPTIONS_FOLDER, file_name), 'r') as f:
-            for line in f:
-                bo, ch, ve, text = line.split('\t')
-                text_dict[(bo, int(ch), ve)] = text.strip()
+    transcriber = make_transcriptions.SPTextTranscriber(BOOKS, WORD_FILES, WORD_FILES_FOLDER)
+    text_dict = transcriber.verse_texts
+    logging.info(f'The word files contain {len(text_dict)} verses.')
     return text_dict
+
 
 @pytest.fixture(scope='module')
 def verse_transcriptions(module):
     yield get_verse_transcriptions()
-    
+
+
 def test_sp_bib_texts(verse_transcriptions):
     try:
+        idx = 1
         for ve in F.otype.s('verse'):
             verse_text = ''.join([F.g_cons.v(w) + F.trailer.v(w) for w in L.d(ve, 'word')]).strip().replace('F', 'C').replace('_', ' ')
             bo, ch, ve = T.sectionFromNode(ve)
-            
-            assert verse_transcriptions[(bo, ch, ve)] == verse_text
+            assert verse_transcriptions[(bo, ch, int(ve))] == verse_text
+            idx += 1
         logging.info("Testing test_sp_texts: SUCCES")
+        logging.info(f"Tested {idx} verses")
     except AssertionError as err:
         logging.error(f"Testing texts of SP books, transcription not equal to TF data in {bo} {ch} {ve}")
         logging.error(f"Word transcription: {verse_transcriptions[(bo, ch, ve)]}")
