@@ -5,8 +5,6 @@ Make sure the word files are in the folder utils/make_transcriptions/hebrew_file
 import os
 import docx
 
-WORD_FILES_FOLDER = './utils/hebrew_files'
-
 alphabet_dict = {'א': '>',
                               'ב': 'B',
                               'ג': 'G',
@@ -56,7 +54,7 @@ class SPTextTranscriber:
     def __init__(self, book_names, word_file_names, word_files_folder):
         self.book_names = book_names
         self.word_file_names = word_file_names
-        self.word_files_folder = WORD_FILES_FOLDER
+        self.word_files_folder = word_files_folder
         self.verse_texts = {}
         
         self.chapter = 0
