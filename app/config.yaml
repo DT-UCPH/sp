@@ -7,7 +7,7 @@ dataDisplay:
 interfaceDefaults: {}
 provenanceSpec:
   corpus: Samaritan Pentateuch - Genesis
-  version: '1.5.5'
+  version: '1.5.6'
 writing: hbo
 typeDisplay:
   verse:
