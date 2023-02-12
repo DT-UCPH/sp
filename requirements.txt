@@ -1,2 +1,2 @@
 docx==0.2.4
-text-fabric==11.1.4
+text-fabric[github]==11.1.4
