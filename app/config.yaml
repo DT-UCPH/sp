@@ -4,6 +4,12 @@ dataDisplay:
     text-orig-full: 
       method: layoutRich
       style:  orig
+docs:
+  docBase: '{docRoot}/bhsa'
+  docExt: ''
+  docPage: ''
+  docRoot: https://etcbc.github.io
+  featurePage: 0_home
 interfaceDefaults: {}
 provenanceSpec:
   corpus: Samaritan Pentateuch - Genesis
