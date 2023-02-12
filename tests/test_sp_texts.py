@@ -9,7 +9,8 @@ import pytest
 from utils import make_transcriptions
 
 from tf.app import use
-A = use('dt-ucph/sp:hot', hoist=globals())
+A = use('dt-ucph/sp:hot')
+F, L, T = A.api.F, A.api.L, A.api.T
 
 WORD_FILES_FOLDER = './utils/hebrew_files'
 
