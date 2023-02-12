@@ -2,7 +2,8 @@ import logging
 import pytest
 
 from tf.app import use
-A = use('DT-UCPH/sp:hot', hoist=globals())
+A = use('DT-UCPH/sp:hot')
+F, L, T = A.api.F, A.api.L, A.api.T
 
 logging.basicConfig(
     filename='./logs/test_data_sp.log',
