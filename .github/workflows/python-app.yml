@@ -8,6 +8,11 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Trigger tests manually."
+        default: "Tests run."
 
 permissions:
   contents: read
