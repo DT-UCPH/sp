@@ -17,3 +17,7 @@ def test_equality():
 
 def test_inequality():
     assert 1 == 2
+    
+def test_lexemes_nouns_ending():
+    assert all([F.lex.v(w)[-1] == '/' for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr'} 
+               and F.lex.v(w) !='absent'])
