@@ -5,7 +5,7 @@ from tf.fabric import Fabric
 data_path = '/home/runner/work/sp/sp/tf/1.5.5'
 TF = Fabric(locations=data_path)
 api = TF.load('''
-    otype lex
+    otype lex sp
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
