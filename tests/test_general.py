@@ -10,9 +10,10 @@ api = TF.load('''
 api.loadLog()
 api.makeAvailableIn(globals())
 
+F, L = api.F, api.L 
+
 
 def test_equality():
-    print('Current WD', os.getcwd())
     assert 1 == 1
 
 def test_inequality():
