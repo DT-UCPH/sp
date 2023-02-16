@@ -2,7 +2,7 @@ import os
 import pytest
 
 from tf.fabric import Fabric
-data_path = '~/tf/1.5.5'
+data_path = '~/sp/tf/1.5.5'
 TF = Fabric(locations=data_path)
 api = TF.load('''
     otype lex
