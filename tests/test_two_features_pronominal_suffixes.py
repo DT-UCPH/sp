@@ -15,7 +15,7 @@ F, L = api.F, api.L
 
 
 def test_lexemes_verb_ending():
-    assert all([(F.g_prs.v(w), F.prs_gn) for w in F.otype.s('word') in 
+    assert all([(F.g_prs.v(w), F.prs_gn.v(w)) for w in F.otype.s('word') in 
        {('+J', 'unknown'), ('+HW', 'm'), ('+KM', 'm'),
         ('+H', 'f'), (']H]', 'NA'), ('+NW', 'unknown'), 
         ('+W', 'm'), ('+KN', 'f'), ('+', 'unknown'), 
@@ -23,4 +23,4 @@ def test_lexemes_verb_ending():
         ('+HN', 'f'), ('+K', 'm'), ('+NJ', 'unknown'),
         ('+W', 'unknown'), ('+M', 'm'), ('+K', 'f'), 
         ('+HM', 'm')}
-        if F.g_prs.v(w) not in {'absent', ''})
+        if F.g_prs.v(w) not in {'absent', ''}])
