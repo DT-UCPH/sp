@@ -3,9 +3,10 @@ import os
 import pytest
 
 from tf.fabric import Fabric
-data_path = '/home/runner/work/sp/sp/tf'
-data_version = '1.5.5'
-TF = Fabric(locations=os.path.join(data_path, data_version))
+
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+data_folder = 'tf/1.5.5'
+TF = Fabric(locations=os.path.join(ROOT_DIR, data_folder))
 api = TF.load('''
     otype lex sp g_nme g_vbe g_pfm g_vbs g_prs vt ps nu prs_nu prs_ps
 ''')
