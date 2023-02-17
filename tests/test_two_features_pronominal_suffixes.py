@@ -15,12 +15,14 @@ F, L = api.F, api.L
 
 
 def test_lexemes_verb_ending():
-    assert all([(F.g_prs.v(w), F.prs_gn.v(w)) for w in F.otype.s('word') in 
-       {('+J', 'unknown'), ('+HW', 'm'), ('+KM', 'm'),
+    allowed_combinations_g_prs_prs_gn = {('+J', 'unknown'), 
+        ('+HW', 'm'), ('+KM', 'm'),
         ('+H', 'f'), (']H]', 'NA'), ('+NW', 'unknown'), 
         ('+W', 'm'), ('+KN', 'f'), ('+', 'unknown'), 
         ('+MW', 'm'), ('+KH', 'm'), ('+NH', 'f'), 
         ('+HN', 'f'), ('+K', 'm'), ('+NJ', 'unknown'),
         ('+W', 'unknown'), ('+M', 'm'), ('+K', 'f'), 
         ('+HM', 'm')}
+    assert all([(F.g_prs.v(w), F.prs_gn.v(w)) in allowed_combinations_g_prs_prs_gn
+        for w in F.otype.s('word') 
         if F.g_prs.v(w) not in {'absent', ''}])
