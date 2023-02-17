@@ -15,17 +15,59 @@ api.makeAvailableIn(globals())
 F, L = api.F, api.L 
 
     
+<<<<<<< HEAD
 def test_lexemes_nouns_adjv_ending():
     assert all([F.lex.v(w)[-1] == '/' for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr', 'adjv'} 
+=======
+def test_lexemes_nouns_ending():
+    assert all([F.lex.v(w)[-1] == '/' for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr'} 
+               and F.lex.v(w) !='absent'])
+    
+def test_lexemes_adjv_ending():
+    assert all([F.lex.v(w)[-1] == '/' for w in F.otype.s('word') if F.sp.v(w) == 'adjv'
+>>>>>>> 33f0227fc691faf81ae1275a4641107ef75a8d54
                and F.lex.v(w) !='absent'])
 
 def test_lexemes_verb_ending():
     assert all([F.lex.v(w)[-1] == '[' for w in F.otype.s('word') if F.sp.v(w) == 'verb'
                    and F.lex.v(w) !='absent'])
 
+<<<<<<< HEAD
 def test_lexemes_advb_conj_prep_pron_nega_inrg_ending():
     assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') 
                if F.sp.v(w) in {'advb', 'conj', 'art', 'prep', 'prps','prde','prin', 'intj', 'nega', 'inrg'}
+=======
+def test_lexemes_advb_ending():
+    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'advb'
+               and F.lex.v(w) !='absent'])
+
+def test_lexemes_conj_ending():
+    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'conj'
+                   and F.lex.v(w) !='absent'])
+
+def test_lexemes_art_ending():
+    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'art'
+                   and F.lex.v(w) !='absent'])
+
+def test_lexemes_prep_ending():
+    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'prep'
+                   and F.lex.v(w) !='absent'])
+
+def test_lexemes_pron_ending():
+    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) in {'prps','prde','prin'}
+               and F.lex.v(w) !='absent'])
+
+def test_lexemes_intj_ending():
+    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'intj'
+               and F.lex.v(w) !='absent'])
+
+def test_lexemes_nega_ending():
+    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'nega'
+               and F.lex.v(w) !='absent'])
+
+def test_lexemes_inrg_ending():
+    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'inrg'
+>>>>>>> 33f0227fc691faf81ae1275a4641107ef75a8d54
                and F.lex.v(w) !='absent'])
 
 def test_nominal_ending():
@@ -87,7 +129,7 @@ def test_perf_tense():
                     and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
 
 def test_perf_tense_morphemes():
-     assert all({not F.g_pfm.v(w) and not F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) == 'perf' 
+     assert all({not F.g_pfm.v(w) and not F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) == 'perf'
                 and F.sp.v(w) != 'absent' 
                 and F.vt.v(w) != 'absent'})
 
@@ -98,7 +140,7 @@ def test_impf_tense():
                 and not F.g_nme.v(w) 
                 and F.sp.v(w) != 'absent'
                 and F.vt.v(w) != 'absent'})
-   
+
 def test_impf_tense_morphemes():
     assert all({F.g_pfm.v(w) and not F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w) for w in F.sp.s('verb')
                      if F.vt.v(w) in {'impf','wayq'} and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
