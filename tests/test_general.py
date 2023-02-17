@@ -22,41 +22,13 @@ def test_lexemes_verb_ending():
     assert all([F.lex.v(w)[-1] == '[' for w in F.otype.s('word') if F.sp.v(w) == 'verb'
                    and F.lex.v(w) !='absent'])
 
-def test_lexemes_advb_conj_prep_pron_nega_inrg_ending():
+def test_lexemes_advb_conj_prep_pron_nega_inrg_intj_ending():
     assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') 
-               if F.sp.v(w) in {'advb', 'conj', 'art', 'prep', 'prps','prde','prin', 'intj', 'nega', 'inrg'}])
-
-def test_lexemes_advb_ending():
-    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'advb'
-               and F.lex.v(w) !='absent'])
-
-def test_lexemes_conj_ending():
-    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'conj'
-                   and F.lex.v(w) !='absent'])
-
-def test_lexemes_art_ending():
-    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'art'
-                   and F.lex.v(w) !='absent'])
-
-def test_lexemes_prep_ending():
-    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'prep'
-                   and F.lex.v(w) !='absent'])
-
-def test_lexemes_pron_ending():
-    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) in {'prps','prde','prin'}
-               and F.lex.v(w) !='absent'])
-
-def test_lexemes_intj_ending():
-    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'intj'
-               and F.lex.v(w) !='absent'])
-
-def test_lexemes_nega_ending():
-    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'nega'
-               and F.lex.v(w) !='absent'])
-
-def test_lexemes_inrg_ending():
-    assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'inrg'
-               and F.lex.v(w) !='absent'])
+               if F.sp.v(w) in {'advb', 'conj', 'art', 'prep', 'prps', 'prde', 'prin', 'intj', 'nega', 'inrg'}])
+    
+def test_lexemes_subs_adjv_ending():
+    assert all([F.lex.v(w)[-1] == '/' for w in F.otype.s('word') 
+               if F.sp.v(w) in {'subs', 'nmpr', 'adjv'}])
 
 def test_nominal_ending():
     assert all({F.g_nme.v(w) for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr', 'adjv'}})
