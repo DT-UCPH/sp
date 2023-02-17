@@ -12,31 +12,17 @@ api = TF.load('''
 api.loadLog()
 api.makeAvailableIn(globals())
 
-F, L = api.F, api.L 
+F, L = api.F, api.L
 
-    
-<<<<<<< HEAD
-def test_lexemes_nouns_adjv_ending():
-    assert all([F.lex.v(w)[-1] == '/' for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr', 'adjv'} 
-=======
-def test_lexemes_nouns_ending():
-    assert all([F.lex.v(w)[-1] == '/' for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr'} 
-               and F.lex.v(w) !='absent'])
-    
-def test_lexemes_adjv_ending():
-    assert all([F.lex.v(w)[-1] == '/' for w in F.otype.s('word') if F.sp.v(w) == 'adjv'
->>>>>>> 33f0227fc691faf81ae1275a4641107ef75a8d54
-               and F.lex.v(w) !='absent'])
 
 def test_lexemes_verb_ending():
     assert all([F.lex.v(w)[-1] == '[' for w in F.otype.s('word') if F.sp.v(w) == 'verb'
                    and F.lex.v(w) !='absent'])
 
-<<<<<<< HEAD
 def test_lexemes_advb_conj_prep_pron_nega_inrg_ending():
     assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') 
-               if F.sp.v(w) in {'advb', 'conj', 'art', 'prep', 'prps','prde','prin', 'intj', 'nega', 'inrg'}
-=======
+               if F.sp.v(w) in {'advb', 'conj', 'art', 'prep', 'prps','prde','prin', 'intj', 'nega', 'inrg'}])
+
 def test_lexemes_advb_ending():
     assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'advb'
                and F.lex.v(w) !='absent'])
@@ -67,7 +53,6 @@ def test_lexemes_nega_ending():
 
 def test_lexemes_inrg_ending():
     assert all([F.lex.v(w)[-1] not in {'/','['} for w in F.otype.s('word') if F.sp.v(w) == 'inrg'
->>>>>>> 33f0227fc691faf81ae1275a4641107ef75a8d54
                and F.lex.v(w) !='absent'])
 
 def test_nominal_ending():
