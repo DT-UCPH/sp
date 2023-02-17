@@ -1,12 +1,8 @@
 import os
 import pytest
 
-from tf.fabric import Fabric
+from test_general import TF
 
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-data_path = '/home/runner/work/sp/sp/tf'
-data_folder = 'tf/1.5.5'
-TF = Fabric(locations=os.path.join(ROOT_DIR, data_folder))
 api = TF.load('''
     otype g_prs prs_gn prs_ps
 ''')
