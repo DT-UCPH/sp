@@ -1,4 +1,5 @@
 """
+This test will not run on github, because it needs data that are not in the github repo.
 Tests whether the text in TF is the same as a transcription of the original word files.
 Note that at this moment only Genesis is tested.
 """
@@ -9,7 +10,8 @@ import pytest
 from utils import make_transcriptions
 
 from tf.app import use
-A = use('dt-ucph/sp:hot', hoist=globals())
+A = use('dt-ucph/sp:hot')
+F, L, T = A.api.F, A.api.L, A.api.T
 
 WORD_FILES_FOLDER = './utils/hebrew_files'
 
