@@ -1,6 +1,7 @@
-# Project-specific files
+# Project-specific files and folders
 *.doc
 *.docx
+data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

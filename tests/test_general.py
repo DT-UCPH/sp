@@ -10,7 +10,7 @@ latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)))[-1]
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
-    otype lex sp g_nme g_vbe g_pfm g_vbs g_prs vt ps nu prs_nu prs_ps
+    otype lex sp g_nme g_vbe g_pfm g_vbs g_prs vt ps nu gn prs_nu prs_ps prs_gn
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
@@ -141,7 +141,7 @@ def test_first_person():
                 if F.ps.v(w) == 'p1'})
 
 def test_second_person():
-    assert all({F.g_pfm.v(w) in {'','!!','!H!','!T!'} and F.g_vbe.v(w) in {'[','[H','[J','[JN','[N','[T','[TH','[TJ',
+    assert all({F.g_pfm.v(w) in {'','!!','!H!','!T!'} and F.g_vbe.v(w) in {'[','[H','[J','[JN','[N','[NH','[T','[TH','[TJ',
             '[TM','[TN','[W','[WN'} for w in F.sp.s('verb') if F.ps.v(w) == 'p2'})
 
 def test_third_person():
@@ -196,3 +196,29 @@ def test_singular_number_sfx():
 def test_plural_number_sfx():
     assert all({F.g_prs.v(w) in {'+HM','+HN','+KM','+KN','+M','+MW','+NH','+NW','+W'} for w in F.otype.s('word') 
                 if F.prs_nu.v(w) == 'pl'})
+
+def test_expected_gender():
+    assert all({F.gn.v(w) in {'m','f','unknown'} for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr','adjv','verb','prps','prde','prin'}
+              and F.ps.v(w) != 'absent'})
+
+def test_unexpected_gender():
+    assert all({F.gn.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) 
+                not in {'subs','nmpr','adjv','verb','prps','prde','prin'} and F.gn.v(w) != 'absent'})
+
+def test_masculine_gender():
+    assert all({F.g_pfm.v(w) in {'','!!','!J!','!T!','!M!','!H!'} and F.g_vbe.v(w) in {'','[','[W','[WN','[H','[T','[TH','[TM'}
+                 and F.g_nme.v(w) in {'','/','/J','/JM','/M','/T','/TJ','/WT'} for w in F.otype.s('word') if F.gn.v(w) == 'm'})
+
+def test_feminine_gender():
+    assert all({F.g_pfm.v(w) in {'','!!','!J!','!T!','!M!'} and F.g_vbe.v(w) in {'','[','[H','[HN','[J','[JN','[N','[NH','[T','[TH','[TJ','[TN'}
+                  and F.g_nme.v(w) in {'','/','/H','/J','/JM','/T','/TJ','/TJM','/WT','/WTJ'} for w in F.otype.s('word') if F.gn.v(w) == 'f'})
+
+def test_unknown_gender():
+    assert all({F.g_pfm.v(w) in {'','!!','!>!','!H!','!N!'} and F.g_vbe.v(w) in {'','[','[H','[NW','[TJ','[W'}
+                  and F.g_nme.v(w) in {'','/','/H','/J','/JM','/T','/TJ','/WT'} for w in F.otype.s('word') if F.gn.v(w) == 'unknown'})
+
+def test_masculine_gender_sfx():
+    assert all({F.g_prs.v(w) in {'+HM','+HW','+K','+KH','+KM','+M','+MW','+W'} for w in F.otype.s('word') if F.prs_gn.v(w) == 'm'})
+
+def test_feminine_gender_sfx():
+    assert all({F.g_prs.v(w) in {'+H','+HN','+K','+KN','+NH'} for w in F.otype.s('word') if F.prs_gn.v(w) == 'f'})
