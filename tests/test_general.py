@@ -1,5 +1,5 @@
-
 import os
+import re
 import pytest
 
 from tf.fabric import Fabric
@@ -10,7 +10,7 @@ latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)))[-1]
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
-    otype lex sp g_nme g_vbe g_pfm g_vbs g_prs vt ps nu gn prs_nu prs_ps prs_gn
+    otype g_cons lex g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt ps nu gn prs_nu prs_ps prs_gn
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
@@ -59,7 +59,7 @@ def test_expected_preformative_ending():
                 and F.g_pfm.v(w) and F.g_pfm.v(w) !='absent'})
 
 def test_unexpected_preformative():
-    assert all({not F.g_pfm.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb', 'absent'}})
+    assert all({not F.g_pfm.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
 
 def test_expected_verbal_stem_beginning():
     assert all({F.g_vbs.v(w)[0] == ']' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
@@ -72,11 +72,27 @@ def test_expected_verbal_stem_ending():
 def test_unexpected_verbal_stem():
     assert all({not F.g_vbs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','absent'}})
 
+def test_uvf_beginning():
+    assert all({F.g_uvf.v(w)[0] == '~' for w in F.otype.s('word') if F.g_uvf.v(w)})
+
+def test_uvf_H():
+    assert all({F.sp.v(w) in {'advb', 'nmpr', 'subs'} for w in F.otype.s('word') if F.g_uvf.v(w) == '~H'})
+
+def test_uvf_J():
+    assert all({F.sp.v(w) in {'adjv','subs'} or F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.otype.s('word') if F.g_uvf.v(w) == '~J'})
+
+def test_uvf_N():
+    assert all({F.sp.v(w) in {'verb','subs','intj','inrg'} for w in F.otype.s('word') if F.g_uvf.v(w) == '~N' and F.g_prs.v(w)})
+
 def test_expected_prs_beginning():
-    assert all({F.g_prs.v(w)[0] == '+' for w in F.otype.s('word') if F.g_prs.v(w) and F.g_prs.v(w) !='absent'})
+    assert all({F.g_prs.v(w)[0] == '+' for w in F.otype.s('word') if F.g_prs.v(w)})
 
 def test_unexpected_prs():
     assert all({not F.g_prs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','verb','prep','inrg','intj','adjv','absent'}})
+
+def test_morphemes_combined():
+    assert all({re.sub('[\]\[\!\/\+\~]','',f'{F.g_pfm.v(w)}{F.g_vbs.v(w)}{F.g_lex.v(w)}{F.g_vbe.v(w)}{F.g_nme.v(w)}{F.g_uvf.v(w)}{F.g_prs.v(w)}') == F.g_cons.v(w)
+                for w in F.otype.s('word') if F.lex.v(w) != 'absent'})
 
 def test_unexpected_verbal_tense():
     assert all({F.vt.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
