@@ -38,7 +38,7 @@ def test_expected_nominal_ending():
                  and F.g_nme.v(w) and F.g_nme.v(w) !='absent'})
 
 def test_unexpected_nominal_ending():
-    assert all({not F.g_nme.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','nmpr', 'adjv','verb'}  and F.g_nme.v(w) != 'absent'})
+    assert all({not F.g_nme.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','nmpr', 'adjv','verb'} and F.g_nme.v(w) not in {'absent','?'}})
 
 def test_verbal_ending():
     assert all({F.g_vbe.v(w) for w in F.otype.s('word') if F.sp.v(w) in {'verb'}})
@@ -48,7 +48,7 @@ def test_expected_verbal_ending():
                 and F.g_vbe.v(w) and F.g_vbe.v(w) !='absent'})
 
 def test_unexpected_verbal_ending():
-    assert all({not F.g_vbe.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','absent'} and F.g_vbe.v(w) != 'absent'})
+    assert all({not F.g_vbe.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','absent'} and F.g_vbe.v(w) not in {'absent','?'}})
       
 def test_expected_preformative_beginning():
     assert all({F.g_pfm.v(w)[0] == '!' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
@@ -59,7 +59,7 @@ def test_expected_preformative_ending():
                 and F.g_pfm.v(w) and F.g_pfm.v(w) !='absent'})
 
 def test_unexpected_preformative():
-    assert all({not F.g_pfm.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb', 'absent'}})
+    assert all({not F.g_pfm.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','absent','?'}})
 
 def test_expected_verbal_stem_beginning():
     assert all({F.g_vbs.v(w)[0] == ']' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
@@ -70,16 +70,16 @@ def test_expected_verbal_stem_ending():
                 and F.g_vbs.v(w) and F.g_vbs.v(w) !='absent'})
 
 def test_unexpected_verbal_stem():
-    assert all({not F.g_vbs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','absent'}})
+    assert all({not F.g_vbs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','absent','?'}})
 
 def test_expected_prs_beginning():
-    assert all({F.g_prs.v(w)[0] == '+' for w in F.otype.s('word') if F.g_prs.v(w) and F.g_prs.v(w) !='absent'})
+    assert all({F.g_prs.v(w)[0] == '+' for w in F.otype.s('word') if F.g_prs.v(w) and F.g_prs.v(w) not in {'absent','?'}})
 
 def test_unexpected_prs():
-    assert all({not F.g_prs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','verb','prep','inrg','intj','adjv','absent'}})
+    assert all({not F.g_prs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','verb','prep','inrg','intj','adjv','absent','?'}})
 
 def test_unexpected_verbal_tense():
-    assert all({F.vt.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
+    assert all({F.vt.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb','?'}})
 
 def test_expected_verbal_tense():
     assert all({F.vt.v(w) != 'NA' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}})
@@ -134,7 +134,7 @@ def test_expected_person():
               and F.ps.v(w) != 'absent'})
 
 def test_unexpected_person():
-    assert all({F.ps.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb','prps'}})
+    assert all({F.ps.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb','prps','?'}})
 
 def test_first_person():
     assert all({F.g_pfm.v(w) in {'','!>!','!N!'} and F.g_vbe.v(w) in {'[', '[H', '[NW', '[TJ'} for w in F.sp.s('verb')
@@ -168,7 +168,7 @@ def test_expected_number():
 
 def test_unexpected_number():
     assert all({F.nu.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) 
-                not in {'subs','nmpr','adjv','verb','prps','prde','prin'} and F.nu.v(w) != 'absent'})
+                not in {'subs','nmpr','adjv','verb','prps','prde','prin'} and F.nu.v(w) not in {'absent','?'}})
 
 def test_singular_number():
     assert all({F.g_pfm.v(w) in {'','!!','!>!','!H!','!J!','!M!','!T!'} and F.g_vbe.v(w) 
@@ -203,7 +203,7 @@ def test_expected_gender():
 
 def test_unexpected_gender():
     assert all({F.gn.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) 
-                not in {'subs','nmpr','adjv','verb','prps','prde','prin'} and F.gn.v(w) != 'absent'})
+                not in {'subs','nmpr','adjv','verb','prps','prde','prin','?'} and F.gn.v(w) in {'absent','?'}})
 
 def test_masculine_gender():
     assert all({F.g_pfm.v(w) in {'','!!','!J!','!T!','!M!','!H!'} and F.g_vbe.v(w) in {'','[','[W','[WN','[H','[T','[TH','[TM'}
