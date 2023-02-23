@@ -12,8 +12,8 @@ docs:
   featurePage: 0_home
 interfaceDefaults: {}
 provenanceSpec:
-  corpus: Samaritan Pentateuch - Genesis
-  version: '1.5.8'
+  corpus: The Samaritan Pentateuch
+  version: '2.0'
 writing: hbo
 typeDisplay:
   verse:
