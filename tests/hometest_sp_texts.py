@@ -1,7 +1,6 @@
 """
 This test will not run on github, because it needs data that are not in the github repo.
 Tests whether the text in TF is the same as a transcription of the original word files.
-Note that at this moment only Genesis is tested.
 """
 import logging
 import os
@@ -41,20 +40,24 @@ def verse_transcriptions(module):
 
 def test_sp_bib_texts(verse_transcriptions):
     try:
-        idx = 1
+        idx = 0
+        book_set = set()
         for ve in F.otype.s('verse'):
             verse_text = ''.join([F.g_cons.v(w) + F.trailer.v(w) for w in L.d(ve, 'word')]).strip().replace('F', 'C').replace('_', ' ')
             bo, ch, ve = T.sectionFromNode(ve)
-            assert verse_transcriptions[(bo, ch, int(ve))] == verse_text
+            if bo not in book_set:
+                logging.info(f'Testing the book of {bo}')
+                book_set.add(bo)
+            assert verse_transcriptions[(bo, ch, ve)] == verse_text
             idx += 1
-        logging.info("Testing test_sp_texts: SUCCES")
-        logging.info(f"Tested {idx} verses")
+        logging.info('Testing test_sp_texts: SUCCES')
+        logging.info(f'Tested {idx} verses')
     except AssertionError as err:
-        logging.error(f"Testing texts of SP books, transcription not equal to TF data in {bo} {ch} {ve}")
-        logging.error(f"Word transcription: {verse_transcriptions[(bo, ch, ve)]}")
-        logging.error(f"TF transcription:   {verse_text}")
+        logging.error(f'Testing texts of SP books, transcription not equal to TF data in {bo} {ch} {ve}')
+        logging.error(f'Word transcription: {verse_transcriptions[(bo, ch, ve)]}')
+        logging.error(f'TF transcription: {verse_text}')
         
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     verse_transcriptions = get_verse_transcriptions()
     test_sp_bib_texts(verse_transcriptions)
