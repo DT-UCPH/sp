@@ -7,6 +7,8 @@ class TfApp(App):
     def fmt_layoutRich(app, n, **kwargs):
         api = app.api
         F = api.F
-        material = F.sign.v(n)
+        material = F.g_cons.v(n)
+        after = F.trailer.v(n) or ""
         
-        return f"{material}"
+        #return f"{material}"
+        return f"{material}{after}"

@@ -1,4 +1,5 @@
 # Project-specific files and folders
+*.tfx
 *.doc
 *.docx
 data/
