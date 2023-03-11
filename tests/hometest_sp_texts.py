@@ -10,7 +10,7 @@ import pytest
 from utils import make_transcriptions
 
 from tf.app import use
-A = use('dt-ucph/sp:hot')
+A = use('dt-ucph/sp', checkout='clone', version='2.1.2')
 F, L, T = A.api.F, A.api.L, A.api.T
 
 WORD_FILES_FOLDER = './utils/hebrew_files'
@@ -43,7 +43,7 @@ def test_sp_bib_texts(verse_transcriptions):
     try:
         idx = 1
         for ve in F.otype.s('verse'):
-            verse_text = ''.join([F.g_cons.v(w) + F.trailer.v(w) for w in L.d(ve, 'word')]).strip().replace('F', 'C').replace('_', ' ')
+            verse_text = ''.join([F.g_cons_raw.v(w) + F.trailer.v(w) for w in L.d(ve, 'word')]).strip().replace('F', 'C').replace('_', ' ')
             bo, ch, ve = T.sectionFromNode(ve)
             assert verse_transcriptions[(bo, ch, int(ve))] == verse_text
             idx += 1
