@@ -9,7 +9,7 @@ import pytest
 from utils import make_transcriptions
 
 from tf.app import use
-A = use('dt-ucph/sp:hot')
+A = use('dt-ucph/sp', checkout='clone', version='2.2')
 F, L, T = A.api.F, A.api.L, A.api.T
 
 WORD_FILES_FOLDER = './utils/hebrew_files'
