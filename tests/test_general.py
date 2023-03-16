@@ -10,13 +10,21 @@ latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)))[-1]
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
-    otype g_cons lex g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt ps nu gn prs_nu prs_ps prs_gn
+    otype g_cons_raw g_cons lex g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt ps nu gn prs_nu prs_ps prs_gn
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
 
 F, L = api.F, api.L
 
+def test_g_cons_raw():
+    assert all([not 'F' in F.g_cons_raw.v(w) for w in F.otype.s('word')])
+
+def test_g_cons_disambiguation():
+    assert all(['F' in F.g_cons.v(w) for w in F.otype.s('word') if 'F' in F.lex.v(w)])
+
+def test_lex_disambiguation():
+    assert all(['F' in F.lex.v(w) for w in F.otype.s('word') if 'F' in F.g_cons.v(w)])
 
 def test_lexemes_verb_ending():
     assert all([F.lex.v(w)[-1] == '[' for w in F.otype.s('word') if F.sp.v(w) == 'verb'
@@ -35,42 +43,42 @@ def test_nominal_ending():
 
 def test_expected_nominal_ending():
     assert all({F.g_nme.v(w)[0] == '/' for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr', 'adjv'}
-                 and F.g_nme.v(w) and F.g_nme.v(w) !='absent'})
+                 and F.g_nme.v(w) and F.g_nme.v(w) !='?'})
 
 def test_unexpected_nominal_ending():
-    assert all({not F.g_nme.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','nmpr', 'adjv','verb'}  and F.g_nme.v(w) not in {'absent','?'}})
+    assert all({not F.g_nme.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','nmpr', 'adjv','verb'} and F.g_nme.v(w) not in {'?'}})
 
 def test_verbal_ending():
     assert all({F.g_vbe.v(w) for w in F.otype.s('word') if F.sp.v(w) in {'verb'}})
 
 def test_expected_verbal_ending():
     assert all({F.g_vbe.v(w)[0] == '[' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
-                and F.g_vbe.v(w) and F.g_vbe.v(w) !='absent'})
+                and F.g_vbe.v(w) and F.g_vbe.v(w) !='?'})
 
 def test_unexpected_verbal_ending():
     assert all({not F.g_vbe.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','absent','?'} and F.g_vbe.v(w)  not in {'absent','?'}})
       
 def test_expected_preformative_beginning():
     assert all({F.g_pfm.v(w)[0] == '!' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
-                and F.g_pfm.v(w) and F.g_pfm.v(w) !='absent'})
+                and F.g_pfm.v(w) and F.g_pfm.v(w) !='?'})
 
 def test_expected_preformative_ending():
     assert all({F.g_pfm.v(w)[-1] == '!' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
-                and F.g_pfm.v(w) and F.g_pfm.v(w) !='absent'})
+                and F.g_pfm.v(w) and F.g_pfm.v(w) !='?'})
 
 def test_unexpected_preformative():
-    assert all({not F.g_pfm.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','?'}})
+    assert all({not F.g_pfm.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','?'} and F.g_pfm.v(w) !='?'})
 
 def test_expected_verbal_stem_beginning():
     assert all({F.g_vbs.v(w)[0] == ']' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
-                and F.g_vbs.v(w) and F.g_vbs.v(w) !='absent'})
+                and F.g_vbs.v(w) and F.g_vbs.v(w) !='?'})
 
 def test_expected_verbal_stem_ending():
     assert all({F.g_vbs.v(w)[-1] == ']' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}
-                and F.g_vbs.v(w) and F.g_vbs.v(w) !='absent'})
+                and F.g_vbs.v(w) and F.g_vbs.v(w) !='?'})
 
 def test_unexpected_verbal_stem():
-    assert all({not F.g_vbs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','absent','?'}})
+    assert all({not F.g_vbs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb','absent','?'} and F.g_vbs.v(w) != '?'})
 
 def test_uvf_beginning():
     assert all({F.g_uvf.v(w)[0] == '~' for w in F.otype.s('word') if F.g_uvf.v(w) and F.g_uvf.v(w) != '?'})
@@ -88,7 +96,7 @@ def test_expected_prs_beginning():
     assert all({F.g_prs.v(w)[0] == '+' for w in F.otype.s('word') if F.g_prs.v(w) and F.g_prs.v(w) != '?'})
 
 def test_unexpected_prs():
-    assert all({not F.g_prs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','verb','prep','inrg','intj','adjv','absent','?'}})
+    assert all({not F.g_prs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','verb','prep','inrg','intj','adjv','absent','?'} and F.g_prs.v(w) != '?'})
 
 def test_morphemes_combined():
     assert all({re.sub('[\]\[\!\/\+\~]','',f'{F.g_pfm.v(w)}{F.g_vbs.v(w)}{F.g_lex.v(w)}{F.g_vbe.v(w)}{F.g_nme.v(w)}{F.g_uvf.v(w)}{F.g_prs.v(w)}') == F.g_cons.v(w)
@@ -96,7 +104,7 @@ def test_morphemes_combined():
 			F.g_lex.v(w)!='?' or F.g_vbe.v(w)!='?' or F.g_nme.v(w)!='?' or F.g_uvf.v(w)!='?' or F.g_prs.v(w)!='?')})
 
 def test_unexpected_verbal_tense():
-    assert all({F.vt.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb','?'}})
+    assert all({F.vt.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb','?'} and F.vt.v(w) != '?'})
 
 def test_expected_verbal_tense():
     assert all({F.vt.v(w) != 'NA' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}})
@@ -148,10 +156,10 @@ def test_participle_tense_morphemes():
 
 def test_expected_person():
     assert all({F.ps.v(w) in {'p1','p2','p3','unknown'} for w in F.otype.s('word') if F.sp.v(w) in {'verb','prps'}
-              and F.ps.v(w) != 'absent'})
+              and F.ps.v(w) != '?'})
 
 def test_unexpected_person():
-    assert all({F.ps.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb','prps','?'}})
+    assert all({F.ps.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb','prps','?'} and F.ps.v(w) != '?'})
 
 def test_first_person():
     assert all({F.g_pfm.v(w) in {'','!>!','!N!'} and F.g_vbe.v(w) in {'[', '[H', '[NW', '[TJ'} for w in F.sp.s('verb')
@@ -181,7 +189,7 @@ def test_third_person_sfx():
 
 def test_expected_number():
     assert all({F.nu.v(w) in {'sg','du','pl','unknown'} for w in F.otype.s('word') if F.sp.v(w) 
-                in {'subs','nmpr','adjv','verb','prps','prde','prin'} and F.nu.v(w) != 'absent'})
+                in {'subs','nmpr','adjv','verb','prps','prde','prin'} and F.nu.v(w) != '?'})
 
 def test_unexpected_number():
     assert all({F.nu.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) 
@@ -216,7 +224,7 @@ def test_plural_number_sfx():
 
 def test_expected_gender():
     assert all({F.gn.v(w) in {'m','f','unknown'} for w in F.otype.s('word') if F.sp.v(w) in {'subs','nmpr','adjv','verb','prps','prde','prin'}
-              and F.ps.v(w) != 'absent'})
+              and F.gn.v(w) != '?'})
 
 def test_unexpected_gender():
     assert all({F.gn.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) 
