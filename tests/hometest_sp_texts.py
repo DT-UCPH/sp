@@ -8,9 +8,20 @@ import pytest
 
 from utils import make_transcriptions
 
-from tf.app import use
-A = use('dt-ucph/sp', checkout='clone', version='2.2')
-F, L, T = A.api.F, A.api.L, A.api.T
+from tf.fabric import Fabric
+
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TF_FOLDER = 'tf'
+latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)))[-1]
+
+TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
+api = TF.load('''
+    otype g_cons trailer
+''')
+api.loadLog()
+api.makeAvailableIn(globals())
+
+F, L, T = api.F, api.L, api.T
 
 WORD_FILES_FOLDER = './utils/hebrew_files'
 
