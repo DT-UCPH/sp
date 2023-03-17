@@ -10,7 +10,7 @@
 @valueType=str
 @version=2.3.1
 @writtenBy=Text-Fabric
-@dateWritten=2023-03-16T13:29:41Z
+@dateWritten=2023-03-16T15:35:48Z
 
 405425	ב
 ראשׁית
