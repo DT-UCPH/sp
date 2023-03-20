@@ -1,7 +1,7 @@
 apiVersion: 3
 dataDisplay:
   textFormats:
-    text-orig-full: 
+    layout-orig-full: 
       method: layoutRich
       style:  orig
 docs:
