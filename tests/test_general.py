@@ -100,8 +100,8 @@ def test_unexpected_prs():
 
 def test_morphemes_combined():
     assert all({re.sub('[\]\[\!\/\+\~]','',f'{F.g_pfm.v(w)}{F.g_vbs.v(w)}{F.g_lex.v(w)}{F.g_vbe.v(w)}{F.g_nme.v(w)}{F.g_uvf.v(w)}{F.g_prs.v(w)}') == F.g_cons.v(w)
-                for w in F.otype.s('word') if F.lex.v(w) not in {'absent'} and (F.g_pfm.v(w)!='?' or F.g_vbs.v(w)!='?' or 
-			F.g_lex.v(w)!='?' or F.g_vbe.v(w)!='?' or F.g_nme.v(w)!='?' or F.g_uvf.v(w)!='?' or F.g_prs.v(w)!='?')})
+                for w in F.otype.s('word') if F.lex.v(w) not in {'absent'} and (F.g_pfm.v(w)!='?' and F.g_vbs.v(w)!='?' and 
+			F.g_lex.v(w)!='?' and F.g_vbe.v(w)!='?' and F.g_nme.v(w)!='?' and F.g_uvf.v(w)!='?' and F.g_prs.v(w)!='?')})
 
 def test_unexpected_verbal_tense():
     assert all({F.vt.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb','?'} and F.vt.v(w) != '?'})
@@ -111,48 +111,45 @@ def test_expected_verbal_tense():
 
 def test_perf_tense():
     assert all({F.vt.v(w) == 'perf' for w in F.sp.s('verb') if not F.g_pfm.v(w) and not F.g_nme.v(w)
-                    and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+                    and F.vt.v(w) != 'absent'})
 
 def test_perf_tense_morphemes():
-     assert all({not F.g_pfm.v(w) and not F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) == 'perf'
-                and F.sp.v(w) != 'absent' 
-                and F.vt.v(w) != 'absent'})
+     assert all({not F.g_pfm.v(w) and not F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) == 'perf' and F.vt.v(w) != 'absent'})
 
 def test_impf_tense():
     assert all({F.vt.v(w) in {'impf','wayq'} for w in F.sp.s('verb') 
                 if F.g_pfm.v(w)
-                and F.g_pfm.v(w) not in {'!!','!H!'} 
+                and F.g_pfm.v(w) not in {'!!','!H!','?'} 
                 and not F.g_nme.v(w) 
-                and F.sp.v(w) != 'absent'
                 and F.vt.v(w) != 'absent'})
 
 def test_impf_tense_morphemes():
     assert all({F.g_pfm.v(w) and not F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w) for w in F.sp.s('verb')
-                     if F.vt.v(w) in {'impf','wayq'} and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+                     if F.vt.v(w) in {'impf','wayq'} and F.vt.v(w) != 'absent'})
 
 def test_impv_tense():
     assert all({F.vt.v(w) == 'impv' for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w)
-                and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+                and F.vt.v(w) != 'absent'})
 
 def test_impv_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w) for w in F.sp.s('verb')
-                if F.vt.v(w) == 'impv' and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+                if F.vt.v(w) == 'impv' and F.vt.v(w) != 'absent'})
 
 def test_infinitive_tense():
     assert all({F.vt.v(w) in {'infc','infa'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'}
-                and F.g_nme.v(w) and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+                and F.g_nme.v(w) and F.vt.v(w) != 'absent'})
 
 def test_infinitive_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'!!','!H!','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb')
-                 if F.vt.v(w) in {'infc','infa'} and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+                 if F.vt.v(w) in {'infc','infa'} and F.vt.v(w) != 'absent'})
 
 def test_participle_tense():
     assert all({F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!'}
-                and F.g_nme.v(w) and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+                and F.g_nme.v(w) and F.vt.v(w) != 'absent'})
 
 def test_participle_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb')
-             if F.vt.v(w) in {'ptca','ptcp'} and F.sp.v(w) != 'absent' and F.vt.v(w) != 'absent'})
+             if F.vt.v(w) in {'ptca','ptcp'} and F.vt.v(w) != 'absent'})
 
 def test_expected_person():
     assert all({F.ps.v(w) in {'p1','p2','p3','unknown'} for w in F.otype.s('word') if F.sp.v(w) in {'verb','prps'}
