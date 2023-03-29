@@ -13,7 +13,7 @@ docs:
 interfaceDefaults: {}
 provenanceSpec:
   corpus: The Samaritan Pentateuch
-  version: '2.5'
+  version: '2.6'
 writing: hbo
 typeDisplay:
   verse:
