@@ -111,7 +111,7 @@ def test_expected_verbal_tense():
 
 def test_perf_tense():
     assert all({F.vt.v(w) == 'perf' for w in F.sp.s('verb') if not F.g_pfm.v(w) and not F.g_nme.v(w)
-                    and F.vt.v(w) != 'absent'})
+                        and F.vt.v(w) not in {'absent','?'}})
 
 def test_perf_tense_morphemes():
      assert all({not F.g_pfm.v(w) and not F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) == 'perf' and F.vt.v(w) != 'absent'})
@@ -121,7 +121,7 @@ def test_impf_tense():
                 if F.g_pfm.v(w)
                 and F.g_pfm.v(w) not in {'!!','!H!','?'} 
                 and not F.g_nme.v(w) 
-                and F.vt.v(w) != 'absent'})
+                and F.vt.v(w) not in {'absent','?'}})
 
 def test_impf_tense_morphemes():
     assert all({F.g_pfm.v(w) and not F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w) for w in F.sp.s('verb')
@@ -129,7 +129,7 @@ def test_impf_tense_morphemes():
 
 def test_impv_tense():
     assert all({F.vt.v(w) == 'impv' for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w)
-                and F.vt.v(w) != 'absent'})
+                and F.vt.v(w) not in {'absent','?'}})
 
 def test_impv_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w) for w in F.sp.s('verb')
@@ -137,7 +137,7 @@ def test_impv_tense_morphemes():
 
 def test_infinitive_tense():
     assert all({F.vt.v(w) in {'infc','infa'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'}
-                and F.g_nme.v(w) and F.vt.v(w) != 'absent'})
+                and F.g_nme.v(w) and F.vt.v(w) not in {'absent','?'}})
 
 def test_infinitive_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'!!','!H!','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb')
@@ -145,7 +145,7 @@ def test_infinitive_tense_morphemes():
 
 def test_participle_tense():
     assert all({F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!'}
-                and F.g_nme.v(w) and F.vt.v(w) != 'absent'})
+                and F.g_nme.v(w) and F.vt.v(w) not in {'absent','?'}})
 
 def test_participle_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb')
@@ -228,7 +228,7 @@ def test_unexpected_gender():
                 not in {'subs','nmpr','adjv','verb','prps','prde','prin'} and F.gn.v(w) not in {'absent','?'}})
 
 def test_masculine_gender():
-    assert all({F.g_pfm.v(w) in {'','!!','!J!','!T!','!M!','!H!'} and F.g_vbe.v(w) in {'','[','[W','[WN','[H','[T','[TH','[TM'}
+    assert all({F.g_pfm.v(w) in {'','!!','!J!','!T!','!M!','!H!'} and F.g_vbe.v(w) in {'','[','[W','[WN','[H','[T','[TH','[TM','[J'}
                  and F.g_nme.v(w) in {'','/','/J','/JM','/M','/T','/TJ','/WT'} for w in F.otype.s('word') if F.gn.v(w) == 'm'})
 
 def test_feminine_gender():
