@@ -19,3 +19,11 @@ Version
 - 0.1 9. November 2022 First data of the book of Genesis.
 - 1.0 29. December 2022
 - 2.0 23. February 2023 Addition of g_cons_raw of Exodus-Deuteronomy.
+
+The features were first added for the book of Genesis. Presently, we are adding the annotations for the other four books. Features that are added for all five books are:
+- g_cons
+- lex
+- sp
+- g_nme
+- g_vbe
+- g_pfm
