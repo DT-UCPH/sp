@@ -17,7 +17,13 @@ api.makeAvailableIn(globals())
 
 F, L = api.F, api.L
 
-def test_g_cons_raw():
+def test_g_cons_raw_length():
+    assert all({len(F.g_cons_raw.v(w)) == len(F.g_cons.v(w)) for w in F.otype.s('word')})
+
+def test_g_cons_utf8_length():
+    assert all({len(F.g_cons_utf8.v(w)) == len(F.g_cons.v(w)) for w in F.otype.s('word')})
+
+def test_g_cons_raw_F():
     assert all([not 'F' in F.g_cons_raw.v(w) for w in F.otype.s('word')])
 
 def test_g_cons_disambiguation():
@@ -114,7 +120,7 @@ def test_perf_tense():
                         and F.vt.v(w) not in {'absent','?'}})
 
 def test_perf_tense_morphemes():
-     assert all({not F.g_pfm.v(w) and not F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) == 'perf' and F.vt.v(w) != 'absent'})
+     assert all({not F.g_pfm.v(w) and not F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) == 'perf'})
 
 def test_impf_tense():
     assert all({F.vt.v(w) in {'impf','wayq'} for w in F.sp.s('verb') 
@@ -125,7 +131,7 @@ def test_impf_tense():
 
 def test_impf_tense_morphemes():
     assert all({F.g_pfm.v(w) and not F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w) for w in F.sp.s('verb')
-                     if F.vt.v(w) in {'impf','wayq'} and F.vt.v(w) != 'absent'})
+                     if F.vt.v(w) in {'impf','wayq'}})
 
 def test_impv_tense():
     assert all({F.vt.v(w) == 'impv' for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w)
@@ -133,7 +139,7 @@ def test_impv_tense():
 
 def test_impv_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w) for w in F.sp.s('verb')
-                if F.vt.v(w) == 'impv' and F.vt.v(w) != 'absent'})
+                if F.vt.v(w) == 'impv'})
 
 def test_infinitive_tense():
     assert all({F.vt.v(w) in {'infc','infa'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'}
@@ -141,7 +147,7 @@ def test_infinitive_tense():
 
 def test_infinitive_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'!!','!H!','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb')
-                 if F.vt.v(w) in {'infc','infa'} and F.vt.v(w) != 'absent'})
+                 if F.vt.v(w) in {'infc','infa'}})
 
 def test_participle_tense():
     assert all({F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!'}
@@ -149,7 +155,7 @@ def test_participle_tense():
 
 def test_participle_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb')
-             if F.vt.v(w) in {'ptca','ptcp'} and F.vt.v(w) != 'absent'})
+             if F.vt.v(w) in {'ptca','ptcp'}})
 
 def test_expected_person():
     assert all({F.ps.v(w) in {'p1','p2','p3','unknown'} for w in F.otype.s('word') if F.sp.v(w) in {'verb','prps'}
