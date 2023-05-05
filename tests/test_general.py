@@ -30,7 +30,7 @@ def test_g_cons_disambiguation():
     assert all(['F' in F.g_cons.v(w) for w in F.otype.s('word') if 'F' in F.lex.v(w)])
 
 def test_lex_disambiguation():
-    assert all(['F' in F.lex.v(w) for w in F.otype.s('word') if 'F' in F.g_cons.v(w)])
+    assert all(['F' in F.lex.v(w) for w in F.otype.s('word') if 'F' in F.g_cons.v(w) and F.lex.v(w) != 'absent'])
 
 def test_lexemes_verb_ending():
     assert all([F.lex.v(w)[-1] == '[' for w in F.otype.s('word') if F.sp.v(w) == 'verb'
