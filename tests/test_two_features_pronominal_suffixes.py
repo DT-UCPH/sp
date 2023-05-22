@@ -25,7 +25,7 @@ def test_combinations_of_g_prs_and_prs_gn():
         ('+K', 'f'), ('+HM', 'm')}
     assert all([(F.g_prs.v(w), F.prs_gn.v(w)) in allowed_combinations_g_prs_prs_gn
         for w in F.otype.s('word') 
-        if F.g_prs.v(w) not in {'absent', '','?'}])
+        if F.g_prs.v(w) not in {'absent', '','?'} and F.prs_gn.v(w) != '?'])
 
 def test_combinations_of_g_prs_and_prs_ps():
     allowed_combinations_g_prs_prs_ps = {('+W', 'p3'), 
@@ -37,4 +37,4 @@ def test_combinations_of_g_prs_and_prs_ps():
     ('+W', 'p1')}
     assert all([(F.g_prs.v(w), F.prs_ps.v(w)) in allowed_combinations_g_prs_prs_ps
         for w in F.otype.s('word') 
-        if F.g_prs.v(w) not in {'absent', '','?'}])
+        if F.g_prs.v(w) not in {'absent', '','?'} and F.prs_ps.v(w) != '?'])

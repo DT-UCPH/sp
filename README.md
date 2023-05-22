@@ -29,3 +29,4 @@ The features were first added for the book of Genesis. Presently, we are adding 
 - g_lex
 - g_vbe
 - g_nme
+- g_prs
