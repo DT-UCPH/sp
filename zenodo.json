@@ -1,0 +1,18 @@
+{
+    "license": "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)", 
+    "upload_type": "software", 
+    "creators": [
+        {
+            "affiliation": "Fjellhaug International University College", 
+            "name": "Christian Canu H\u00f8jgaard"
+        }, 
+        {
+            "affiliation": "https://github.com/etcbc", 
+            "name": "Martijn Naaijer"
+        },
+        {
+            "affiliation": "Martin-Luther-Universität Halle-Wittenberg", 
+            "name": "Stefan Schorch"
+        }
+    ]
+}
