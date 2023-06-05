@@ -13,12 +13,13 @@ Here and there we still need to decide which value a feature should have for a s
 
 ### Versions
 
-This repo is work in progress. Before version 2.0, the dataset consisted of the text of Genesis. In 2.0 the text of the other four books was added. This started with the feature g_cons_raw. Other features are implemented gradually. If a feature has not been implemented yet for those books, the values are '?'.
+This repo is work in progress. Before version 2.0, the dataset consisted of the text of Genesis. In 3.0 all morphemes have been added for the entire Samaritan Pentateuch. Parsing of the morphemes (verbal tense, gender etc.) is completed for Genesis only. Morphology will be implemented gradually for Exodus-Deuteronomy. If a feature has not been implemented yet for those books, the values are '?'.
 
 Version
 - 0.1 9. November 2022 First data of the book of Genesis.
 - 1.0 29. December 2022
 - 2.0 23. February 2023 Addition of g_cons_raw of Exodus-Deuteronomy.
+- 3.0 3. June 2023 Addition of all morphemes of Genesis-Deuteronomy
 
 The features were first added for the book of Genesis. Presently, we are adding the annotations for the other four books. Features that are added for all five books are:
 - g_cons
@@ -29,4 +30,5 @@ The features were first added for the book of Genesis. Presently, we are adding 
 - g_lex
 - g_vbe
 - g_nme
+- g_uvf
 - g_prs

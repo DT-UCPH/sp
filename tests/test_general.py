@@ -93,10 +93,10 @@ def test_uvf_H():
     assert all({F.sp.v(w) in {'advb', 'nmpr', 'subs'} for w in F.otype.s('word') if F.g_uvf.v(w) == '~H'})
 
 def test_uvf_J():
-    assert all({F.sp.v(w) in {'adjv','subs'} or F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.otype.s('word') if F.g_uvf.v(w) == '~J'})
+    assert all({F.sp.v(w) in {'adjv','subs'} or F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.otype.s('word') if F.g_uvf.v(w) == '~J' and F.vt.v(w) != '?'})
 
 def test_uvf_N():
-    assert all({F.sp.v(w) in {'verb','subs','intj','inrg'} for w in F.otype.s('word') if F.g_uvf.v(w) == '~N' and F.g_prs.v(w)})
+    assert all({F.sp.v(w) in {'verb','subs','intj','inrg'} and F.g_prs.v(w) for w in F.otype.s('word') if F.g_uvf.v(w) == '~N'})
 
 def test_expected_prs_beginning():
     assert all({F.g_prs.v(w)[0] == '+' for w in F.otype.s('word') if F.g_prs.v(w) and F.g_prs.v(w) != '?'})
