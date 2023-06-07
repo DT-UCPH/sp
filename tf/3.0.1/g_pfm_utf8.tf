@@ -10,7 +10,7 @@
 @valueType=str
 @version=3.0.1
 @writtenBy=Text-Fabric
-@dateWritten=2023-06-05T11:53:17Z
+@dateWritten=2023-06-06T09:38:11Z
 
 405451	!מ!
 405457	!י!
