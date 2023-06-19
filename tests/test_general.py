@@ -157,6 +157,12 @@ def test_participle_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb')
              if F.vt.v(w) in {'ptca','ptcp'}})
 
+def test_active_participle_stem_morpheme():
+    assert all({not F.vt.v(w) == 'ptca' for w in F.sp.s('verb') if F.g_vbs.v(w) == ']W]'})
+
+def test_passive_participle_stem_morpheme():
+    assert all({not F.vt.v(w) == 'ptcp' for w in F.sp.s('verb') if F.g_vbs.v(w) == ']N]'})
+
 def test_expected_person():
     assert all({F.ps.v(w) in {'p1','p2','p3','unknown'} for w in F.otype.s('word') if F.sp.v(w) in {'verb','prps'}
               and F.ps.v(w) != '?'})
