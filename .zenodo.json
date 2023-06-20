@@ -1,6 +1,7 @@
 {
     "license": {
-        "id": "cc-by-nc-4.0"
+        "id": "cc-by-nc-4.0",
+	"title": "Attribution-NonCommercial 4.0 International"
     },
     "upload_type": "software", 
     "creators": [
