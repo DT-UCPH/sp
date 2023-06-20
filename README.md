@@ -32,3 +32,4 @@ The features were first added for the book of Genesis. Presently, we are adding 
 - g_nme
 - g_uvf
 - g_prs
+- vt
