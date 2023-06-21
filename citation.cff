@@ -1,14 +1,19 @@
 cff-version: 1.2.0
+type: dataset
 message: "If you use this software, please cite it as below."
 authors:
-- family-names: "Lisa"
-  given-names: "Mona"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
-- family-names: "Bot"
-  given-names: "Hew"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
-title: "My Research Software"
-version: 2.0.4
-doi: 10.5281/zenodo.1234
-date-released: 2017-12-18
-url: "https://github.com/github-linguist/linguist"
+- family-names: "Højgaard"
+  given-names: "Christian Canu"
+  affiliation: "Fjellhaug International University College"
+- family-names: "Naaijer"
+  given-names: "Martijn"
+  affiliation: "https://github.com/etcbc"
+- family-names: "Schorch"
+  given-names: "Stefan"
+  affiliation: "Martin-Luther-Universität Halle-Wittenberg"
+title: "The Samaritan Pentateuch"
+version: 3.1
+doi: 10.5281/zenodo.7734632
+date-released: 2023-06-21
+url: "https://github.com/DT-UCPH/sp"
+license: "CC-BY-NC-4.0"
