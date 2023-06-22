@@ -1,0 +1,26 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: The Samaritan Pentateuch
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Christian Canu
+    family-names: Højgaard
+    affiliation: Fjellhaug International University College
+  - given-names: Martijn
+    family-names: Naaijer
+    affiliation: 'https://github.com/etcbc'
+  - given-names: Stefan
+    family-names: Schorch
+    affiliation: Martin-Luther-Universität Halle-Wittenberg
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.7734632
+repository-code: 'https://github.com/DT-UCPH/sp'
+license: CC-BY-NC-4.0
+version: '3.1'
+date-released: '2023-06-22'
