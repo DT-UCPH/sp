@@ -193,7 +193,7 @@ def test_second_person_sfx():
     assert all({F.g_prs.v(w) in {'+K','+KH','+KM','+KN'} for w in F.otype.s('word') if F.prs_ps.v(w) == 'p2'})
 
 def test_third_person_sfx():
-    assert all({F.g_prs.v(w) in {'+H','+HM','+HN','+HW','+M','+MW','+NH','+W'} for w in F.otype.s('word') 
+    assert all({F.g_prs.v(w) in {'+H','+HM','+HN','+HW','+M','+MW','+N','+NH','+W'} for w in F.otype.s('word') 
                 if F.prs_ps.v(w) == 'p3'})
 
 def test_expected_number():
