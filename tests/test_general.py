@@ -171,7 +171,7 @@ def test_unexpected_person():
     assert all({F.ps.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb','prps','?'} and F.ps.v(w) != '?'})
 
 def test_first_person():
-    assert all({F.g_pfm.v(w) in {'','!>!','!N!'} and F.g_vbe.v(w) in {'[', '[H', '[NW', '[TJ'} for w in F.sp.s('verb')
+    assert all({F.g_pfm.v(w) in {'','!>!','!N!'} and F.g_vbe.v(w) in {'[', '[H', '[NW', '[TJ','[T'} for w in F.sp.s('verb')
                 if F.ps.v(w) == 'p1'})
 
 def test_second_person():
@@ -184,7 +184,7 @@ def test_third_person():
 
 def test_unknown_person():
     assert all({F.g_pfm.v(w) in {'','!!','!H!','!M!'} and F.g_vbe.v(w) in {'['} and F.g_nme.v(w) 
-                in {'/','/H','/J','/JM','/T','/TJ','/WT'} for w in F.otype.s('word') if F.ps.v(w) == 'unknown'})
+                in {'/','/H','/J','/JM','/T','/TJ','/WT','/WTJ'} for w in F.otype.s('word') if F.ps.v(w) == 'unknown'})
 
 def test_first_person_sfx():
     assert all({F.g_prs.v(w) in {'+','+J','+NJ','+NW','+W'} for w in F.otype.s('word') if F.prs_ps.v(w) == 'p1'})
@@ -193,7 +193,7 @@ def test_second_person_sfx():
     assert all({F.g_prs.v(w) in {'+K','+KH','+KM','+KN'} for w in F.otype.s('word') if F.prs_ps.v(w) == 'p2'})
 
 def test_third_person_sfx():
-    assert all({F.g_prs.v(w) in {'+H','+HM','+HN','+HW','+M','+MW','+NH','+W'} for w in F.otype.s('word') 
+    assert all({F.g_prs.v(w) in {'+H','+HM','+HN','+HW','+M','+MW','+N','+NH','+W'} for w in F.otype.s('word') 
                 if F.prs_ps.v(w) == 'p3'})
 
 def test_expected_number():

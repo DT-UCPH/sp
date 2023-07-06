@@ -33,3 +33,5 @@ The features were first added for the book of Genesis. Presently, we are adding 
 - g_uvf
 - g_prs
 - vt
+- ps
+- prs_ps
