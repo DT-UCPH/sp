@@ -210,17 +210,17 @@ def test_singular_number():
                 for w in F.otype.s('word') if F.nu.v(w) == 'sg'})
 
 def test_dual_number():
-    assert all({not F.g_pfm.v(w) and not F.g_vbe.v(w) and F.g_nme.v(w) in {'/J','/JM','/TJ','/TJM'} 
+    assert all({not F.g_pfm.v(w) and not F.g_vbe.v(w) and F.g_nme.v(w) in {'/','/J','/JM','/TJ','/TJM'} 
          for w in F.otype.s('word') if F.nu.v(w) == 'du'})
 
 def test_plural_number():
     assert all({F.g_pfm.v(w) in {'','!!','!H!','!J!','!M!','!N!','!T!'} and F.g_vbe.v(w) 
-                    in {'','[','[H','[HN','[N','[NH','[NW','[TM','[TN','[W','[WN'}
-                     and F.g_nme.v(w) in {'','/','/J','/JM','/M','/T','/TJ','/WT','/WTJ'}
+                    in {'','[','[H','[HN','[N','[NH','[NW','[T','[TM','[TN','[W','[WN'}
+                     and F.g_nme.v(w) in {'','/','/>T','/>TJ','/J','/JM','/M','/T','/TJ','/WT','/WTJ'}
                      for w in F.otype.s('word') if F.nu.v(w) == 'pl'})
  
 def test_unknown_number():
-    assert all({F.g_pfm.v(w) in {'','!!','!H!'} and F.g_vbe.v(w) in {'','['} and F.g_nme.v(w) in {'','/','/H','/T','/WT'}
+    assert all({F.g_pfm.v(w) in {'','!!','!H!'} and F.g_vbe.v(w) in {'','['} and F.g_nme.v(w) in {'','/','/H','/T','/TJ','/WT'}
                 for w in F.otype.s('word') if F.nu.v(w) == 'unknown'})
 
 def test_singular_number_sfx():
