@@ -228,7 +228,7 @@ def test_singular_number_sfx():
                 if F.prs_nu.v(w) == 'sg'})
 
 def test_plural_number_sfx():
-    assert all({F.g_prs.v(w) in {'+HM','+HN','+KM','+KN','+M','+MW','+NH','+NW','+W'} for w in F.otype.s('word') 
+    assert all({F.g_prs.v(w) in {'+HM','+HN','+KM','+KN','+M','+MW','+N','+NH','+NW','+W'} for w in F.otype.s('word') 
                 if F.prs_nu.v(w) == 'pl'})
 
 def test_expected_gender():
