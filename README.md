@@ -35,3 +35,5 @@ The features were first added for the book of Genesis. Presently, we are adding 
 - vt
 - ps
 - prs_ps
+- nu
+- prs_nu
