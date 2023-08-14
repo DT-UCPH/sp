@@ -17,6 +17,9 @@ api.makeAvailableIn(globals())
 
 F, L = api.F, api.L
 
+def test_last_word_trailer():
+    assert all({SP.api.F.trailer.v(SP.api.L.d(v, 'word')[-1]) == ' ' for v in SP.api.F.otype.s('verse')})
+
 def test_g_cons_raw_length():
     assert all({len(F.g_cons_raw.v(w)) == len(F.g_cons.v(w)) for w in F.otype.s('word')})
 
