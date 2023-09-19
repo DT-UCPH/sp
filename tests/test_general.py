@@ -10,12 +10,15 @@ latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)))[-1]
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
-    otype g_cons_raw g_cons g_cons_utf8 lex g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt ps nu gn prs_nu prs_ps prs_gn
+    otype g_cons_raw g_cons g_cons_utf8 lex g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt ps nu gn prs_nu prs_ps prs_gn trailer
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
 
 F, L = api.F, api.L
+
+def test_last_word_trailer():
+    assert all({F.trailer.v(L.d(v, 'word')[-1]) == ' ' for v in F.otype.s('verse')})
 
 def test_g_cons_raw_length():
     assert all({len(F.g_cons_raw.v(w)) == len(F.g_cons.v(w)) for w in F.otype.s('word')})
@@ -241,14 +244,14 @@ def test_unexpected_gender():
 
 def test_masculine_gender():
     assert all({F.g_pfm.v(w) in {'','!!','!J!','!T!','!M!','!H!'} and F.g_vbe.v(w) in {'','[','[W','[WN','[H','[T','[TH','[TM','[J'}
-                 and F.g_nme.v(w) in {'','/','/J','/JM','/M','/T','/TJ','/WT'} for w in F.otype.s('word') if F.gn.v(w) == 'm'})
+                 and F.g_nme.v(w) in {'','/','/H','/J','/JM','/M','/T','/TJ','/WT','/WTJ'} for w in F.otype.s('word') if F.gn.v(w) == 'm'})
 
 def test_feminine_gender():
-    assert all({F.g_pfm.v(w) in {'','!!','!J!','!T!','!M!'} and F.g_vbe.v(w) in {'','[','[H','[HN','[J','[JN','[N','[NH','[T','[TH','[TJ','[TN'}
-                  and F.g_nme.v(w) in {'','/','/H','/J','/JM','/T','/TJ','/TJM','/WT','/WTJ'} for w in F.otype.s('word') if F.gn.v(w) == 'f'})
+    assert all({F.g_pfm.v(w) in {'','!!','!H!','!J!','!T!','!M!'} and F.g_vbe.v(w) in {'','[','[H','[HN','[J','[JN','[N','[NH','[T','[TH','[TJ','[TN'}
+                      and F.g_nme.v(w) in {'','/','/>T','/>TJ','/H','/J','/JM','/T','/TJ','/TJM','/WT','/WTJ'} for w in F.otype.s('word') if F.gn.v(w) == 'f'})
 
 def test_unknown_gender():
-    assert all({F.g_pfm.v(w) in {'','!!','!>!','!H!','!N!'} and F.g_vbe.v(w) in {'','[','[H','[NW','[TJ','[W'}
+    assert all({F.g_pfm.v(w) in {'','!!','!>!','!H!','!N!'} and F.g_vbe.v(w) in {'','[','[H','[NW','[T','[TJ','[W'}
                   and F.g_nme.v(w) in {'','/','/H','/J','/JM','/T','/TJ','/WT'} for w in F.otype.s('word') if F.gn.v(w) == 'unknown'})
 
 def test_masculine_gender_sfx():
