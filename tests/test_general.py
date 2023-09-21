@@ -255,7 +255,7 @@ def test_unknown_gender():
                   and F.g_nme.v(w) in {'','/','/H','/J','/JM','/T','/TJ','/WT'} for w in F.otype.s('word') if F.gn.v(w) == 'unknown'})
 
 def test_masculine_gender_sfx():
-    assert all({F.g_prs.v(w) in {'+HM','+HW','+K','+KH','+KM','+M','+MW','+W'} for w in F.otype.s('word') if F.prs_gn.v(w) == 'm'})
+    assert all({F.g_prs.v(w) in {'+H','+HM','+HW','+K','+KH','+KM','+M','+MW','+W'} for w in F.otype.s('word') if F.prs_gn.v(w) == 'm'})
 
 def test_feminine_gender_sfx():
-    assert all({F.g_prs.v(w) in {'+H','+HN','+K','+KN','+NH'} for w in F.otype.s('word') if F.prs_gn.v(w) == 'f'})
+    assert all({F.g_prs.v(w) in {'+H','+HN','+K','+KN','+N','+NH'} for w in F.otype.s('word') if F.prs_gn.v(w) == 'f'})

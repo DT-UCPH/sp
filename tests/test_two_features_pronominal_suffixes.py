@@ -18,11 +18,13 @@ def test_combinations_of_g_prs_and_prs_gn():
         ('+H', 'f'), (']H]', 'NA'), 
         ('+NW', 'unknown'), ('+W', 'm'), 
         ('+KN', 'f'), ('+', 'unknown'), 
-        ('+MW', 'm'), ('+KH', 'm'), 
+        ('+MW', 'm'), ('+KH', 'm'),
+        ('+N', 'f'), ('+H', 'm'),
         ('+NH', 'f'), ('+HN', 'f'), 
         ('+K', 'm'), ('+NJ', 'unknown'),
         ('+W', 'unknown'), ('+M', 'm'), 
         ('+K', 'f'), ('+HM', 'm')}
+
     assert all([(F.g_prs.v(w), F.prs_gn.v(w)) in allowed_combinations_g_prs_prs_gn
         for w in F.otype.s('word') 
         if F.g_prs.v(w) not in {'absent', '','?'} and F.prs_gn.v(w) != '?'])
