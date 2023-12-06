@@ -21,7 +21,7 @@ Version
 - 2.0 23. February 2023 Addition of g_cons_raw of Exodus-Deuteronomy.
 - 3.0 3. June 2023 Addition of all morphemes of Genesis-Deuteronomy
 
-The features were first added for the book of Genesis. Presently, we are adding the annotations for the other four books. Features that are added for all five books are:
+Currently, the following features exist for all books:
 - g_cons
 - lex
 - sp
@@ -37,3 +37,5 @@ The features were first added for the book of Genesis. Presently, we are adding 
 - prs_ps
 - nu
 - prs_nu
+- gn
+- prs_gn
