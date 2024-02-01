@@ -7,7 +7,7 @@ The dataset is work in progress, and so far, we have added a number of word feat
 
 ### The CACCHT project: Creating Annotated Corpora of Classical Hebrew Text
 
-This dataset is part of the CACCHT project, which is a collaboration of Christian Canu Højgaard, Martijn Naaijer, Martin Ehrensvärd, Robert Rezetko, Oliver Glanz, and Willem van Peursen. The goal of CACCHT is to prepare and publish ancient Semitic texts digitally that can be used for research.
+This dataset is developed as part of the CACCHT project, which is a collaboration of Christian Canu Højgaard, Martijn Naaijer, Martin Ehrensvärd, Robert Rezetko, Oliver Glanz, and Willem van Peursen. The goal of CACCHT is to prepare and publish ancient Semitic texts digitally that can be used for research.
 
 ### Text
 
