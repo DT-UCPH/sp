@@ -11,6 +11,28 @@ We have made a small change in the original verse division. Instead of assigning
 
 Here and there we still need to decide which value a feature should have for a specific object. In this case, the value is "absent".
 
+### Get started
+
+This data can be processed by Text-Fabric.
+
+Text-Fabric will automatically download the SP data.
+
+After installing Text-Fabric, you can start the Text-Fabric browser by this command
+
+´´´text-fabric dt-ucph/sp´´´
+
+Alternatively, you can work in a Jupyter notebook and say
+
+´´´from tf.app import use
+A = use('dt-ucph/sp')
+´´´
+
+In both cases the data is downloaded and ends up in your home directory, under text-fabric-data.
+
+For a general tutorial to working with Text-Fabric in a Jupyter notebook, we recommend [start](https://nbviewer.jupyter.org/github/etcbc/bhsa/blob/master/tutorial/start.ipynb)
+and
+[search](https://nbviewer.jupyter.org/github/etcbc/bhsa/blob/master/tutorial/search.ipynb), both of which use the BHSA database of the Hebrew Bible.
+
 ### Versions
 
 This repo is work in progress. Before version 2.0, the dataset consisted of the text of Genesis. In 3.0 all morphemes have been added for the entire Samaritan Pentateuch. Parsing of the morphemes (verbal tense, gender etc.) is completed for Genesis only. Morphology will be implemented gradually for Exodus-Deuteronomy. If a feature has not been implemented yet for those books, the values are '?'.
