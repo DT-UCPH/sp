@@ -11,7 +11,7 @@
 @valueType=str
 @version=3.4.2
 @writtenBy=Text-Fabric
-@dateWritten=2024-11-26T10:14:10Z
+@dateWritten=2024-12-13T11:09:10Z
 
 405426	prep
 subs
@@ -2936,6 +2936,7 @@ conj
 prep
 subs
 verb
+conj
 verb
 prep
 subs

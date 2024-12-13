@@ -10,10 +10,10 @@
 @valueType=str
 @version=3.4.2
 @writtenBy=Text-Fabric
-@dateWritten=2024-11-26T10:14:09Z
+@dateWritten=2024-12-13T11:09:09Z
 
 1-399392	sign
 399393-399397	book
 399398-399584	chapter
 399585-405425	verse
-405426-520316	word
+405426-520317	word
