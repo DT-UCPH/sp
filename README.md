@@ -2,8 +2,12 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7734632.svg)](https://doi.org/10.5281/zenodo.7734632) [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
+## About
+
 In this repo you find our Text-Fabric dataset of the Samaritan Pentateuch.
 The dataset is work in progress, and so far, we have added a number of word features, which you find in the tf folder. The features are similar to those of the Biblia Hebraica Stuttgartensia Amstelodamensis (BHSA), so we refer to the [BHSA feature documentation](https://etcbc.github.io/bhsa/) for more explanation of the features.
+
+For an an introduction to the dataset and its features, see the publication [Text-Fabric Dataset of the Samaritan Pentateuch(https://doi.org/10.1163/24523666-bja10051).
 
 The text was provided by the Samaritanus-project based at Martin-Luther-Universität Halle-Wittenberg, directed by Stefan Schorch, and is based on a transcription MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34), cf. Stefan Schorch (ed.), The Samaritan Pentateuch: A critical editio maior. Berlin: de Gruyter, 2018-.
 
@@ -11,7 +15,7 @@ We have made a small change in the original verse division. Instead of assigning
 
 Here and there we still need to decide which value a feature should have for a specific object. In this case, the value is "absent".
 
-### Get started
+## Get started
 
 This data can be processed by Text-Fabric.
 
@@ -33,7 +37,7 @@ For a general tutorial to working with Text-Fabric in a Jupyter notebook, we rec
 and
 [search](https://nbviewer.jupyter.org/github/etcbc/bhsa/blob/master/tutorial/search.ipynb), both of which use the BHSA database of the Hebrew Bible.
 
-### Versions
+## Versions
 
 This repo is work in progress. Before version 2.0, the dataset consisted of the text of Genesis. In 3.0 all morphemes have been added for the entire Samaritan Pentateuch. Parsing of the morphemes (verbal tense, gender etc.) is completed for Genesis only. Morphology will be implemented gradually for Exodus-Deuteronomy. If a feature has not been implemented yet for those books, the values are '?'.
 
