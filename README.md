@@ -2,9 +2,15 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7734632.svg)](https://doi.org/10.5281/zenodo.7734632) [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-In this repo you find our Text-Fabric dataset of the Samaritan Pentateuch.
+This is the [Text-Fabric](https://github.com/annotation/text-fabric) representation of the Samaritan Pentateuch.
 The dataset is work in progress, and so far, we have added a number of word features, which you find in the tf folder. The features are similar to those of the Biblia Hebraica Stuttgartensia Amstelodamensis (BHSA), so we refer to the [BHSA feature documentation](https://etcbc.github.io/bhsa/) for more explanation of the features.
 
+For an introduction to the dataset and its features, see the publication
+Martijn Naaijer, Christian Canu Højgaard, Stefan Schorch, and Martin Ehrensvärd (2024)
+Text-Fabric Dataset of the Samaritan Pentateuch
+Research Data Journal for the Humanities and Social Sciences
+https://doi.org/10.1163/24523666-bja10051
+ 
 ### The CACCHT project: Creating Annotated Corpora of Classical Hebrew Text
 
 This dataset is developed as part of the CACCHT project, which is a collaboration of Christian Canu Højgaard, Martijn Naaijer, Martin Ehrensvärd, Robert Rezetko, Oliver Glanz, and Willem van Peursen. The goal of CACCHT is to prepare and publish ancient Semitic texts digitally that can be used for research.
@@ -25,7 +31,29 @@ https://doi.org/10.5281/zenodo.7734632
 
 You can also refer to specific versions of the dataset.
 
-### Versions
+## Get started
+
+This data can be processed by Text-Fabric.
+
+Text-Fabric will automatically download the SP data.
+
+After installing Text-Fabric, you can start the Text-Fabric browser by this command
+
+´´´text-fabric dt-ucph/sp´´´
+
+Alternatively, you can work in a Jupyter notebook and say
+
+´´´from tf.app import use
+A = use('dt-ucph/sp')
+´´´
+
+In both cases the data is downloaded and ends up in your home directory, under text-fabric-data.
+
+For a general tutorial to working with Text-Fabric in a Jupyter notebook, we recommend [start](https://nbviewer.jupyter.org/github/etcbc/bhsa/blob/master/tutorial/start.ipynb)
+and
+[search](https://nbviewer.jupyter.org/github/etcbc/bhsa/blob/master/tutorial/search.ipynb), both of which use the BHSA database of the Hebrew Bible.
+
+## Versions
 
 This repo is work in progress. Before version 2.0, the dataset consisted of the text of Genesis. In 3.0 all morphemes have been added for the entire Samaritan Pentateuch. Parsing of the morphemes (verbal tense, gender etc.) is completed for Genesis only. Morphology will be implemented gradually for Exodus-Deuteronomy. If a feature has not been implemented yet for those books, the values are '?'.
 

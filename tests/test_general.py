@@ -182,7 +182,7 @@ def test_second_person():
             '[TM','[TN','[W','[WN'} for w in F.sp.s('verb') if F.ps.v(w) == 'p2'})
 
 def test_third_person():
-    assert all({F.g_pfm.v(w) in {'','!J!','!T!'} and F.g_vbe.v(w) in {'[','[H','[HN','[NH','[T','[TH','[W','[WN'} 
+    assert all({F.g_pfm.v(w) in {'','!J!','!T!'} and F.g_vbe.v(w) in {'[','[H','[HN','[N','[NH','[T','[TH','[W','[WN'} 
                  for w in F.sp.s('verb') if F.ps.v(w) == 'p3'})
 
 def test_unknown_person():
