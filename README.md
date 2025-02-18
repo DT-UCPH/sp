@@ -5,11 +5,24 @@
 This is the [Text-Fabric](https://github.com/annotation/text-fabric) representation of the Samaritan Pentateuch.
 The dataset is work in progress, and so far, we have added a number of word features, which you find in the tf folder. The features are similar to those of the Biblia Hebraica Stuttgartensia Amstelodamensis (BHSA), so we refer to the [BHSA feature documentation](https://etcbc.github.io/bhsa/) for more explanation of the features.
 
-For an introduction to the dataset and its features, see the publication
-Martijn Naaijer, Christian Canu Højgaard, Stefan Schorch, and Martin Ehrensvärd (2024)
-Text-Fabric Dataset of the Samaritan Pentateuch
-Research Data Journal for the Humanities and Social Sciences
+### Publication
+
+For an introduction to the dataset and its features, see this paper:
+
+Martijn Naaijer, Christian Canu Højgaard, Stefan Schorch, and Martin Ehrensvärd (2024)\
+Text-Fabric Dataset of the Samaritan Pentateuch\
+Research Data Journal for the Humanities and Social Sciences\
 https://doi.org/10.1163/24523666-bja10051
+
+### Use of the dataset
+
+You can use the dataset freely for research and education. If you do so, please refer to the paper. Also refer to the dataset in the following way:
+
+Christian Canu Højgaard, Martijn Naaijer, & Stefan Schorch. (2023). 
+Text-Fabric Dataset of the Samaritan Pentateuch. Zenodo. 
+https://doi.org/10.5281/zenodo.7734632
+
+You can also refer to specific versions of the dataset.
  
 ### The CACCHT project: Creating Annotated Corpora of Classical Hebrew Text
 
@@ -20,16 +33,6 @@ This dataset is developed as part of the CACCHT project, which is a collaboratio
 The text was provided by the Samaritanus-project based at Martin-Luther-Universität Halle-Wittenberg, directed by Stefan Schorch, and is based on a transcription MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34), cf. Stefan Schorch (ed.), The Samaritan Pentateuch: A critical editio maior. Berlin: de Gruyter, 2018-.
 
 We have made a small change in the original verse division. Instead of assigning the additions after Genesis 30:36 to the verse numbers 36a, 36b, and 36 c, we group these under verse 36.
-
-### Use of the dataset
-
-You can use the dataset freely for research and education. If you do so, please refer to it in the following way:
-
-Christian Canu Højgaard, Martijn Naaijer, & Stefan Schorch. (2023). 
-Text-Fabric Dataset of the Samaritan Pentateuch. Zenodo. 
-https://doi.org/10.5281/zenodo.7734632
-
-You can also refer to specific versions of the dataset.
 
 ## Get started
 
