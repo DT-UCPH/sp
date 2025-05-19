@@ -1,18 +1,18 @@
 @edge
-@convertedToTextFabricBy=Saulo Cantanhede, Martijn Naaijer and Christian Canu Højgaard
+@convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2023-12-06T08:55:33Z
+@dateWritten=2024-12-13T11:09:11Z
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
 @licenceUrl=http://creativecommons.org/licenses/by-nc/4.0/
 @manuscripts=MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34)
 @source=Stefan Schorch in colloboration with Evelyn Burkhardt, Ulrike Hirschfelder, Irina Wandrey and József Zsengellér
 @valueType=str
-@version=3.4.1
+@version=3.4.2
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-05-14T20:25:51Z
+@dateWritten=2025-05-18T20:32:15Z
 
 399393	1-100557
 100558-187155
@@ -8970,7 +8970,8 @@
 9815
 9816-9819
 9820-9824
-9825-9831
+9825
+9826-9831
 9832-9834
 9835-9840
 9841-9844
