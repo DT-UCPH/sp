@@ -65,6 +65,7 @@ Version
 - 1.0 29. December 2022
 - 2.0 23. February 2023 Addition of g_cons_raw of Exodus-Deuteronomy.
 - 3.0 3. June 2023 Addition of all morphemes of Genesis-Deuteronomy
+- 4.0 May 2025 addition of phrase atoms by Saulo de Oliveira Cantanhêde
 
 ### Features
 
