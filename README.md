@@ -42,13 +42,13 @@ Text-Fabric will automatically download the SP data.
 
 After installing Text-Fabric, you can start the Text-Fabric browser by this command
 
-´´´text-fabric dt-ucph/sp´´´
+```text-fabric dt-ucph/sp```
 
 Alternatively, you can work in a Jupyter notebook and say
 
-´´´from tf.app import use
+```from tf.app import use
 A = use('dt-ucph/sp')
-´´´
+```
 
 In both cases the data is downloaded and ends up in your home directory, under text-fabric-data.
 
@@ -58,13 +58,14 @@ and
 
 ## Versions
 
-This repo is work in progress. Before version 2.0, the dataset consisted of the text of Genesis. In 3.0 all morphemes have been added for the entire Samaritan Pentateuch. Parsing of the morphemes (verbal tense, gender etc.) is completed for Genesis only. Morphology will be implemented gradually for Exodus-Deuteronomy. If a feature has not been implemented yet for those books, the values are '?'.
+This repo is work in progress. Before version 2.0, the dataset consisted of the text of Genesis. In 3.0 all morphemes have been added for the entire Samaritan Pentateuch. In 4.0 phrase atom boundaries have been added for the entire text.
 
 Version
-- 0.1 9. November 2022 First data of the book of Genesis.
-- 1.0 29. December 2022
-- 2.0 23. February 2023 Addition of g_cons_raw of Exodus-Deuteronomy.
-- 3.0 3. June 2023 Addition of all morphemes of Genesis-Deuteronomy
+- 0.1 November 2022 First data of the book of Genesis.
+- 1.0 December 2022
+- 2.0 February 2023 Addition of g_cons_raw of Exodus-Deuteronomy
+- 3.0 June 2023 Addition of all morphemes of Genesis-Deuteronomy
+- 4.0 May 2025 addition of phrase atoms by Saulo de Oliveira Cantanhêde
 
 ### Features
 
