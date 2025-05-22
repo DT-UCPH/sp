@@ -3,7 +3,7 @@
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
 @dateWritten=2025-05-15T10:00:06Z
-@encodedBy=Christian Canu Højgaard and Martijn Naaijer
+@encodedBy=Christian Canu Højgaard, Saulo de Oliveira Cantanhêde, and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
 @licenceUrl=http://creativecommons.org/licenses/by-nc/4.0/
 @manuscripts=MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34)
@@ -12,7 +12,7 @@
 @version=4.0.1
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-05-22T09:50:53Z
+@dateWritten=2025-05-22T10:41:39Z
 
 1-399392	sign
 399393-399397	book
