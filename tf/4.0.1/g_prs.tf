@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-15T10:00:05Z
+@dateWritten=2025-05-23T14:53:28Z
 @description=realized pronominal suffix consonantal
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -13,7 +13,7 @@
 @version=4.0.1
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-05-22T10:41:38Z
+@dateWritten=2025-05-23T14:55:21Z
 
 405426	
 
@@ -5888,7 +5888,6 @@
 
 
 
-
 +H
 
 
@@ -100956,7 +100955,6 @@
 
 
 +W
-
 
 
 

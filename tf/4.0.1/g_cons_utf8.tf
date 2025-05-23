@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-15T10:00:04Z
+@dateWritten=2025-05-23T14:53:27Z
 @description=word in Hebrew script
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -13,7 +13,7 @@
 @version=4.0.1
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-05-22T10:41:37Z
+@dateWritten=2025-05-23T14:55:21Z
 
 405426	ב
 ראשׁית
@@ -5886,8 +5886,7 @@
 ו
 ל
 אברם
-ה
-ייטב
+הייטב
 ב
 עבורה
 ו
@@ -100957,8 +100956,7 @@
 אכתה
 אתו
 טחון
-ה
-ייטב
+הייטב
 עד
 אשׁר
 דק

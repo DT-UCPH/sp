@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-15T10:00:06Z
+@dateWritten=2025-05-23T14:53:30Z
 @description=neural network prediction
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -13,7 +13,7 @@
 @version=4.0.1
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-05-22T10:41:39Z
+@dateWritten=2025-05-23T14:55:23Z
 
 405426	B
 R>CJT/
@@ -5886,7 +5886,6 @@ PR<H/
 W
 L
 >BRM/
-H
 HJJVB/
 B
 <BWR(H/H
@@ -100957,7 +100956,6 @@ W
 >!(H](NK(H[/T+H
 >T+W
 VXWN/c
-H=
 J!JVB[
 <D
 >CR
@@ -109839,7 +109837,7 @@ TWR(H/H
 H
 Z>T
 B>R/
-JJVB/
+HJJVB[
 Wn
 J!DBR[d
 MCH=/

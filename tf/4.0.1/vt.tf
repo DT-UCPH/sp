@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-15T10:00:08Z
+@dateWritten=2025-05-23T14:53:32Z
 @description=verbal tense
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -13,7 +13,7 @@
 @version=4.0.1
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-05-22T10:41:40Z
+@dateWritten=2025-05-23T14:55:24Z
 
 405426	NA
 NA
@@ -5886,8 +5886,7 @@ NA
 NA
 NA
 NA
-NA
-impf
+perf
 NA
 NA
 NA
@@ -25214,7 +25213,7 @@ NA
 NA
 NA
 impf
-NA
+ptcp
 NA
 impf
 NA
@@ -100957,8 +100956,7 @@ NA
 impf
 NA
 ptcp
-NA
-impf
+infa
 NA
 NA
 perf
@@ -103427,7 +103425,7 @@ NA
 perf
 NA
 perf
-NA
+infa
 NA
 NA
 NA
@@ -105090,7 +105088,7 @@ NA
 perf
 NA
 perf
-NA
+infa
 NA
 NA
 NA
@@ -109839,7 +109837,7 @@ NA
 NA
 NA
 infa
-NA
+infa
 NA
 impf
 NA

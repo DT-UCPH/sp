@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-15T10:00:06Z
+@dateWritten=2025-05-23T14:53:30Z
 @description=lexeme in Hebrew script
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -13,7 +13,7 @@
 @version=4.0.1
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-05-22T10:41:39Z
+@dateWritten=2025-05-23T14:55:22Z
 
 405426	ב
 ראשׁית/
@@ -5886,7 +5886,6 @@
 ו
 ל
 אברמ/
-הא
 יטב[
 ב
 עבור/
@@ -6925,7 +6924,7 @@
 מה
 ידע[
 כי
-412337	ו
+412336	ו
 אמר[
 אל
 לקח[
@@ -25213,7 +25212,8 @@
 ו
 אתם
 היה[
-430626	ו
+נקה[
+ו
 מהר[
 ו
 ירד[
@@ -28118,7 +28118,8 @@
 ענב/
 כ
 סות/
-433532	עינ/
+כלל[
+עינ/
 מנ
 יינ/
 ו
@@ -65399,8 +65400,7 @@
 נקמ[
 ו
 לא
-טור[
-את
+470813	את
 בנ/
 עמ/
 ו
@@ -100954,7 +100954,6 @@
 כתת[
 את
 טחנ[
-ה
 יטב[
 עד
 אשׁר
@@ -105087,7 +105086,8 @@
 שׁמע[
 ו
 דרשׁ[
-510502	ו
+יטב[
+ו
 הנה
 אמת/
 כונ[
@@ -109835,7 +109835,8 @@
 ה
 זאת
 באר[
-515251	ו
+יטב[
+ו
 דבר[
 משׁה=/
 ו
@@ -112660,7 +112661,7 @@
 יצא[
 ו
 ל
-518077	ו
+518075	ו
 יהוה/
 ה
 אמר[

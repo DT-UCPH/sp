@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-15T10:00:04Z
+@dateWritten=2025-05-23T14:53:28Z
 @description=realized lexeme in Hebrew script
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -13,7 +13,7 @@
 @version=4.0.1
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-05-22T10:41:38Z
+@dateWritten=2025-05-23T14:55:21Z
 
 405426	ב
 ראשׁית
@@ -5886,8 +5886,7 @@
 ו
 ל
 אברם
-ה
-יטב
+ייטב
 ב
 עבור
 ו
@@ -6925,7 +6924,7 @@
 מה
 דע
 כי
-412337	ו
+412336	ו
 אמר
 אלי
 קח
@@ -9412,7 +9411,7 @@
 לקח
 ו
 היא
-באיל
+בעיל
 בעל
 ו
 אבימלך
@@ -25213,7 +25212,8 @@
 ו
 אתם
 הי
-430626	ו
+נקוא
+ו
 מהר
 ו
 וריד
@@ -28118,7 +28118,7 @@
 ענב
 כ
 סות
-חכליל
+כליל
 עין
 מ
 יין
@@ -47578,7 +47578,7 @@
 ו
 שׁחל
 ו
-חלבניה
+חלבני
 סם
 ו
 לבון
@@ -65400,7 +65400,7 @@
 קום
 ו
 לא
-470814	את
+470813	את
 בן
 עם
 ו
@@ -87178,7 +87178,7 @@
 ישׂראל
 כ
 נחל
-נתו
+נטו
 כ
 גן
 עלי
@@ -100954,8 +100954,7 @@
 כת
 את
 טחון
-ה
-יטב
+ייטב
 עד
 אשׁר
 דק
@@ -103424,7 +103423,7 @@
 חקר
 ו
 שׁאל
-יטב
+ייטב
 ו
 הנה
 אם
@@ -105087,7 +105086,8 @@
 שׁמע
 ו
 דרשׁ
-510502	ו
+ייטב
+ו
 הנה
 אם
 כון
@@ -109835,7 +109835,8 @@
 ה
 זאת
 באר
-515251	ו
+ייטב
+ו
 דבר
 משׁה
 ו
@@ -112660,7 +112661,7 @@
 צא
 ו
 ל
-518077	ו
+518075	ו
 יהוה
 ה
 אמר
@@ -113848,7 +113849,7 @@
 ענב
 ראשׁ
 ו
-אשׁכול
+אשׁכל
 מרר
 ל
 חם

@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-15T10:00:05Z
+@dateWritten=2025-05-23T14:53:29Z
 @description=lexeme consonantal-transliterated
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -13,7 +13,7 @@
 @version=4.0.1
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-05-22T10:41:39Z
+@dateWritten=2025-05-23T14:55:22Z
 
 405426	B
 R>CJT/
@@ -5886,7 +5886,6 @@ PR<H/
 W
 L
 >BRM/
-H>
 JVB[
 B
 <BWR/
@@ -25214,7 +25213,7 @@ L
 W
 >TM
 HJH[
-absent
+NQH[
 W
 MHR[
 W
@@ -28120,7 +28119,7 @@ DM/
 <NB/
 K
 SWT/
-absent
+KLL[
 <JN/
 MN
 JJN/
@@ -65402,7 +65401,7 @@ L>
 NQM[
 W
 L>
-VWR[
+absent
 >T
 BN/
 <M/
@@ -100957,7 +100956,6 @@ W
 KTT[
 >T
 VXN[
-H
 JVB[
 <D
 >CR
@@ -105090,7 +105088,7 @@ W
 CM<[
 W
 DRC[
-absent
+JVB[
 W
 HNH
 >MT/
@@ -109839,7 +109837,7 @@ TWRH/
 H
 Z>T
 B>R[
-absent
+JVB[
 W
 DBR[
 MCH=/

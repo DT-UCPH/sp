@@ -11,7 +11,7 @@
 @valueType=str
 @version=3.4.3
 @writtenBy=Text-Fabric
-@dateWritten=2025-05-15T10:00:08Z
+@dateWritten=2025-05-23T14:53:32Z
 
 405426	prep
 subs
@@ -5884,7 +5884,6 @@ subs
 conj
 prep
 nmpr
-intj
 verb
 prep
 subs
@@ -25212,7 +25211,7 @@ subs
 conj
 prps
 verb
-absent
+verb
 conj
 verb
 conj
@@ -100955,7 +100954,6 @@ conj
 verb
 prep
 verb
-art
 verb
 prep
 conj
@@ -105088,7 +105086,7 @@ conj
 verb
 conj
 verb
-absent
+verb
 conj
 intj
 subs
@@ -109837,7 +109835,7 @@ subs
 art
 prde
 verb
-absent
+verb
 conj
 verb
 nmpr

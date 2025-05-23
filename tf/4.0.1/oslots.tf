@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-15T10:00:08Z
+@dateWritten=2025-05-23T14:53:32Z
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
 @licenceUrl=http://creativecommons.org/licenses/by-nc/4.0/
@@ -12,7 +12,7 @@
 @version=4.0.1
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-05-22T10:41:41Z
+@dateWritten=2025-05-23T14:55:24Z
 
 399393	1-100557
 100558-187155
@@ -11918,8 +11918,7 @@
 19531
 19532
 19533-19537
-19538
-19539-19543
+19538-19543
 19544
 19545-19550
 19551
@@ -106989,8 +106988,7 @@
 350690-350694
 350695-350698
 350699-350703
-350704
-350705-350709
+350704-350709
 350710-350712
 350713-350716
 350717-350719
