@@ -108,7 +108,7 @@ def test_unexpected_prs():
     assert all({not F.g_prs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'subs','verb','prep','inrg','intj','adjv','absent','?'} and F.g_prs.v(w) != '?'})
 
 def test_morphemes_combined():
-    assert all({re.sub('[\]\[\!\/\+\~]','',f'{F.g_pfm.v(w)}{F.g_vbs.v(w)}{F.g_lex.v(w)}{F.g_vbe.v(w)}{F.g_nme.v(w)}{F.g_uvf.v(w)}{F.g_prs.v(w)}') == F.g_cons.v(w)
+    assert all({re.sub(r'[\]\[\!\/\+\~]','',f'{F.g_pfm.v(w)}{F.g_vbs.v(w)}{F.g_lex.v(w)}{F.g_vbe.v(w)}{F.g_nme.v(w)}{F.g_uvf.v(w)}{F.g_prs.v(w)}') == F.g_cons.v(w)
                 for w in F.otype.s('word') if F.lex.v(w) not in {'absent'} and (F.g_pfm.v(w)!='?' and F.g_vbs.v(w)!='?' and 
 			F.g_lex.v(w)!='?' and F.g_vbe.v(w)!='?' and F.g_nme.v(w)!='?' and F.g_uvf.v(w)!='?' and F.g_prs.v(w)!='?')})
 
