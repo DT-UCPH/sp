@@ -68,9 +68,6 @@ Version
 - 4.0 May 2025 addition of phrase atoms by Saulo de Oliveira Cantanhêde
 
 ### Features
-
-Here and there we still need to decide which value a feature should have for a specific object. In this case, the value is "absent".
-
 Currently, the following features exist for all books:
 - g_cons
 - lex
@@ -89,3 +86,6 @@ Currently, the following features exist for all books:
 - prs_nu
 - gn
 - prs_gn
+
+### Textual issues
+Some annotations are dubious due to idiosyncracies in the SP manuscript used for this project. The issues are documented in the folder textual_issues.
