@@ -13,7 +13,7 @@ docs:
 interfaceDefaults: {}
 provenanceSpec:
   corpus: The Samaritan Pentateuch
-  version: '4.1'
+  version: '4.1.3'
 writing: hbo
 typeDisplay:
   verse:
