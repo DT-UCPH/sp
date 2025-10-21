@@ -37,7 +37,15 @@ def reconstruct_lex(w):
     w = re.sub(r':?[a-z]', '', w) #Remove state and verbal stem
     return w
 
-#Testing
+
+# PHRASE-ATOM LEVEL TESTS
+def test_last_word_of_verse_is_last_word_of_phrase_atom():
+    final_words_of_verses = [L.d(ve, 'word')[-1] for ve in F.otype.s('verse')]
+    final_words_of_phrase_atoms = [L.d(pa, 'word')[-1] for pa in F.otype.s('phrase_atom')]
+    assert all([node in final_words_of_phrase_atoms for node in final_words_of_verses])
+    
+
+#WORD LEVEL TESTS
 def test_last_word_trailer():
     assert all({F.trailer.v(L.d(v, 'word')[-1]) == ' ' for v in F.otype.s('verse')})
 
