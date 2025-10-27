@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-23T14:55:24Z
+@dateWritten=2025-09-27T12:54:03+00:00Z
 @description=verbal tense
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -10,10 +10,10 @@
 @manuscripts=MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34)
 @source=Stefan Schorch in colloboration with Evelyn Burkhardt, Ulrike Hirschfelder, Irina Wandrey and József Zsengellér
 @valueType=str
-@version=4.0.1
+@version=4.1.3
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-06-23T17:01:11Z
+@dateWritten=2025-09-27T13:07:07+00:00Z
 
 405426	NA
 NA
@@ -6924,7 +6924,7 @@ NA
 NA
 impf
 NA
-NA
+impf
 NA
 impf
 NA
@@ -28119,7 +28119,6 @@ NA
 NA
 NA
 NA
-perf
 NA
 NA
 NA
@@ -28132,6 +28131,7 @@ NA
 NA
 NA
 NA
+NA
 impf
 NA
 NA
@@ -37859,7 +37859,7 @@ NA
 NA
 NA
 NA
-NA
+impf
 NA
 NA
 NA
@@ -40614,8 +40614,8 @@ NA
 impf
 NA
 NA
-NA
 impv
+impv
 NA
 perf
 NA
@@ -65399,9 +65399,9 @@ NA
 NA
 NA
 impf
-NA
 NA
 NA
+impf
 NA
 NA
 NA
@@ -112663,7 +112663,7 @@ NA
 infc
 NA
 NA
-NA
+infc
 NA
 NA
 NA

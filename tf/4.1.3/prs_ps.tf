@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-23T14:55:23Z
+@dateWritten=2025-09-27T12:54:00+00:00Z
 @description=pronominal suffix person
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -10,10 +10,10 @@
 @manuscripts=MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34)
 @source=Stefan Schorch in colloboration with Evelyn Burkhardt, Ulrike Hirschfelder, Irina Wandrey and József Zsengellér
 @valueType=str
-@version=4.0.1
+@version=4.1.3
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-06-23T17:01:10Z
+@dateWritten=2025-09-27T13:07:04+00:00Z
 
 405426	NA
 NA
@@ -6924,7 +6924,7 @@ NA
 NA
 NA
 NA
-NA
+p3
 NA
 NA
 p3
@@ -56570,7 +56570,6 @@ p3
 NA
 p3
 NA
-p1
 NA
 NA
 NA
@@ -56584,6 +56583,7 @@ NA
 NA
 NA
 NA
+NA
 p3
 NA
 NA
@@ -108071,7 +108071,7 @@ NA
 NA
 NA
 NA
-p1
+NA
 NA
 p2
 NA

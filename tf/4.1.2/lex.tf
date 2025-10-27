@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-23T14:55:22Z
+@dateWritten=2025-09-27T12:18:17+00:00Z
 @description=lexeme consonantal-transliterated
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -10,10 +10,10 @@
 @manuscripts=MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34)
 @source=Stefan Schorch in colloboration with Evelyn Burkhardt, Ulrike Hirschfelder, Irina Wandrey and József Zsengellér
 @valueType=str
-@version=4.0.1
+@version=4.1.2
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-06-16T15:07:29Z
+@dateWritten=2025-09-27T12:53:57+00:00Z
 
 405426	B
 R>CJT/
@@ -6924,7 +6924,7 @@ B
 MH
 JD<[
 KJ
-absent
+JRC[
 W
 >MR[
 >L
@@ -11284,7 +11284,7 @@ H
 KN<NJ/
 >CR
 >NKJ
-CWB[
+JCB[
 B
 QRB/
 KJ
@@ -28119,7 +28119,7 @@ DM/
 <NB/
 K
 SWT/
-KLL[
+XKLJLW/
 <JN/
 MN
 JJN/
@@ -32394,7 +32394,7 @@ HNH
 >NKJ
 NKH[
 B
-MVH=/
+MVH/
 >CR
 B
 JD/
@@ -37859,7 +37859,7 @@ B
 MCH=/
 <BD/
 >Z
-JCR/
+CJR[
 MCH=/
 W
 BN/
@@ -38906,7 +38906,7 @@ JWM/
 H
 CBT/
 W
-JCB[
+CBT[
 H
 <M/
 B
@@ -40035,7 +40035,7 @@ W
 BJN/
 GR/
 L>
-KRH=[
+NKR[
 PNH/
 B
 MCPV/
@@ -40614,7 +40614,7 @@ W
 >MR[
 >L
 JHWH/
-K
+HLK[
 JRD[
 W
 <LH[
@@ -41599,7 +41599,7 @@ B
 >DWN/
 >CR
 L>
-J<D[
+<WD=[
 W
 PDH[
 L
@@ -41616,7 +41616,7 @@ W
 >M
 L
 BN/
-J<D[
+<WD=[
 K
 MCPV/
 H
@@ -42404,11 +42404,11 @@ KL/
 W
 JTWM/
 L>
-<NH==[
+<NH=[
 KJ
 >M
 <NH=[
-<NH==[
+<NH=[
 >T
 KJ
 >M
@@ -60763,7 +60763,7 @@ H
 KHN/
 >T
 NG</
-HJ>
+HW>
 W
 >M
 TXT/
@@ -62902,7 +62902,7 @@ BFR/
 MN
 ZWB/
 VM>/
-HJ>
+HW>
 KL/
 JWM/
 ZWB[
@@ -65401,7 +65401,7 @@ L>
 NQM[
 W
 L>
-absent
+VWR[
 >T
 BN/
 <M/
@@ -68618,7 +68618,7 @@ L
 KL/
 JCB[
 JWBL/
-HJ>
+HW>
 HJH[
 L
 W
@@ -68632,7 +68632,7 @@ W
 MCPXT/
 CWB[
 JWBL/
-HJ>
+HW>
 CNH/
 H
 XMC/
@@ -68653,7 +68653,7 @@ BYR[
 NZJR/
 KJ
 JWBL/
-HJ>
+HW>
 QDC/
 HJH[
 L
@@ -69058,7 +69058,7 @@ HJ>
 L
 W
 KJ
-MWV[
+MWK[
 >X/
 W
 MWV[
@@ -69603,7 +69603,7 @@ L
 <BD/
 W
 CBR[
-MVH=/
+MWVH/
 <L/
 W
 HLK[
@@ -79437,7 +79437,7 @@ H=
 RPH/
 H=
 M<V/
-HJ>
+HW>
 >M
 RB/
 W
@@ -83253,7 +83253,7 @@ XQ/
 BRJT/
 MLX/
 <WLM/
-HJ>
+HW>
 L
 PNH/
 JHWH/
@@ -85531,7 +85531,7 @@ H
 >MRJ/
 HJ>
 W
-HJ>
+HW>
 H
 LXM[
 B
@@ -100083,7 +100083,7 @@ CNH/
 B
 MDBR/
 LM<N
-<NH==[
+<NH=[
 L
 NSH[
 L
@@ -100341,7 +100341,7 @@ L>
 JD<[
 >B/
 LM<N
-<NH==[
+<NH=[
 W
 LM<N
 NSH[
@@ -107680,7 +107680,7 @@ HJ>
 H
 >JC/
 H
-HJ>
+HW>
 W
 JSR[
 >T
@@ -110609,7 +110609,7 @@ CXJN/
 MYRJM/
 W
 B
-VXRJM/
+<PLJM/
 W
 B
 GRB/
@@ -112663,7 +112663,7 @@ L
 JY>[
 W
 L
-absent
+BW>[
 W
 JHWH/
 H

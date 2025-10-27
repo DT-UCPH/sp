@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-23T14:55:25Z
+@dateWritten=2025-09-27T12:54:06+00:00Z
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @fmt:text-orig-full={sign}
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -14,5 +14,5 @@
 @version=3.4.3
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-06-23T17:01:12Z
+@dateWritten=2025-09-27T13:07:09+00:00Z
 

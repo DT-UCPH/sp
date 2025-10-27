@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-23T14:55:22Z
+@dateWritten=2025-09-27T12:53:56+00:00Z
 @description=gender
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -10,10 +10,10 @@
 @manuscripts=MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34)
 @source=Stefan Schorch in colloboration with Evelyn Burkhardt, Ulrike Hirschfelder, Irina Wandrey and József Zsengellér
 @valueType=str
-@version=4.0.1
+@version=4.1.3
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-06-23T17:01:09Z
+@dateWritten=2025-09-27T13:07:00+00:00Z
 
 405426	NA
 f
@@ -6924,7 +6924,7 @@ NA
 unknown
 unknown
 NA
-NA
+unknown
 NA
 m
 NA
@@ -28118,8 +28118,8 @@ NA
 m
 m
 NA
-unknown
 unknown
+m
 f
 NA
 m
@@ -37859,8 +37859,8 @@ NA
 m
 m
 NA
-unknown
 m
+m
 NA
 m
 unknown
@@ -40614,8 +40614,8 @@ NA
 m
 NA
 m
-NA
 m
+m
 NA
 m
 m
@@ -60763,7 +60763,7 @@ NA
 m
 NA
 m
-f
+m
 NA
 NA
 m
@@ -62902,7 +62902,7 @@ m
 NA
 m
 unknown
-f
+m
 unknown
 m
 unknown
@@ -65399,9 +65399,9 @@ NA
 m
 NA
 m
-NA
 NA
 NA
+m
 NA
 m
 m
@@ -68618,7 +68618,7 @@ NA
 m
 m
 m
-f
+m
 f
 NA
 NA
@@ -68632,7 +68632,7 @@ NA
 f
 m
 m
-f
+m
 f
 NA
 m
@@ -68653,7 +68653,7 @@ NA
 m
 NA
 m
-f
+m
 m
 f
 NA
@@ -79437,7 +79437,7 @@ NA
 unknown
 NA
 m
-f
+m
 NA
 m
 NA
@@ -83253,7 +83253,7 @@ m
 f
 m
 m
-f
+m
 NA
 m
 m
@@ -85531,7 +85531,7 @@ NA
 m
 f
 NA
-f
+m
 NA
 m
 NA
@@ -107680,7 +107680,7 @@ NA
 NA
 m
 NA
-f
+m
 NA
 unknown
 NA
@@ -112663,7 +112663,7 @@ NA
 unknown
 NA
 NA
-NA
+unknown
 NA
 m
 NA

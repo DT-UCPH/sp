@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-23T14:55:21Z
+@dateWritten=2025-09-27T12:53:52+00:00Z
 @description=realized lexeme
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -10,10 +10,10 @@
 @manuscripts=MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34)
 @source=Stefan Schorch in colloboration with Evelyn Burkhardt, Ulrike Hirschfelder, Irina Wandrey and József Zsengellér
 @valueType=str
-@version=4.0.1
+@version=4.1.3
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-06-23T17:01:08Z
+@dateWritten=2025-09-27T13:06:57+00:00Z
 
 405426	B
 R>CJT
@@ -6924,7 +6924,7 @@ B
 MH
 D<
 KJ
-absent
+JJRC
 W
 >MR
 >LJ
@@ -28119,7 +28119,7 @@ DM
 <NB
 K
 SWT
-KLJL
+XKLJLW
 <JN
 M
 JJN
@@ -32394,7 +32394,7 @@ HNH
 >NKJ
 KH
 B
-MV
+MVH
 >CR
 B
 JD
@@ -37859,7 +37859,7 @@ B
 MCH
 <BD
 >Z
-JCR
+CR
 MCH
 W
 BN
@@ -37875,7 +37875,7 @@ W
 >MR
 L
 >MR
-CJR
+>CJR
 L
 JHWH
 KJ
@@ -65401,7 +65401,7 @@ L>
 QWM
 W
 L>
-absent
+HVR
 >T
 BN
 <M
@@ -108071,7 +108071,7 @@ L
 <LM
 L>
 T<B
->DWM
+>DWMJ
 KJ
 >X
 HW>
@@ -112663,7 +112663,7 @@ L
 Y>
 W
 L
-absent
+>BW>
 W
 JHWH
 H

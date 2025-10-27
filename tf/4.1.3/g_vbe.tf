@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-05-23T14:55:22Z
+@dateWritten=2025-09-27T12:53:55+00:00Z
 @description=realized verbal ending consonantal
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -10,10 +10,10 @@
 @manuscripts=MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34)
 @source=Stefan Schorch in colloboration with Evelyn Burkhardt, Ulrike Hirschfelder, Irina Wandrey and József Zsengellér
 @valueType=str
-@version=4.0.1
+@version=4.1.3
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-06-23T17:01:09Z
+@dateWritten=2025-09-27T13:06:59+00:00Z
 
 405426	
 
@@ -6924,7 +6924,7 @@
 
 [
 
-
+[
 
 [
 
@@ -28119,7 +28119,7 @@
 
 
 
-[W
+
 
 
 
@@ -37859,7 +37859,7 @@
 
 
 
-
+[
 
 
 
@@ -40614,7 +40614,7 @@
 [
 
 
-
+[
 [
 
 [T
@@ -65401,7 +65401,7 @@
 [
 
 
-
+[
 
 
 
@@ -112663,7 +112663,7 @@
 [
 
 
-
+[
 
 
 
