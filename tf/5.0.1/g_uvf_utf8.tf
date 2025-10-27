@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-09-27T13:06:59+00:00Z
+@dateWritten=2025-10-27T00:26:23Z
 @description=realized univalent final in Hebrew script
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -13,7 +13,7 @@
 @version=4.1.3
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-10-27T13:19:33Z
+@dateWritten=2025-10-27T13:55:18Z
 
 406568	~י
 406778	~

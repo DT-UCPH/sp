@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2025-09-27T13:07:02+00:00Z
+@dateWritten=2025-10-27T00:26:24Z
 @encodedBy=Christian Canu Højgaard, Saulo de Oliveira Cantanhêde, and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
 @licenceUrl=http://creativecommons.org/licenses/by-nc/4.0/
@@ -12,12 +12,12 @@
 @version=4.1.3
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2025-10-27T13:19:34Z
+@dateWritten=2025-10-27T13:55:19Z
 
 1-399392	sign
 399393-399397	book
 399398-399584	chapter
 399585-405425	verse
 405426-520314	word
-520315-586728	phrase
-586729-653142	phrase_atom
+520315-590298	phrase_atom
+590299-656712	phrase
