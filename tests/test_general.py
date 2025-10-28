@@ -38,11 +38,27 @@ def reconstruct_lex(w):
     return w
 
 
-# PHRASE-ATOM LEVEL TESTS
+# PHRASE-ATOM AND PHRASE LEVEL TESTS
+def test_all_words_occur_in_one_phrase():
+    assert all([len(L.u(w, 'phrase')) == 1 for w in F.otype.s('word')])
+
+def test_all_words_occur_in_one_phrase_atom():
+    assert all([len(L.u(w, 'phrase_atom')) == 1 for w in F.otype.s('word')])
+
 def test_last_word_of_verse_is_last_word_of_phrase_atom():
     final_words_of_verses = [L.d(ve, 'word')[-1] for ve in F.otype.s('verse')]
     final_words_of_phrase_atoms = [L.d(pa, 'word')[-1] for pa in F.otype.s('phrase_atom')]
     assert all([node in final_words_of_phrase_atoms for node in final_words_of_verses])
+
+def test_last_word_of_verse_is_last_word_of_phrase():
+    final_words_of_verses = [L.d(ve, 'word')[-1] for ve in F.otype.s('verse')]
+    final_words_of_phrases = [L.d(pa, 'word')[-1] for pa in F.otype.s('phrase')]
+    assert all([node in final_words_of_phrases for node in final_words_of_verses])
+
+def test_last_word_of_phrase_is_last_word_of_phrase_atom():
+    final_words_of_phrases = [L.d(ph, 'word')[-1] for ph in F.otype.s('phrase')]
+    final_words_of_phrase_atoms = [L.d(pa, 'word')[-1] for pa in F.otype.s('phrase_atom')]
+    all([node in final_words_of_phrase_atoms for node in final_words_of_phrases])
     
 
 #WORD LEVEL TESTS
