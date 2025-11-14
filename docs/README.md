@@ -1,6 +1,6 @@
 <a name="start"></a>
 
-# The Samaritan Penteateuch - Features
+# The Samaritan Pentateuch - Features
 
 In Text-Fabric, a 'feature' refers to attributes associated with a certain nodes type (like signs and words). The feature value provide additional information specific to the attribute of that node.
 
