@@ -7,9 +7,9 @@ In Text-Fabric, a 'feature' refers to attributes associated with a certain nodes
 [All features listed by feature name](featuresbyname.md#start).
 
 The full featureset of this Text-Fabric dataset can also be viewed by different grouping methods:
-* [Grouped by feature type](featuresbyfeaturetype.md#start)
-     * [`Node`](featuresbyfeaturetype.md#node): the fundamental units or entities in the data model.
-     * [`Edge`](featuresbyfeaturetype.md#edge): relationships or links, establishing connections between nodes in the data model.
+* [Grouped by feature type](featuresbytype.md#start)
+     * [`Node`](featuresbytype.md#node): the fundamental units or entities in the data model.
+     * [`Edge`](featuresbytype.md#edge): relationships or links, establishing connections between nodes in the data model.
 * [Grouped by node type](featuresbynodetype.md#start):
      * [`sign`](featuresbynodetype.md#sign): represents individual characters in the text.
      * [`word`](featuresbynodetype.md#word): represents individual words in the text.
