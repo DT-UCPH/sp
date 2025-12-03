@@ -1,6 +1,7 @@
 import os
 import re
 import pytest
+import collections
 
 from tf.fabric import Fabric
 
@@ -82,6 +83,12 @@ def test_lex_disambiguation():
 
 def test_allowed_sp():
     assert all({F.sp.v(w) in {'subs','prep','verb','conj','nmpr','art','adjv','nega','prps','advb','prde','intj','inrg','prin'} for w in F.otype.s('word')})
+
+def test_each_lex_only_one_sp():
+    lex_sp = collections.defaultdict(set)
+    for w in F.otype.s('word'):
+        lex_sp[F.lex.v(w)].add(F.sp.v(w))
+    assert all({len(lex_sp[F.lex.v(w)]) == 1 for w in F.otype.s('word')})
 
 def test_lexemes_verb_ending():
     assert all({F.lex.v(w)[-1] == '[' for w in F.otype.s('word') if F.sp.v(w) == 'verb'})
