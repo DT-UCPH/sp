@@ -38,7 +38,6 @@ def reconstruct_lex(w):
     w = re.sub(r':?[a-z]', '', w) #Remove state and verbal stem
     return w
 
-
 # PHRASE-ATOM AND PHRASE LEVEL TESTS
 def test_all_words_occur_in_one_phrase():
     assert all([len(L.u(w, 'phrase')) == 1 for w in F.otype.s('word')])
