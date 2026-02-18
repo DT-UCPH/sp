@@ -2,10 +2,10 @@
 @dateWritten=2025-12-03T19:54:10+00:00Z
 @description=Word parsing in ETCBC-format
 @valueType=str
-@version=5.0.4
+@version=6.0.3
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2026-02-15T15:29:47Z
+@dateWritten=2026-02-18T14:59:39Z
 
 405426	B
 R>CJT/
