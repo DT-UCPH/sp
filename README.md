@@ -4,7 +4,7 @@
 
 This is the [Text-Fabric](https://github.com/annotation/text-fabric) representation of the Samaritan Pentateuch.
 The dataset is work in progress, and so far, we have added a number of word features, which you find in the tf folder. The feature documentation can be found in the docs folder. They are similar to those of the Biblia Hebraica Stuttgartensia Amstelodamensis (BHSA), so we refer to the [BHSA feature documentation](https://etcbc.github.io/bhsa/) for more explanation of the features.
-Apart from word level annotations, the dataset contains phrase atom boundaries and phrase boundaries. Phrase features like phrase type and phrase function will be added later, just like clause boundaries.
+Apart from word level annotations, the dataset contains phrase (atom) boundaries and clause atom boundaries. Phrase features like phrase type and phrase function will be added later.
 
 ### Publication
 
@@ -68,6 +68,7 @@ Version
 - 3.0 June 2023 Addition of all morphemes of Genesis-Deuteronomy.
 - 4.0 May 2025 addition of phrase atoms by Saulo de Oliveira Cantanhêde.
 - 5.0.1 October 2025 addition of phrases.
+- 6.0.0 February 2026 addition of phrase atoms.
 
 ### Features
 Currently, the following features exist for all books:
