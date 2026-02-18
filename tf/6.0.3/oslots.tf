@@ -9,10 +9,10 @@
 @manuscripts=MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34)
 @source=Stefan Schorch in colloboration with Evelyn Burkhardt, Ulrike Hirschfelder, Irina Wandrey and József Zsengellér
 @valueType=str
-@version=5.0.4
+@version=6.0.3
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2026-02-15T15:29:51Z
+@dateWritten=2026-02-18T14:59:43Z
 
 399393	1-100557
 100558-187155

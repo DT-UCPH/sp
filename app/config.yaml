@@ -1,9 +1,9 @@
 apiVersion: 3
 dataDisplay:
   textFormats:
-    layout-orig-full: 
+    layout-orig-full:
       method: layoutRich
-      style:  orig
+      style: orig
 docs:
   docBase: '{docRoot}/bhsa'
   docExt: ''
@@ -13,7 +13,7 @@ docs:
 interfaceDefaults: {}
 provenanceSpec:
   corpus: The Samaritan Pentateuch
-  version: '5.0.4'
+  version: 6.0.3
 writing: hbo
 typeDisplay:
   verse:
