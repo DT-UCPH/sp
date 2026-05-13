@@ -60,6 +60,9 @@ def test_last_word_of_phrase_is_last_word_of_phrase_atom():
     final_words_of_phrase_atoms = [L.d(pa, 'word')[-1] for pa in F.otype.s('phrase_atom')]
     all([node in final_words_of_phrase_atoms for node in final_words_of_phrases])
 
+def test_all_phrases_have_typ():
+    assert all(F.typ.v(p) for p in F.otype.s('phrase'))
+
 #CLAUSE-ATOM LEVEL TESTS
 def test_all_words_occur_in_one_clause_atom():
     assert all([len(L.u(w, 'clause_atom')) == 1 for w in F.otype.s('word')])
