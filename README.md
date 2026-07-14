@@ -69,6 +69,7 @@ Version
 - 5.0.1 October 2025 addition of phrases.
 - 6.0.0 February 2026 addition of clause atoms.
 - 7.0.0 April 2026 addition of clauses.
+- 7.1.0 July 2026 addition of phrase types.
 
 ### Features
 Currently, the following features exist for all books.

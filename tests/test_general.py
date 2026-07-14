@@ -11,7 +11,7 @@ latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)))[-1]
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
-    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing
+    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing typ
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
@@ -59,6 +59,9 @@ def test_last_word_of_phrase_is_last_word_of_phrase_atom():
     final_words_of_phrases = [L.d(ph, 'word')[-1] for ph in F.otype.s('phrase')]
     final_words_of_phrase_atoms = [L.d(pa, 'word')[-1] for pa in F.otype.s('phrase_atom')]
     all([node in final_words_of_phrase_atoms for node in final_words_of_phrases])
+
+def test_all_phrases_have_typ():
+    assert all(F.typ.v(p) for p in F.otype.s('phrase'))
 
 #CLAUSE-ATOM LEVEL TESTS
 def test_all_words_occur_in_one_clause_atom():
