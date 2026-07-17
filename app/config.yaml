@@ -13,12 +13,15 @@ docs:
 interfaceDefaults: {}
 provenanceSpec:
   corpus: The Samaritan Pentateuch
-  version: 7.1.3
+  version: 7.2.1
 writing: hbo
 typeDisplay:
   verse:
     label: '{verse}'
     template: '{verse}'
     verselike: true
+  phrase:
+    label: '{typ} {function}'
+    style: ''
   word:
     features: lex
