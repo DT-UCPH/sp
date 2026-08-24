@@ -1,5 +1,7 @@
 # The Samaritan Pentateuch
 
+<img src="images/caccht-logo.png" alt="CACCHT logo" height="200">
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7734632.svg)](https://doi.org/10.5281/zenodo.7734632) [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 This is the [Text-Fabric](https://github.com/annotation/text-fabric) representation of the Samaritan Pentateuch.
