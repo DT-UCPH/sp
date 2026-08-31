@@ -44,7 +44,7 @@ Text-Fabric will automatically download the SP data.
 
 After installing Text-Fabric, you can start the Text-Fabric browser by this command
 
-```text-fabric dt-ucph/sp```
+```tf dt-ucph/sp```
 
 Alternatively, you can work in a Jupyter notebook and say
 
