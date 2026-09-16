@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2026-09-16T00:31:31Z
+@dateWritten=2026-09-16T01:22:46Z
 @description=realized verbal preformative consonantal
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -13,7 +13,7 @@
 @version=7.2.4
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2026-09-16T00:32:42Z
+@dateWritten=2026-09-16T01:24:05Z
 
 405426	
 

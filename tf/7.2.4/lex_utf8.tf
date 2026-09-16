@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2026-09-16T00:31:32Z
+@dateWritten=2026-09-16T01:22:47Z
 @description=lexeme in Hebrew script
 @encodedBy=Christian Canu Højgaard and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
@@ -13,7 +13,7 @@
 @version=7.2.4
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2026-09-16T00:32:43Z
+@dateWritten=2026-09-16T01:24:06Z
 
 405426	ב
 ראשׁית/

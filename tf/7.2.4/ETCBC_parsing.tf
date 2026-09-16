@@ -1,11 +1,11 @@
 @node
-@dateWritten=2026-09-16T00:31:30Z
+@dateWritten=2026-09-16T01:22:45Z
 @description=Word parsing in ETCBC-format
 @valueType=str
 @version=7.2.4
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2026-09-16T00:32:41Z
+@dateWritten=2026-09-16T01:24:03Z
 
 405426	B
 R>CJT/

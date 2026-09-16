@@ -2,7 +2,7 @@
 @convertedToTextFabricBy=Martijn Naaijer and Christian Canu Højgaard
 @dataset=sp
 @datasetName=The Samaritan Pentateuch
-@dateWritten=2026-09-16T00:31:33Z
+@dateWritten=2026-09-16T01:22:47Z
 @encodedBy=Christian Canu Højgaard, Saulo de Oliveira Cantanhêde, and Martijn Naaijer
 @licence=Creative Commons Attribution-NonCommercial 4.0 International License
 @licenceUrl=http://creativecommons.org/licenses/by-nc/4.0/
@@ -12,7 +12,7 @@
 @version=7.2.4
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2026-09-16T00:32:44Z
+@dateWritten=2026-09-16T01:24:07Z
 
 1-399392	sign
 399393-399397	book

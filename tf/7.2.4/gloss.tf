@@ -1,11 +1,11 @@
 @node
-@dateWritten=2026-09-16T00:31:32Z
+@dateWritten=2026-09-16T01:22:47Z
 @description=Simple glosses
 @valueType=str
 @version=7.2.4
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2026-09-16T00:32:43Z
+@dateWritten=2026-09-16T01:24:05Z
 
 405426	in
 beginning
