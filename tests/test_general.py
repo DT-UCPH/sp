@@ -18,7 +18,7 @@ api.makeAvailableIn(globals())
 
 F, L = api.F, api.L
 
-EXPECTED_PHRASE_TYPES = ['VP', 'PP', 'CP', 'NP', 'PrNP', 'NegP', 'AdvP', 'PPrP', 'InjP', 'AdjP', 'InrP', 'IPrP', 'DPrP']
+EXPECTED_PHRASE_TYPE = ['VP', 'PP', 'CP', 'NP', 'PrNP', 'NegP', 'AdvP', 'PPrP', 'InjP', 'AdjP', 'InrP', 'IPrP', 'DPrP']
 
 EXPECTED_PHRASE_FUNCTION = ['Pred', 'Conj', 'Subj', 'Cmpl', 'Objc', 'PreC', 'Adju', 'Rela', 'Nega', 'PreO', 'Time', 'Modi',
                             'Loca', 'Intj', 'Voct', 'Ques', 'Frnt', 'PreS', 'NCop', 'IntS', 'PrAd', 'Supp', 'PtcO', 'Exst',
@@ -89,13 +89,13 @@ def test_all_phrases_have_typ():
     assert all(F.typ.v(p) for p in F.otype.s('phrase'))
 
 def test_phrase_typ_have_valid_values():
-    assert all(F.typ.v(p) in EXPECTED_PHRASE_TYPES for p in F.otype.s('phrase'))
+    assert all(F.typ.v(p) in EXPECTED_PHRASE_TYPE for p in F.otype.s('phrase'))
 
 def test_all_phrases_have_function():
     assert all(F.function.v(p) for p in F.otype.s('phrase'))
 
 def test_phrase_function_have_valid_values():
-    assert all(F.function.v(p) in EXPECTED_PHRASE_TYPES for p in F.otype.s('phrase'))
+    assert all(F.function.v(p) in EXPECTED_PHRASE_FUNCTION for p in F.otype.s('phrase'))
 
 #CLAUSE-ATOM LEVEL TESTS
 def test_all_words_occur_in_one_clause_atom():
