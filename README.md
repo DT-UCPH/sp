@@ -1,10 +1,12 @@
 # The Samaritan Pentateuch
 
+<img src="images/caccht-logo.png" alt="CACCHT logo" height="200">
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7734632.svg)](https://doi.org/10.5281/zenodo.7734632) [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 This is the [Text-Fabric](https://github.com/annotation/text-fabric) representation of the Samaritan Pentateuch.
 The dataset is work in progress, and so far, we have added a number of word features, which you find in the tf folder. The [feature documentation](https://github.com/DT-UCPH/sp/blob/main/docs/README.md) can be found in the docs folder. They are similar to those of the Biblia Hebraica Stuttgartensia Amstelodamensis (BHSA), so we refer to the [BHSA feature documentation](https://etcbc.github.io/bhsa/) for more explanation of the features.
-Apart from word level annotations, the dataset contains phrase (atom) boundaries and clause (atom) boundaries. Phrase features like phrase type and phrase function will be added later.
+Apart from word level annotations, the dataset contains phrase (atom) boundaries, clause (atom) boundaries, and phrase features, such as phrase type and phrase function.
 
 ### Publications
 
@@ -42,7 +44,7 @@ Text-Fabric will automatically download the SP data.
 
 After installing Text-Fabric, you can start the Text-Fabric browser by this command
 
-```text-fabric dt-ucph/sp```
+```tf dt-ucph/sp```
 
 Alternatively, you can work in a Jupyter notebook and say
 
@@ -70,6 +72,7 @@ Version
 - 6.0.0 February 2026 addition of clause atoms.
 - 7.0.0 April 2026 addition of clauses.
 - 7.1.0 July 2026 addition of phrase types.
+- 7.2.0 September 2026 addition of phrase functions.
 
 ### Features
 Currently, the following features exist for all books.
