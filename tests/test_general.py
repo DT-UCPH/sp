@@ -11,12 +11,18 @@ latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)))[-1]
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
-    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing typ
+    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing typ function
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
 
 F, L = api.F, api.L
+
+EXPECTED_PHRASE_TYPE = ['VP', 'PP', 'CP', 'NP', 'PrNP', 'NegP', 'AdvP', 'PPrP', 'InjP', 'AdjP', 'InrP', 'IPrP', 'DPrP']
+
+EXPECTED_PHRASE_FUNCTION = ['Pred', 'Conj', 'Subj', 'Cmpl', 'Objc', 'PreC', 'Adju', 'Rela', 'Nega', 'PreO', 'Time', 'Modi',
+                            'Loca', 'Intj', 'Voct', 'Ques', 'Frnt', 'PreS', 'NCop', 'IntS', 'PrAd', 'Supp', 'PtcO', 'Exst',
+                            'NCoS', 'ModS', 'EPPr', 'ExsS', 'PrcS']
 
 #Auxilary functions to reconstruct g_cons and lex from the feature ETCBC_parsing:
 def reconstruct_g_cons(w):
@@ -60,8 +66,36 @@ def test_last_word_of_phrase_is_last_word_of_phrase_atom():
     final_words_of_phrase_atoms = [L.d(pa, 'word')[-1] for pa in F.otype.s('phrase_atom')]
     all([node in final_words_of_phrase_atoms for node in final_words_of_phrases])
 
+def test_every_phrase_atom_nested_to_exactly_one_phrase():
+    assert all([len(L.u(pa, 'phrase')) == 1 for pa in F.otype.s('phrase_atom')])
+
+def test_every_phrase_has_words():
+    assert all(L.d(p, 'word') for p in F.otype.s('phrase'))
+
+def test_every_phrase_atom_has_words():
+    assert all(L.d(pa, 'word') for pa in F.otype.s('phrase_atom'))
+
+def test_phrase_atoms_are_in_word_order():
+    phatoms = F.otype.s('phrase_atom')
+    starts = [L.d(pa, 'word')[0] for pa in phatoms]
+    assert starts == sorted(starts)
+
+def test_phrases_are_in_word_order():
+    phrases = F.otype.s('phrase')
+    starts = [L.d(p, 'word')[0] for p in phrases]
+    assert starts == sorted(starts)
+
 def test_all_phrases_have_typ():
     assert all(F.typ.v(p) for p in F.otype.s('phrase'))
+
+def test_phrase_typ_have_valid_values():
+    assert all(F.typ.v(p) in EXPECTED_PHRASE_TYPE for p in F.otype.s('phrase'))
+
+def test_all_phrases_have_function():
+    assert all(F.function.v(p) for p in F.otype.s('phrase'))
+
+def test_phrase_function_have_valid_values():
+    assert all(F.function.v(p) in EXPECTED_PHRASE_FUNCTION for p in F.otype.s('phrase'))
 
 #CLAUSE-ATOM LEVEL TESTS
 def test_all_words_occur_in_one_clause_atom():
@@ -71,6 +105,17 @@ def test_last_word_of_clause_atom_is_last_word_of_phrase_atom():
     final_words_of_clause_atoms = [L.d(ph, 'word')[-1] for ph in F.otype.s('clause_atom')]
     final_words_of_phrase_atoms = [L.d(pa, 'word')[-1] for pa in F.otype.s('phrase_atom')]
     all([node in final_words_of_phrase_atoms for node in final_words_of_clause_atoms])
+
+def test_every_clause_atom_nested_to_exactly_one_clause():
+    assert all([len(L.u(ca, 'clause')) == 1 for ca in F.otype.s('clause_atom')])
+
+def test_every_clause_atom_has_words():
+    assert all(L.d(ca, 'word') for ca in F.otype.s('clause_atom'))
+
+def test_clause_atoms_are_in_word_order():
+    clatoms = F.otype.s('clause_atom')
+    starts = [L.d(ca, 'word')[0] for ca in clatoms]
+    assert starts == sorted(starts)
 
 #CLAUSE LEVEL TESTS
 def test_all_words_occur_in_one_clause():
@@ -85,6 +130,14 @@ def test_last_word_of_clause_is_last_word_of_phrase_atom():
     final_words_of_clauses = [L.d(ve, 'word')[-1] for ve in F.otype.s('clause')]
     final_words_of_phrase_atoms = [L.d(pa, 'word')[-1] for pa in F.otype.s('phrase_atom')]
     all([node in final_words_of_phrase_atoms for node in final_words_of_clauses])
+
+def test_every_clause_has_words():
+    assert all(L.d(c, 'word') for c in F.otype.s('clause'))
+
+def test_clauses_are_in_word_order():
+    clauses = F.otype.s('clause')
+    starts = [L.d(c, 'word')[0] for c in clauses]
+    assert starts == sorted(starts)
 
 #WORD LEVEL TESTS
 def test_last_word_trailer():
