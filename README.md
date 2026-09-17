@@ -1,4 +1,4 @@
-# The Samaritan Pentateuch
+# The CACCHT Samaritan Pentateuch dataset
 
 <img src="images/caccht-logo.png" alt="CACCHT logo" height="200">
 
