@@ -13,7 +13,7 @@
 @version=7.2.5
 @writtenBy=Text-Fabric
 @writtenBy=Text-Fabric
-@dateWritten=2026-09-22T10:51:40+00:00Z
+@dateWritten=2026-09-22T11:53:54+00:00Z
 
 405614	+ו
 405616	+ו
