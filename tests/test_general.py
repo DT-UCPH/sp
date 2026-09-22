@@ -193,7 +193,7 @@ def test_expected_verbal_tense():
     assert all({F.vt.v(w) != 'NA' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}})
 
 def test_allowed_verbal_tense():
-    assert all({F.vt.v(w) in {'NA','impf','perf','infc','ptca','impv','ptcp','infa'} for w in F.otype.s('word')})
+    assert all({F.vt.v(w) in {'NA','impf','perf','inf','ptca','impv','ptcp'} for w in F.otype.s('word')})
 
 def test_perf_tense():
     assert all({F.vt.v(w) == 'perf' for w in F.sp.s('verb') if not F.g_pfm.v(w) and not F.g_nme.v(w)})
@@ -216,10 +216,10 @@ def test_impv_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) == 'impv'})
 
 def test_infinitive_tense():
-    assert all({F.vt.v(w) in {'infc','infa'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'} and F.g_nme.v(w)})
+    assert all({F.vt.v(w) == 'inf' for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'} and F.g_nme.v(w)})
 
 def test_infinitive_tense_morphemes():
-    assert all({F.g_pfm.v(w) in {'!!','!H!','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) in {'infc','infa'}})
+    assert all({F.g_pfm.v(w) in {'!!','!H!','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) =='inf'})
 
 def test_participle_tense():
     assert all({F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w)})
