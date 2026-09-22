@@ -222,7 +222,7 @@ def test_infinitive_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'!!','!H!','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) =='inf'})
 
 def test_participle_tense():
-    assert all({F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w)})
+    assert all({F.vt.v(w) in {'inf','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w)})
 
 def test_participle_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) in {'ptca','ptcp'}})
