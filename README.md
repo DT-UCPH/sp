@@ -44,13 +44,14 @@ Text-Fabric will automatically download the SP data.
 
 After installing Text-Fabric, you can start the Text-Fabric browser by this command
 
-```tf dt-ucph/sp```
+```tf DT-UCPH/sp```
 
 Alternatively, you can work in a Jupyter notebook and say
 
 ```from tf.app import use
-A = use('dt-ucph/sp')
+A = use('DT-UCPH/sp')
 ```
+
 
 In both cases the data is downloaded and ends up in your home directory, under text-fabric-data.
 
@@ -99,6 +100,8 @@ Currently, the following features exist for all books.
 - prs_gn
 - language
 - trailer
+- typ
+- function
 
 ### Textual issues
 Some annotations are dubious due to idiosyncrasies in the SP manuscript used for this project. The issues are documented in the folder textual_issues.
