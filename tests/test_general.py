@@ -11,7 +11,7 @@ latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)))[-1]
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
-    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing
+    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt vs ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
@@ -139,10 +139,10 @@ def test_unexpected_preformative():
 def test_allowed_preformative():
     assert all({F.g_pfm.v(w) in {'','!J!','!!','!T!','!>!','!M!','!N!','!H!'} for w in F.otype.s('word')})
 
-def test_unexpected_verbal_stem():
+def test_unexpected_verbal_stem_morpheme():
     assert all({not F.g_vbs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
 
-def test_allowed_verbal_stem():
+def test_allowed_verbal_stem_morphemes():
     assert all({F.g_vbs.v(w) in {'',']]',']H]',']N]',']T]',']HT]',']W]',']CT]',']HW]',']HCT]',']S]',']>]',']F]',']HF]',']Y]',']X]'} for w in F.otype.s('word')})
 
 def test_expected_verbal_ending():
@@ -185,6 +185,33 @@ def test_morphemes_combined():
     assert all({re.sub(r'[\]\[\!\/\+\~]','',f'{F.g_pfm.v(w)}{F.g_vbs.v(w)}{F.g_lex.v(w)}{F.g_vbe.v(w)}{F.g_nme.v(w)}{F.g_uvf.v(w)}{F.g_prs.v(w)}') == F.g_cons.v(w)
                 for w in F.otype.s('word') if F.lex.v(w) not in {'absent'} and (F.g_pfm.v(w)!='?' and F.g_vbs.v(w)!='?' and 
 			F.g_lex.v(w)!='?' and F.g_vbe.v(w)!='?' and F.g_nme.v(w)!='?' and F.g_uvf.v(w)!='?' and F.g_prs.v(w)!='?')})
+
+def test_expected_verbal_stem():
+    assert all({F.vs.v(w) in {'qal','nif','piel','pual','hit','hif','hof','hsht'} for w in F.sp.s('verb') if T.sectionFromNode(w)[0] == 'Genesis'})
+
+def test_unexpected_verbal_stem():
+    assert all({F.vs.v(w) == '' for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
+
+def test_allowed_verbal_stem():
+    assert all({F.vs.v(w) in {'','qal','nif','piel','pual','hit','hif','hof','hsht'} for w in F.otype.s('word')})
+
+def test_nifal_stem():
+    assert all({F.vs.v(w) == 'nif' for w in F.sp.s('verb') if F.g_vbs.v(w) in {']N]'} and T.sectionFromNode(w)[0] == 'Genesis'})
+
+def test_nifal_morphemes():
+    assert all({F.g_vbs.v(w) in {']]',']N]'} for w in F.sp.s('verb') if F.vs.v(w) == 'nif'})
+
+def test_hifil_stem():
+    assert all({F.vs.v(w) in {'hif','hof'} for w in F.sp.s('verb') if F.g_vbs.v(w) in {']H]'} and T.sectionFromNode(w)[0] == 'Genesis'})
+
+def test_hifil_morphemes():
+    assert all({F.g_vbs.v(w) in {']]',']H]',']W]',']HW]'} for w in F.sp.s('verb') if F.vs.v(w) in {'hif','hof'}})
+
+def test_hitpael_stem():
+    assert all({F.vs.v(w) == 'hit' for w in F.sp.s('verb') if F.g_vbs.v(w) in {']HT]',']T]',']Y]'} and T.sectionFromNode(w)[0] == 'Genesis'})
+
+def test_hitpael_morphemes():
+    assert all({F.g_vbs.v(w) in {']]',']HT]',']T]',']Y]'} for w in F.sp.s('verb') if F.vs.v(w) == 'hit'})
 
 def test_unexpected_verbal_tense():
     assert all({F.vt.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
