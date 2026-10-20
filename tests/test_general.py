@@ -199,7 +199,10 @@ def test_nifal_stem():
     assert all({F.vs.v(w) == 'nif' for w in F.sp.s('verb') if F.g_vbs.v(w) in {']N]'} and T.sectionFromNode(w)[0] == 'Genesis'})
 
 def test_nifal_morphemes():
-    assert all({F.g_vbs.v(w) in {']]',']N]'} for w in F.sp.s('verb') if F.vs.v(w) == 'nif'})
+    assert all({F.g_vbs.v(w) in {']]',']N]'} for w in F.vs.s('nif')})
+
+def test_nifal_imperatives_infinitives():
+    assert all({F.g_pfm.v(w) in {'!!','!H!'} for w in F.vs.s('nif') if F.vt.v(w) in {'impv','inf'}})
 
 def test_hifil_stem():
     assert all({F.vs.v(w) in {'hif','hof'} for w in F.sp.s('verb') if F.g_vbs.v(w) in {']H]'} and T.sectionFromNode(w)[0] == 'Genesis'})
@@ -211,7 +214,10 @@ def test_hitpael_stem():
     assert all({F.vs.v(w) == 'hit' for w in F.sp.s('verb') if F.g_vbs.v(w) in {']HT]',']T]',']Y]'} and T.sectionFromNode(w)[0] == 'Genesis'})
 
 def test_hitpael_morphemes():
-    assert all({F.g_vbs.v(w) in {']]',']HT]',']T]',']Y]'} for w in F.sp.s('verb') if F.vs.v(w) == 'hit'})
+    assert all({F.g_vbs.v(w) in {']]',']HT]',']T]',']Y]'} for w in F.vs.s('hit')})
+
+def test_M_preformative_participles():
+    assert all({F.vs.v(w) in {'hif','hof','piel','pual','hit','hsht'} for w in F.sp.s('verb') if F.g_pfm.v(w) == '!M!' and T.sectionFromNode(w)[0] == 'Genesis'})
 
 def test_unexpected_verbal_tense():
     assert all({F.vt.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
