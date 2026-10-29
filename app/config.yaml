@@ -20,5 +20,8 @@ typeDisplay:
     label: '{verse}'
     template: '{verse}'
     verselike: true
+  phrase:
+    label: '{typ} {function}'
+    style: ''
   word:
     features: lex
