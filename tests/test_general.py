@@ -11,12 +11,12 @@ latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)))[-1]
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
-    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing typ function
+    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt vs ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing typ function
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
 
-F, L = api.F, api.L
+F, L, T = api.F, api.L, api.T
 
 EXPECTED_PHRASE_TYPE = ['VP', 'PP', 'CP', 'NP', 'PrNP', 'NegP', 'AdvP', 'PPrP', 'InjP', 'AdjP', 'InrP', 'IPrP', 'DPrP']
 
@@ -195,10 +195,10 @@ def test_unexpected_preformative():
 def test_allowed_preformative():
     assert all({F.g_pfm.v(w) in {'','!J!','!!','!T!','!>!','!M!','!N!','!H!'} for w in F.otype.s('word')})
 
-def test_unexpected_verbal_stem():
+def test_unexpected_verbal_stem_morpheme():
     assert all({not F.g_vbs.v(w) for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
 
-def test_allowed_verbal_stem():
+def test_allowed_verbal_stem_morphemes():
     assert all({F.g_vbs.v(w) in {'',']]',']H]',']N]',']T]',']HT]',']W]',']CT]',']HW]',']HCT]',']S]',']>]',']F]',']HF]',']Y]',']X]'} for w in F.otype.s('word')})
 
 def test_expected_verbal_ending():
@@ -223,7 +223,7 @@ def test_uvf_H():
     assert all({F.sp.v(w) in {'advb', 'nmpr', 'subs'} for w in F.otype.s('word') if F.g_uvf.v(w) == '~H'})
 
 def test_uvf_J():
-    assert all({F.sp.v(w) in {'adjv','subs'} or F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.otype.s('word') if F.g_uvf.v(w) == '~J'})
+    assert all({F.sp.v(w) in {'adjv','subs'} or F.vt.v(w) in {'inf','ptca','ptcp'} for w in F.otype.s('word') if F.g_uvf.v(w) == '~J'})
 
 def test_uvf_N():
     assert all({F.sp.v(w) in {'verb','subs','intj','inrg'} and F.g_prs.v(w) for w in F.otype.s('word') if F.g_uvf.v(w) == '~N'})
@@ -242,6 +242,39 @@ def test_morphemes_combined():
                 for w in F.otype.s('word') if F.lex.v(w) not in {'absent'} and (F.g_pfm.v(w)!='?' and F.g_vbs.v(w)!='?' and 
 			F.g_lex.v(w)!='?' and F.g_vbe.v(w)!='?' and F.g_nme.v(w)!='?' and F.g_uvf.v(w)!='?' and F.g_prs.v(w)!='?')})
 
+def test_expected_verbal_stem():
+    assert all({F.vs.v(w) in {'qal','nif','piel','pual','hit','hif','hof','hsht'} for w in F.sp.s('verb') if T.sectionFromNode(w)[0] == 'Genesis'})
+
+def test_unexpected_verbal_stem():
+    assert all({F.vs.v(w) == '' for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
+
+def test_allowed_verbal_stem():
+    assert all({F.vs.v(w) in {'','qal','nif','piel','pual','hit','hif','hof','hsht'} for w in F.otype.s('word')})
+
+def test_nifal_stem():
+    assert all({F.vs.v(w) == 'nif' for w in F.sp.s('verb') if F.g_vbs.v(w) in {']N]'} and T.sectionFromNode(w)[0] == 'Genesis'})
+
+def test_nifal_morphemes():
+    assert all({F.g_vbs.v(w) in {']]',']N]'} for w in F.vs.s('nif')})
+
+def test_nifal_imperatives_infinitives():
+    assert all({F.g_pfm.v(w) in {'!!','!H!'} for w in F.vs.s('nif') if F.vt.v(w) in {'impv','inf'}})
+
+def test_hifil_stem():
+    assert all({F.vs.v(w) in {'hif','hof'} for w in F.sp.s('verb') if F.g_vbs.v(w) in {']H]'} and T.sectionFromNode(w)[0] == 'Genesis'})
+
+def test_hifil_morphemes():
+    assert all({F.g_vbs.v(w) in {']]',']H]',']W]',']HW]'} for w in F.sp.s('verb') if F.vs.v(w) in {'hif','hof'}})
+
+def test_hitpael_stem():
+    assert all({F.vs.v(w) == 'hit' for w in F.sp.s('verb') if F.g_vbs.v(w) in {']HT]',']T]',']Y]'} and T.sectionFromNode(w)[0] == 'Genesis'})
+
+def test_hitpael_morphemes():
+    assert all({F.g_vbs.v(w) in {']]',']HT]',']T]',']Y]'} for w in F.vs.s('hit')})
+
+def test_M_preformative_participles():
+    assert all({F.vs.v(w) in {'hif','hof','piel','pual','hit','hsht'} for w in F.sp.s('verb') if F.g_pfm.v(w) == '!M!' and T.sectionFromNode(w)[0] == 'Genesis'})
+
 def test_unexpected_verbal_tense():
     assert all({F.vt.v(w) == 'NA' for w in F.otype.s('word') if F.sp.v(w) not in {'verb'}})
 
@@ -249,7 +282,7 @@ def test_expected_verbal_tense():
     assert all({F.vt.v(w) != 'NA' for w in F.otype.s('word') if F.sp.v(w) in {'verb'}})
 
 def test_allowed_verbal_tense():
-    assert all({F.vt.v(w) in {'NA','impf','perf','infc','ptca','impv','ptcp','infa'} for w in F.otype.s('word')})
+    assert all({F.vt.v(w) in {'NA','impf','perf','inf','ptca','impv','ptcp'} for w in F.otype.s('word')})
 
 def test_perf_tense():
     assert all({F.vt.v(w) == 'perf' for w in F.sp.s('verb') if not F.g_pfm.v(w) and not F.g_nme.v(w)})
@@ -272,13 +305,13 @@ def test_impv_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'!!','!H!'} and not F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) == 'impv'})
 
 def test_infinitive_tense():
-    assert all({F.vt.v(w) in {'infc','infa'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'} and F.g_nme.v(w)})
+    assert all({F.vt.v(w) == 'inf' for w in F.sp.s('verb') if F.g_pfm.v(w) in {'!!','!H!'} and F.g_nme.v(w)})
 
 def test_infinitive_tense_morphemes():
-    assert all({F.g_pfm.v(w) in {'!!','!H!','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) in {'infc','infa'}})
+    assert all({F.g_pfm.v(w) in {'!!','!H!','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) =='inf'})
 
 def test_participle_tense():
-    assert all({F.vt.v(w) in {'infc','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w)})
+    assert all({F.vt.v(w) in {'inf','ptca','ptcp'} for w in F.sp.s('verb') if F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w)})
 
 def test_participle_tense_morphemes():
     assert all({F.g_pfm.v(w) in {'','!M!'} and F.g_nme.v(w) for w in F.sp.s('verb') if F.vt.v(w) in {'ptca','ptcp'}})

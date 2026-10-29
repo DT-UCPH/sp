@@ -74,6 +74,7 @@ Version
 - 7.0.0 April 2026 addition of clauses.
 - 7.1.0 July 2026 addition of phrase types.
 - 7.2.0 September 2026 addition of phrase functions.
+- 7.2.12 October 2026 addition of phonetic transcription, addition of verbal stem (only Genesis)
 
 ### Features
 Currently, the following features exist for all books.
@@ -82,6 +83,7 @@ Currently, the following features exist for all books.
 - verse
 - g_cons
 - lex
+- phono_transcr
 - gloss
 - sp
 - g_vbs
