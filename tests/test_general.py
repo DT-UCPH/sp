@@ -16,7 +16,7 @@ api = TF.load('''
 api.loadLog()
 api.makeAvailableIn(globals())
 
-F, L = api.F, api.L
+F, L, T = api.F, api.L, api.T
 
 #Auxilary functions to reconstruct g_cons and lex from the feature ETCBC_parsing:
 def reconstruct_g_cons(w):
