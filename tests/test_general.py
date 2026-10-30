@@ -7,7 +7,7 @@ from tf.fabric import Fabric
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TF_FOLDER = 'tf'
-latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)))[-1]
+latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)), key=lambda v: tuple(int(p) for p in v.split('.')))[-1]
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
@@ -421,4 +421,8 @@ def test_etcbc_parsing_g_cons():
     assert all({reconstruct_g_cons(F.ETCBC_parsing.v(w)) == F.g_cons.v(w) for w in F.otype.s('word')})
 
 def test_etcbc_parsing_lex():
-    assert all({reconstruct_lex(F.ETCBC_parsing.v(w)) == F.lex.v(w) for w in F.otype.s('word')})   
+    assert all({reconstruct_lex(F.ETCBC_parsing.v(w)) == F.lex.v(w) for w in F.otype.s('word')})
+
+def test_exodus_19_24_lk():
+    w = L.d(T.nodeFromSection(('Exodus', 19, 24)), 'word')[4]
+    assert (F.g_cons.v(w), F.lex.v(w)) == ('LK', 'HLK[')

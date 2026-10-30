@@ -75,6 +75,7 @@ Version
 - 7.1.0 July 2026 addition of phrase types.
 - 7.2.0 September 2026 addition of phrase functions.
 - 7.2.12 October 2026 addition of phonetic transcription, addition of verbal stem (only Genesis)
+- 7.3.0 October 2026 text correction in Exodus 19:24 (K corrected to LK), addition of missing g_lex of H in Genesis 17:13.
 
 ### Features
 Currently, the following features exist for all books.
