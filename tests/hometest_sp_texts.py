@@ -12,7 +12,7 @@ from tf.fabric import Fabric
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TF_FOLDER = 'tf'
-latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)))[-1]
+latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)), key=lambda v: tuple(int(p) for p in v.split('.')))[-1]
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
