@@ -470,14 +470,15 @@ def test_schorch_genesis_corrections(ref, g_cons, index, features):
     w = word_in_verse(ref, g_cons, index)
     assert {f: getattr(F, f).v(w) or '' for f in features} == features
     assert F.mt_feat.v(w) == ''
-    assert F.grammar_note.v(w)
+    # Gen 33:13 JD< is a parsing consistency fix without a reference to Schorch, so it has no note.
+    assert bool(F.grammar_note.v(w)) == (ref != ('Genesis', 33, 13))
 
 def test_grammar_note_only_in_genesis():
     assert {T.sectionFromNode(n)[0] for n, _ in F.grammar_note.items()} == {'Genesis'}
 
 def test_grammar_note_cites_a_page():
     for n, note in F.grammar_note.items():
-        assert re.match(r'Schorch 2004, pp?\. \d+', note) or note.startswith(('No reference to Schorch', 'No entry in Schorch')), (n, note)
+        assert re.search(r'Schorch 2004, pp?\. \d+', note), (n, note)
 
 @pytest.mark.parametrize('ref, g_cons, index, start', [
     (('Genesis', 3, 16), '>RBH', 0, 'Schorch 2004, pp. 95-96:'),

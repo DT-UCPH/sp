@@ -13,8 +13,8 @@ A6  ETCBC_parsing consistency: the `]]` stem formative where g_vbs is `]]`,
     stray `:a` on active participles, and the missing preformative in Gen 33:13 JD<.
 
 The old value of every changed feature is asserted before it is changed.
-Word nodes that change get mt_feat ''. Every changed node gets a grammar_note: the page in
-Schorch (2004) where the reason for the change is given, with a short summary of that reason. The *_utf8 twins of lex, g_lex and the
+Word nodes that change get mt_feat ''. Every change based on Schorch gets a grammar_note: the
+page in Schorch (2004) where the reason for the change is given, with a short summary of that reason. The *_utf8 twins of lex, g_lex and the
 morpheme features are derived from the changed transliteration values.
 """
 import os
@@ -112,7 +112,6 @@ assert not mismatch, (len(mismatch), [(w, F.g_lex.v(w), F.g_lex_utf8.v(w)) for w
 changed_words = set()
 grammar_notes = {}
 SCHORCH = 'Schorch 2004'
-CONSISTENCY = 'No reference to Schorch: ETCBC_parsing made consistent with the other morphological features'
 
 
 def change(node, note=None, **feats):
@@ -250,8 +249,7 @@ for w, note in ((418092, f'{SCHORCH}, p. 165: noun <M/ in the singular, "his peo
     change(w, note=note, lex=('<M', '<M/'), sp=('prep', 'subs'), nu=('NA', 'sg'), gn=('NA', 'm'), g_nme=('', '/'),
            ETCBC_parsing=('<M+W=', '<M/+W='))
 # In 26:20 <MW is the whole phrase: "for his people quarrelled".
-change(L.u(418903, 'phrase')[0], note='No entry in Schorch: phrase type and function follow from <M/ "his people"',
-       typ=('PP', 'NP'), function=('Cmpl', 'Subj'))
+change(L.u(418903, 'phrase')[0], typ=('PP', 'NP'), function=('Cmpl', 'Subj'))
 # Gen 30:3 BRKJ (birrūki): piel infinitive of BRK[ + 1sg instead of "knees"
 change(421174, note=f'{SCHORCH}, p. 178: verbal noun of BRK piel, "for my blessing", not BRK "knee"',
        lex=('BRK/', 'BRK['), sp=('subs', 'verb'), vs=('', 'piel'), vt=('NA', 'inf'), ps=('NA', 'unknown'),
@@ -317,10 +315,8 @@ change(425869, note=f'{SCHORCH}, p. 197: qal active participle, so person is unk
 # ---------------------------------------------------------------------------------------
 # A6 ETCBC_parsing consistency
 # ---------------------------------------------------------------------------------------
-change(411189, note=f'{CONSISTENCY}: stray :a removed from an active participle',
-       ETCBC_parsing=('NS<[/:a', 'NS<[/'))                                         # Gen 12:9, stray :a
-change(423894, note=f'{CONSISTENCY}: missing preformative !J! added',
-       ETCBC_parsing=('JD<[', '!J!(JD<['))                                         # Gen 33:13, missing !J!
+change(411189, ETCBC_parsing=('NS<[/:a', 'NS<[/'))                                         # Gen 12:9, stray :a
+change(423894, ETCBC_parsing=('JD<[', '!J!(JD<['))                                         # Gen 33:13, missing !J!
 
 # Add the stem formative ]] to every parse that lacks it while g_vbs is ]].
 # It goes directly after the preformative, as in !J!]](NGD[.
@@ -331,8 +327,7 @@ for w in F.otype.s('word'):
         assert T.sectionFromNode(w)[0] == 'Genesis'
         m = re.match(r'!.*?!', parse)
         pos = m.end() if m else 0
-        change(w, note=f'{CONSISTENCY}: stem formative ]] added to match g_vbs',
-               ETCBC_parsing=(parse, f'{parse[:pos]}]]{parse[pos:]}'))
+        change(w, ETCBC_parsing=(parse, f'{parse[:pos]}]]{parse[pos:]}'))
         fixed_stem += 1
 # 78 parses lacked ]] in 7.3.0; four of them (409145, 409186, 412115, 422717) are handled above.
 assert fixed_stem == 74, fixed_stem
@@ -340,9 +335,11 @@ assert fixed_stem == 74, fixed_stem
 for w in changed_words:
     nf['mt_feat'][w] = ''
 
-# Every changed word and phrase has a grammar note, and only changed nodes have one.
-changed_phrases = {L.u(412115, 'phrase')[0], L.u(418903, 'phrase')[0]}
-assert set(grammar_notes) == changed_words | changed_phrases, set(grammar_notes) ^ (changed_words | changed_phrases)
+# Only changed nodes have a grammar note, and every note refers to a page in Schorch.
+# The ETCBC_parsing consistency fixes (A6) and the phrase in Gen 26:20 have no such reference, so no note.
+assert set(grammar_notes) <= changed_words | {L.u(412115, 'phrase')[0]}, set(grammar_notes) - changed_words
+assert all(re.search(r'Schorch 2004, pp?\. \d+', note) for note in grammar_notes.values())
+assert len(grammar_notes) == 73, len(grammar_notes)  # 72 words + the phrase in Gen 14:20
 node_features['grammar_note'] = grammar_notes
 
 print(f'{len(changed_words)} words changed')
