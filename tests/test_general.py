@@ -11,7 +11,7 @@ latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)), key=l
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
-    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt vs ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing typ function mt_feat
+    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt vs ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing typ function mt_feat grammar_note
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
@@ -470,3 +470,20 @@ def test_schorch_genesis_corrections(ref, g_cons, index, features):
     w = word_in_verse(ref, g_cons, index)
     assert {f: getattr(F, f).v(w) or '' for f in features} == features
     assert F.mt_feat.v(w) == ''
+    assert F.grammar_note.v(w)
+
+def test_grammar_note_only_in_genesis():
+    assert {T.sectionFromNode(n)[0] for n, _ in F.grammar_note.items()} == {'Genesis'}
+
+def test_grammar_note_cites_a_page():
+    for n, note in F.grammar_note.items():
+        assert re.match(r'Schorch 2004, pp?\. \d+', note) or note.startswith(('No reference to Schorch', 'No entry in Schorch')), (n, note)
+
+@pytest.mark.parametrize('ref, g_cons, index, start', [
+    (('Genesis', 3, 16), '>RBH', 0, 'Schorch 2004, pp. 95-96:'),
+    (('Genesis', 8, 10), 'JSP', 0, 'Schorch 2004, p. 108:'),
+    (('Genesis', 32, 18), 'C>LK', 0, 'Schorch 2004, p. 164 (ad Gen 24:47):'),
+    (('Genesis', 49, 26), 'GB<T', 0, 'Schorch 2004, pp. 239-240:'),
+])
+def test_grammar_note_page(ref, g_cons, index, start):
+    assert F.grammar_note.v(word_in_verse(ref, g_cons, index)).startswith(start)

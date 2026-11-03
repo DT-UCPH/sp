@@ -13,7 +13,8 @@ A6  ETCBC_parsing consistency: the `]]` stem formative where g_vbs is `]]`,
     stray `:a` on active participles, and the missing preformative in Gen 33:13 JD<.
 
 The old value of every changed feature is asserted before it is changed.
-Word nodes that change get mt_feat ''. The *_utf8 twins of lex, g_lex and the
+Word nodes that change get mt_feat ''. Every changed node gets a grammar_note: the page in
+Schorch (2004) where the reason for the change is given, with a short summary of that reason. The *_utf8 twins of lex, g_lex and the
 morpheme features are derived from the changed transliteration values.
 """
 import os
@@ -109,10 +110,16 @@ mismatch = [w for w in F.otype.s('word')
 assert not mismatch, (len(mismatch), [(w, F.g_lex.v(w), F.g_lex_utf8.v(w)) for w in mismatch[:10]])
 
 changed_words = set()
+grammar_notes = {}
+SCHORCH = 'Schorch 2004'
+CONSISTENCY = 'No reference to Schorch: ETCBC_parsing made consistent with the other morphological features'
 
 
-def change(node, **feats):
-    """Change features of a node. Each value is a pair (expected old value, new value)."""
+def change(node, note=None, **feats):
+    """Change features of a node. Each value is a pair (expected old value, new value).
+    note is the grammar_note: where the reason for the change can be found."""
+    if note is not None:
+        assert grammar_notes.setdefault(node, note) == note, (node, grammar_notes[node], note)
     for feat, (old, new) in feats.items():
         current = nf[feat].get(node, '')
         current = '' if current is None else current
@@ -137,123 +144,183 @@ def change(node, **feats):
 # A1 Verbal stem
 # ---------------------------------------------------------------------------------------
 # Gen 3:16 >RBH: RBH piel in divine speech
-change(406906, vs=('hif', 'piel'), g_vbs=(']]', ''), ETCBC_parsing=('!>!]]RBH[', '!>!RBH['))
+change(406906, note=f'{SCHORCH}, pp. 95-96: RBH is read as piel in divine speech (MT hif)', vs=('hif', 'piel'), g_vbs=(']]', ''), ETCBC_parsing=('!>!]]RBH[', '!>!RBH['))
 # Gen 8:10, 25:1 JSP: qal perfect (wayyosef read as perfect)
-for w in (409151, 417966):
-    change(w, vs=('hif', 'qal'), vt=('impf', 'perf'), g_pfm=('!J!', ''), g_vbs=(']]', ''), g_lex=('SP', 'JSP'),
+for w, note in ((409151, f'{SCHORCH}, p. 108: qal perfect instead of MT hif wayyiqtol; with I-Yod verbs the perfect '
+                          'often replaces the wayyiqtol, and JSP is qal in the perfect and hif in the imperfect'),
+                (417966, f'{SCHORCH}, p. 164: qal perfect instead of MT hif wayyiqtol, see p. 108 (ad Gen 8:10)')):
+    change(w, note=note, vs=('hif', 'qal'), vt=('impf', 'perf'), g_pfm=('!J!', ''), g_vbs=(']]', ''), g_lex=('SP', 'JSP'),
            ETCBC_parsing=('!J!]](JSP[', 'JSP['))
 # Gen 18:29 JSP: qal
-change(413855, vs=('hif', 'qal'), g_vbs=(']]', ''), ETCBC_parsing=(']]JSP[', 'JSP['))
+change(413855, note=f'{SCHORCH}, p. 147: qal perfect instead of MT hif, see p. 108 (ad Gen 8:10)', vs=('hif', 'qal'), g_vbs=(']]', ''), ETCBC_parsing=(']]JSP[', 'JSP['))
 # Gen 12:16 HJJVB (ā̊ʾīṭåb), Gen 48:2 JGD: hofal
-change(411298, vs=('hif', 'hof'))
-change(432910, vs=('hif', 'hof'))
+change(411298, note=f'{SCHORCH}, pp. 120-121: passive of the causative stem (hof) instead of MT hif', vs=('hif', 'hof'))
+change(432910, note=f'{SCHORCH}, p. 221: passive, the equivalent of the hof, instead of MT hif', vs=('hif', 'hof'))
 # Gen 21:7 JNJQH: qal active participle
-change(415244, vs=('hif', 'qal'), g_vbs=(']]', ''), ETCBC_parsing=(']]JN&JQ[/H', 'JN&JQ[/H'))
+change(415244, note=f'{SCHORCH}, p. 153: qal active participle fem. sg. preceded by the interjection H (MT hif perfect)',
+       vs=('hif', 'qal'), g_vbs=(']]', ''), ETCBC_parsing=(']]JN&JQ[/H', 'JN&JQ[/H'))
 # qal -> piel:
 #   Gen 21:6 JYXQ (YXQ always piel), 25:24 JML>W (ML> with time expressions), 31:27 NXBT,
 #   32:17 <BRW, 38:17 CLXK (šal'lāk)
 #   and the regular Samaritan piel of CLX, C>L and <BR (gemination or ē-prefix in phono_transcr):
 #   Gen 19:10 JCLXW; C>L in 32:18, 37:15, 43:7 (perfect; the infinitive stays qal), 44:19;
 #   <BR in 18:3, 30:32, 31:52 (x2), 33:14.
-for w in (415235, 418345, 422454, 423350, 426727,
-          414154,
-          423373, 426037, 429838, 430787,
-          413391, 421623, 422963, 422974, 423916):
-    change(w, vs=('qal', 'piel'))
+CLX_NOTE = (f'{SCHORCH}, p. 97 (ad Gen 3:22): CLX is always piel in the Samaritan tradition, except the qal passive '
+            'participle in Gen 32:19 and 49:21; no separate entry for this verse')
+C_L_NOTE = (f'{SCHORCH}, p. 164 (ad Gen 24:47): C>L is always piel in the Samaritan tradition, except the qal '
+            'infinitive in Gen 43:7; no separate entry for this verse')
+BR_NOTE = (f'{SCHORCH}, p. 119 (ad Gen 12:6): in Samaritan Hebrew <BR is more often piel than qal, without difference '
+           'in meaning; no separate entry for this verse')
+for w, note in ((415235, f'{SCHORCH}, p. 153: YXQ is only piel in the Samaritan tradition, see pp. 139-140 (ad Gen 17:17)'),
+                (418345, f'{SCHORCH}, p. 167: ML> is always piel with time expressions'),
+                (422454, f'{SCHORCH}, p. 181: piel of a secondary root NXB instead of MT XB>'),
+                (423350, f'{SCHORCH}, p. 186: piel instead of MT qal, see p. 119 (ad Gen 12:6)'),
+                (426727, f'{SCHORCH}, p. 199: piel instead of MT qal, see p. 97 (ad Gen 3:22)'),
+                (414154, CLX_NOTE),
+                (423373, C_L_NOTE), (426037, C_L_NOTE), (429838, C_L_NOTE), (430787, C_L_NOTE),
+                (413391, BR_NOTE), (421623, BR_NOTE), (422963, BR_NOTE), (422974, BR_NOTE), (423916, BR_NOTE)):
+    change(w, note=note, vs=('qal', 'piel'))
 
 # ---------------------------------------------------------------------------------------
 # A2 Lexemes
 # ---------------------------------------------------------------------------------------
-change(406752, lex=('RWX/', 'RWX=/'), ETCBC_parsing=('RWX/', 'RWX=/'))                      # Gen 3:8
-change(409101, lex=('QLL[', 'QWL['), ETCBC_parsing=('QL(L[W', 'Q(WL[W'))                    # Gen 8:8
-for w in (409145, 409186):                                                                 # Gen 8:10, 8:12
-    change(w, lex=('XLL===[', 'XLL['), ETCBC_parsing=('!J!XL(L===[', '!J!]]XL(L['))
-change(410474, lex=('BLL[', 'BLH['), g_lex=('BL', 'BLH'), g_vbe=('[H', '['),                 # Gen 11:7
+change(406752, note=f'{SCHORCH}, p. 93: RWX= "relief" (Tiberian rewaḥ), not RWX "wind"',
+       lex=('RWX/', 'RWX=/'), ETCBC_parsing=('RWX/', 'RWX=/'))                      # Gen 3:8
+change(409101, note=f'{SCHORCH}, p. 107: root QWL, a younger by-form of QLL, as in Gen 8:11',
+       lex=('QLL[', 'QWL['), ETCBC_parsing=('QL(L[W', 'Q(WL[W'))                    # Gen 8:8
+for w, note in ((409145, f'{SCHORCH}, p. 107: hif of XLL "begin" instead of MT XJL/XWL "wait"'),  # Gen 8:10
+                (409186, f'{SCHORCH}, p. 108: hif of XLL "begin"; JXL is not attested in the Samaritan reading')):  # Gen 8:12
+    change(w, note=note, lex=('XLL===[', 'XLL['), ETCBC_parsing=('!J!XL(L===[', '!J!]]XL(L['))
+change(410474, note=f'{SCHORCH}, pp. 116-117: piel of BLH "destroy" instead of MT BLL "confuse"',
+       lex=('BLL[', 'BLH['), g_lex=('BL', 'BLH'), g_vbe=('[H', '['),                 # Gen 11:7
        ETCBC_parsing=('!N!BL(L[H=', '!N!BLH['))
-change(411712, lex=('>WL[', '>HL['), ETCBC_parsing=('!J!]]>(WL[', '!J!]]>(HL['))            # Gen 13:18
-for w in (413018, 413060):                                                                 # Gen 17:10, 17:13
-    change(w, lex=('NML[', 'MWL['), ETCBC_parsing=('!!(NM&WL[/', '!!MWL[/'))
-change(413613, lex=('>JC/', '>NWC/'), ETCBC_parsing=('>(J&N&WC/JM', '>NWC/JM'))             # Gen 18:16
-change(415525, lex=('RBH=[', 'RBH['), ETCBC_parsing=('RB(H&J=[/', 'RB(H&J[/'))              # Gen 21:20
-change(415526, lex=('QCT=/', 'QCT/'), ETCBC_parsing=('QCT=/', 'QCT/'))
-change(423538, lex=('GW<[', 'GW<=['), ETCBC_parsing=('!J!G(W<[', '!J!G(W<=['))              # Gen 32:26
-change(424905, lex=('NSK[', 'SWK['), ETCBC_parsing=('!J!(NSK[', '!J!S(WK['))                # Gen 35:14
-change(428056, lex=('JQY[', 'QWY==['), ETCBC_parsing=('!J!(JQY[', '!J!Q(WY==['))            # Gen 41:7
-change(433541, lex=('XLB/', 'XLB=/'), ETCBC_parsing=('XLB/', 'XLB=/'))                      # Gen 49:12
-change(433633, lex=('CPR/', 'CWPR/'), ETCBC_parsing=('CPR/', 'C(WPR/'))                     # Gen 49:21
+change(411712, note=f'{SCHORCH}, p. 124: hif of >HL, "he pitched the tent" (MT qal)',
+       lex=('>WL[', '>HL['), ETCBC_parsing=('!J!]]>(WL[', '!J!]]>(HL['))            # Gen 13:18
+for w, note in ((413018, f'{SCHORCH}, p. 138: MWL is always qal in Samaritan Hebrew (MT nif)'),  # Gen 17:10
+                (413060, f'{SCHORCH}, pp. 138-139: both forms of the figura etymologica are qal of MWL, see ad Gen 17:10')):
+    change(w, note=note, lex=('NML[', 'MWL['), ETCBC_parsing=('!!(NM&WL[/', '!!MWL[/'))
+change(413613, note=f'{SCHORCH}, p. 144: ʾenūšam "angels", derived from >NWC, see ad Gen 18:2',
+       lex=('>JC/', '>NWC/'), ETCBC_parsing=('>(J&N&WC/JM', '>NWC/JM'))             # Gen 18:16
+change(415525, note=f'{SCHORCH}, p. 155: qal active participle of RBH "be great" ("a great one of the bow")',
+       lex=('RBH=[', 'RBH['), ETCBC_parsing=('RB(H&J=[/', 'RB(H&J[/'))              # Gen 21:20
+change(415526, note=f'{SCHORCH}, p. 155: QCT "bow" ("a great one of the bow")',
+       lex=('QCT=/', 'QCT/'), ETCBC_parsing=('QCT=/', 'QCT/'))
+change(423538, note=f'{SCHORCH}, pp. 187-188: root GW<, a secondary formation from NG< "touch"',
+       lex=('GW<[', 'GW<=['), ETCBC_parsing=('!J!G(W<[', '!J!G(W<=['))              # Gen 32:26
+change(424905, note=f'{SCHORCH}, p. 195: qal of SWK, a by-form of NSK',
+       lex=('NSK[', 'SWK['), ETCBC_parsing=('!J!(NSK[', '!J!S(WK['))                # Gen 35:14
+change(428056, note=f'{SCHORCH}, p. 202: derived from the root QWY "wake", see ad Gen 9:24',
+       lex=('JQY[', 'QWY==['), ETCBC_parsing=('!J!(JQY[', '!J!Q(WY==['))            # Gen 41:7
+change(433541, note=f'{SCHORCH}, p. 230: XLB= "fat", not XLB "milk"',
+       lex=('XLB/', 'XLB=/'), ETCBC_parsing=('XLB/', 'XLB=/'))                      # Gen 49:12
+change(433633, note=f'{SCHORCH}, p. 235: "shofar" (CWPR)',
+       lex=('CPR/', 'CWPR/'), ETCBC_parsing=('CPR/', 'C(WPR/'))                     # Gen 49:21
 # Gen 31:30: NKSP[ qal instead of KSP[ nifal
-change(422519, lex=('KSP[', 'NKSP['), vs=('nif', 'qal'), g_vbs=(']N]', ''), g_lex=('KSP', 'NKSP'),
+change(422519, note=f'{SCHORCH}, pp. 182-183: qal of the quadriliteral root NKSP, a secondary extension of KSP',
+       lex=('KSP[', 'NKSP['), vs=('nif', 'qal'), g_vbs=(']N]', ''), g_lex=('KSP', 'NKSP'),
        ETCBC_parsing=('!!]N]KSP[/:a', '!!NKSP[/:a'))
-change(422520, lex=('KSP[', 'NKSP['), vs=('nif', 'qal'), g_vbs=(']N]', ''), g_lex=('KSP', 'NKSP'),
+change(422520, note=f'{SCHORCH}, pp. 182-183: qal of the quadriliteral root NKSP, a secondary extension of KSP',
+       lex=('KSP[', 'NKSP['), vs=('nif', 'qal'), g_vbs=(']N]', ''), g_lex=('KSP', 'NKSP'),
        ETCBC_parsing=(']N]KSP[T', 'NKSP[T'))
 # Gen 31:39 >XVNH (ʿāʾīṭinnå): XWV[ hifil instead of XV>[
-change(422717, lex=('XV>[', 'XWV['), ETCBC_parsing=('!>!XV(>[~N+H==', '!>!]]X(WV[~N+H=='))
+change(422717, note=f'{SCHORCH}, p. 183: hif imperfect 1sg of the root XWV + suffix 3fs instead of MT XV>',
+       lex=('XV>[', 'XWV['), ETCBC_parsing=('!>!XV(>[~N+H==', '!>!]]X(WV[~N+H=='))
 
 # ---------------------------------------------------------------------------------------
 # A3 Lexeme + part of speech
 # ---------------------------------------------------------------------------------------
 # Gen 3:9 >JKH "how", without suffix
-change(406779, lex=('>J', '>JKH'), g_lex=('>J', '>JKH'), g_uvf=('~', ''), g_prs=('+KH', ''),
+change(406779, note=f'{SCHORCH}, p. 94: >JKH "how" (Tiberian ʾêkâ), without suffix',
+       lex=('>J', '>JKH'), g_lex=('>J', '>JKH'), g_uvf=('~', ''), g_prs=('+KH', ''),
        prs_ps=('p2', 'NA'), prs_nu=('sg', 'NA'), prs_gn=('m', 'NA'), ETCBC_parsing=('>J~(N+K&H=', '>JKH'))
 # Gen 14:20 MGN/ "shield" (as 15:1). Its phrase becomes a noun phrase.
-change(412115, lex=('MGN[', 'MGN/'), sp=('verb', 'subs'), vs=('hif', ''), vt=('perf', 'NA'), ps=('p3', 'NA'),
+change(412115, note=f'{SCHORCH}, p. 127: noun MGN "shield"; the verb MGN does not exist in the Samaritan tradition',
+       lex=('MGN[', 'MGN/'), sp=('verb', 'subs'), vs=('hif', ''), vt=('perf', 'NA'), ps=('p3', 'NA'),
        gn=('m', 'unknown'), g_vbs=(']]', ''), g_vbe=('[', ''), g_nme=('', '/'), ETCBC_parsing=('MGN[', 'MGN/'))
-change(L.u(412115, 'phrase')[0], typ=('VP', 'NP'), function=('Pred', 'PreC'))
+change(L.u(412115, 'phrase')[0], note=f'{SCHORCH}, p. 127: phrase type and function follow from MGN as a noun',
+       typ=('VP', 'NP'), function=('Pred', 'PreC'))
 # Gen 16:8 >WJ interjection
-change(412714, lex=('>J', '>WJ'), sp=('inrg', 'intj'), ETCBC_parsing=('>&WJ', '>WJ'))
+change(412714, note=f'{SCHORCH}, p. 135: interjection >WJ (Tiberian ʾôy)',
+       lex=('>J', '>WJ'), sp=('inrg', 'intj'), ETCBC_parsing=('>&WJ', '>WJ'))
 # Gen 25:8, 25:17, 26:11, 26:20 <MW: "his people" (ʿammu)
-for w in (418092, 418231, 418739, 418903):
-    change(w, lex=('<M', '<M/'), sp=('prep', 'subs'), nu=('NA', 'sg'), gn=('NA', 'm'), g_nme=('', '/'),
+AMMU_NOTE = f'No entry in Schorch: phono_transcr ʿammu, read as <M/ "his people" as in Gen 25:8 ({SCHORCH}, p. 165)'
+for w, note in ((418092, f'{SCHORCH}, p. 165: noun <M/ in the singular, "his people", confirmed by the targumim'),
+                (418231, f'{SCHORCH}, pp. 166-167: noun <M/ in the singular, "his people", see p. 165 (ad Gen 25:8)'),
+                (418739, AMMU_NOTE), (418903, AMMU_NOTE)):
+    change(w, note=note, lex=('<M', '<M/'), sp=('prep', 'subs'), nu=('NA', 'sg'), gn=('NA', 'm'), g_nme=('', '/'),
            ETCBC_parsing=('<M+W=', '<M/+W='))
 # In 26:20 <MW is the whole phrase: "for his people quarrelled".
-change(L.u(418903, 'phrase')[0], typ=('PP', 'NP'), function=('Cmpl', 'Subj'))
+change(L.u(418903, 'phrase')[0], note='No entry in Schorch: phrase type and function follow from <M/ "his people"',
+       typ=('PP', 'NP'), function=('Cmpl', 'Subj'))
 # Gen 30:3 BRKJ (birrūki): piel infinitive of BRK[ + 1sg instead of "knees"
-change(421174, lex=('BRK/', 'BRK['), sp=('subs', 'verb'), vs=('', 'piel'), vt=('NA', 'inf'), ps=('NA', 'unknown'),
+change(421174, note=f'{SCHORCH}, p. 178: verbal noun of BRK piel, "for my blessing", not BRK "knee"',
+       lex=('BRK/', 'BRK['), sp=('subs', 'verb'), vs=('', 'piel'), vt=('NA', 'inf'), ps=('NA', 'unknown'),
        nu=('du', 'unknown'), gn=('f', 'unknown'), g_pfm=('', '!!'), g_vbe=('', '['), g_nme=('/J', '/'),
        g_prs=('+', '+J'), ETCBC_parsing=('BRK/J=+(J', '!!BRK[/+J'))
 # Gen 49:24 CM/ "name"
-change(433667, lex=('CM', 'CM/'), sp=('advb', 'subs'), nu=('NA', 'sg'), gn=('NA', 'm'), g_nme=('', '/'),
+change(433667, note=f'{SCHORCH}, p. 236: noun CM "name" instead of MT "from there"',
+       lex=('CM', 'CM/'), sp=('advb', 'subs'), nu=('NA', 'sg'), gn=('NA', 'm'), g_nme=('', '/'),
        ETCBC_parsing=('CM', 'CM/'))
 
 # ---------------------------------------------------------------------------------------
 # A4 >T versus >T==
 # ---------------------------------------------------------------------------------------
-change(421526, lex=('>T', '>T=='), ETCBC_parsing=('>T+K=', '>T==+K='))                      # Gen 30:26
-change(424076, lex=('>T', '>T=='), ETCBC_parsing=('>T+H==', '>T==+H=='))                    # Gen 34:2
-change(410972, lex=('>T==', '>T'), ETCBC_parsing=('>T==+M', '>T+M'))                        # Gen 11:31
+change(421526, note=f'{SCHORCH}, p. 179: preposition >T== "with" instead of the MT object marker',
+       lex=('>T', '>T=='), ETCBC_parsing=('>T+K=', '>T==+K='))                      # Gen 30:26
+change(424076, note=f'{SCHORCH}, p. 192: preposition >T== "with", see ad Gen 19:33',
+       lex=('>T', '>T=='), ETCBC_parsing=('>T+H==', '>T==+H=='))                    # Gen 34:2
+change(410972, note=f'{SCHORCH}, p. 118: object marker + suffix after the hif of JY>, instead of MT "with"',
+       lex=('>T==', '>T'), ETCBC_parsing=('>T==+M', '>T+M'))                        # Gen 11:31
 
 # ---------------------------------------------------------------------------------------
 # A5 Person, gender, number
 # ---------------------------------------------------------------------------------------
 # singular -> plural
-change(406714, nu=('sg', 'pl'), ETCBC_parsing=('PRJ/+W=', 'PRJ/(J+W='))                     # Gen 3:6
-change(432574, nu=('sg', 'pl'), g_nme=('/T', '/TJ'), g_uvf=('~J', ''),                       # Gen 47:18
+change(406714, note=f'{SCHORCH}, p. 92: PRJ "fruit" in the plural',
+       nu=('sg', 'pl'), ETCBC_parsing=('PRJ/+W=', 'PRJ/(J+W='))                     # Gen 3:6
+change(432574, note=f'{SCHORCH}, p. 219: GWJH "body" in the plural',
+       nu=('sg', 'pl'), g_nme=('/T', '/TJ'), g_uvf=('~J', ''),                       # Gen 47:18
        ETCBC_parsing=('GWJ(H/T~J+NW', 'GWJ(H/(WTJ+NW'))
-for w in (432576, 432584, 432589, 432596):                                                  # Gen 47:18-19
-    change(w, nu=('sg', 'pl'), ETCBC_parsing=('>DM(H/T+NW', '>DM(H/(WT+NW'))
+ADMH_19 = f'{SCHORCH}, p. 220: >DMH "land" in the plural (three times in Gen 47:19)'
+for w, note in ((432576, f'{SCHORCH}, p. 219: >DMH "land" in the plural'),                  # Gen 47:18
+                (432584, ADMH_19), (432589, ADMH_19), (432596, ADMH_19)):                     # Gen 47:19
+    change(w, note=note, nu=('sg', 'pl'), ETCBC_parsing=('>DM(H/T+NW', '>DM(H/(WT+NW'))
 # plural -> singular
-change(406550, nu=('pl', 'sg'), g_nme=('/J', '/'), g_prs=('+', '+J'),                        # Gen 2:23
+change(406550, note=f'{SCHORCH}, p. 89: <YM "bone" in the singular',
+       nu=('pl', 'sg'), g_nme=('/J', '/'), g_prs=('+', '+J'),                        # Gen 2:23
        ETCBC_parsing=('<YM/J+(J', '<YM/+J'))
-change(428102, nu=('pl', 'sg'), g_nme=('/J', '/'), g_prs=('+', '+J'),                        # Gen 41:9
+change(428102, note=f'{SCHORCH}, p. 203: XV> "sin" in the singular',
+       nu=('pl', 'sg'), g_nme=('/J', '/'), g_prs=('+', '+J'),                        # Gen 41:9
        ETCBC_parsing=('XV>/J+(J', 'XV>/+J'))
-change(431714, nu=('pl', 'sg'), g_nme=('/TJ', '/T'), g_uvf=('', '~J'),                       # Gen 46:7
+change(431714, note=f'{SCHORCH}, pp. 215-216: BT "daughter" in the singular',
+       nu=('pl', 'sg'), g_nme=('/TJ', '/T'), g_uvf=('', '~J'),                       # Gen 46:7
        ETCBC_parsing=('B(T&N/(WTJ+W=', 'B(T&N/T~J+W='))
-for w in (433680, 433684, 433688, 433692, 433698):                                          # Gen 49:25-26
-    change(w, nu=('pl', 'sg'), ETCBC_parsing=('BRK(H/(WT', 'BRK(H/T'))
-change(433699, nu=('pl', 'sg'), g_nme=('/J', '/'), g_uvf=('', '~J'), ETCBC_parsing=('HR/J', 'HR/~J'))  # Gen 49:26
-change(433702, nu=('pl', 'sg'), ETCBC_parsing=('GB<(H/(WT', 'GB<(H/T'))
+BRKH_25 = f'{SCHORCH}, pp. 237-238: BRKH "blessing" in the singular (three times in Gen 49:25)'
+BRKH_26 = f'{SCHORCH}, p. 239: BRKH "blessing" in the singular (twice in Gen 49:26), see pp. 237-238'
+for w, note in ((433680, BRKH_25), (433684, BRKH_25), (433688, BRKH_25),                     # Gen 49:25
+                (433692, BRKH_26), (433698, BRKH_26)):                                       # Gen 49:26
+    change(w, note=note, nu=('pl', 'sg'), ETCBC_parsing=('BRK(H/(WT', 'BRK(H/T'))
+change(433699, note=f'{SCHORCH}, p. 239: HR "mountain" in the singular',
+       nu=('pl', 'sg'), g_nme=('/J', '/'), g_uvf=('', '~J'), ETCBC_parsing=('HR/J', 'HR/~J'))  # Gen 49:26
+change(433702, note=f'{SCHORCH}, pp. 239-240: GB<H "hill" in the singular, as in Deut 33:15',
+       nu=('pl', 'sg'), ETCBC_parsing=('GB<(H/(WT', 'GB<(H/T'))
 # Gen 44:28 >MR: 3rd person masculine singular (qal passive)
-change(430936, ps=('p1', 'p3'), gn=('unknown', 'm'))
+change(430936, note=f'{SCHORCH}, p. 213: qal passive perfect 3ms ("it was said") instead of MT 1sg',
+       ps=('p1', 'p3'), gn=('unknown', 'm'))
 # Gen 8:7 JY> participle: masculine singular, without the stray :a
-change(409080, nu=('unknown', 'sg'), gn=('unknown', 'm'), ETCBC_parsing=('JY>[/:a', 'JY>[/'))
+change(409080, note=f'{SCHORCH}, p. 106: participle (yāṣa) instead of the MT infinitive absolute',
+       nu=('unknown', 'sg'), gn=('unknown', 'm'), ETCBC_parsing=('JY>[/:a', 'JY>[/'))
 # Gen 37:7 NYBH participle: person unknown
-change(425869, ps=('p3', 'unknown'))
+change(425869, note=f'{SCHORCH}, p. 197: qal active participle, so person is unknown',
+       ps=('p3', 'unknown'))
 
 # ---------------------------------------------------------------------------------------
 # A6 ETCBC_parsing consistency
 # ---------------------------------------------------------------------------------------
-change(411189, ETCBC_parsing=('NS<[/:a', 'NS<[/'))                                         # Gen 12:9, stray :a
-change(423894, ETCBC_parsing=('JD<[', '!J!(JD<['))                                         # Gen 33:13, missing !J!
+change(411189, note=f'{CONSISTENCY}: stray :a removed from an active participle',
+       ETCBC_parsing=('NS<[/:a', 'NS<[/'))                                         # Gen 12:9, stray :a
+change(423894, note=f'{CONSISTENCY}: missing preformative !J! added',
+       ETCBC_parsing=('JD<[', '!J!(JD<['))                                         # Gen 33:13, missing !J!
 
 # Add the stem formative ]] to every parse that lacks it while g_vbs is ]].
 # It goes directly after the preformative, as in !J!]](NGD[.
@@ -264,7 +331,8 @@ for w in F.otype.s('word'):
         assert T.sectionFromNode(w)[0] == 'Genesis'
         m = re.match(r'!.*?!', parse)
         pos = m.end() if m else 0
-        change(w, ETCBC_parsing=(parse, f'{parse[:pos]}]]{parse[pos:]}'))
+        change(w, note=f'{CONSISTENCY}: stem formative ]] added to match g_vbs',
+               ETCBC_parsing=(parse, f'{parse[:pos]}]]{parse[pos:]}'))
         fixed_stem += 1
 # 78 parses lacked ]] in 7.3.0; four of them (409145, 409186, 412115, 422717) are handled above.
 assert fixed_stem == 74, fixed_stem
@@ -272,9 +340,18 @@ assert fixed_stem == 74, fixed_stem
 for w in changed_words:
     nf['mt_feat'][w] = ''
 
+# Every changed word and phrase has a grammar note, and only changed nodes have one.
+changed_phrases = {L.u(412115, 'phrase')[0], L.u(418903, 'phrase')[0]}
+assert set(grammar_notes) == changed_words | changed_phrases, set(grammar_notes) ^ (changed_words | changed_phrases)
+node_features['grammar_note'] = grammar_notes
+
 print(f'{len(changed_words)} words changed')
 
 meta_data = {f: read_metadata(os.path.join(old_location, f'{f}.tf')) for f in feature_names}
+meta_data['grammar_note'] = {
+    **{k: v for k, v in meta_data['mt_feat'].items() if k != 'description'},
+    'description': 'reason for a correction in version 7.4.0, with the page in Schorch, Die Vokale des Gesetzes I (2004)',
+}
 
 TF.save(
     nodeFeatures=node_features,
