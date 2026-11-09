@@ -11,7 +11,7 @@ latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)), key=l
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
-    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt vs ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing typ function
+    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt vs ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing typ function mt_feat grammar_note
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
@@ -426,3 +426,65 @@ def test_etcbc_parsing_lex():
 def test_exodus_19_24_lk():
     w = L.d(T.nodeFromSection(('Exodus', 19, 24)), 'word')[4]
     assert (F.g_cons.v(w), F.lex.v(w)) == ('LK', 'HLK[')
+
+def test_etcbc_parsing_stem_formative():
+    #The stem formative in ETCBC_parsing (e.g. ]] or ]H]) must agree with g_vbs
+    def stem(w):
+        m = re.search(r'\][^\[\]]*\]', F.ETCBC_parsing.v(w))
+        return re.sub(r'\(.|&', '', m.group(0)) if m else ''
+    assert all({stem(w) == (F.g_vbs.v(w) or '') for w in F.otype.s('word')})
+
+def test_participles_person_unknown():
+    assert all({F.ps.v(w) == 'unknown' for w in F.otype.s('word') if F.vt.v(w) in {'ptca', 'ptcp'}})
+
+def test_active_participles_no_state_marker():
+    assert all({not F.ETCBC_parsing.v(w).endswith(':a') for w in F.otype.s('word') if F.vt.v(w) == 'ptca'})
+
+#Schorch, Die Vokale des Gesetzes I, Genesis (data version 7.4.0)
+def word_in_verse(ref, g_cons, index=0):
+    return [w for w in L.d(T.nodeFromSection(ref), 'word') if F.g_cons.v(w) == g_cons][index]
+
+@pytest.mark.parametrize('ref, g_cons, index, features', [
+    (('Genesis', 3, 16), '>RBH', 0, {'lex': 'RBH[', 'vs': 'piel', 'g_vbs': '', 'ETCBC_parsing': '!>!RBH['}),
+    (('Genesis', 8, 10), 'JSP', 0, {'vs': 'qal', 'vt': 'perf', 'g_pfm': '', 'ETCBC_parsing': 'JSP['}),
+    (('Genesis', 18, 3), 'T<BRW', 0, {'vs': 'piel'}),
+    (('Genesis', 48, 2), 'JGD', 0, {'vs': 'hof'}),
+    (('Genesis', 8, 8), 'QLW', 0, {'lex': 'QWL['}),
+    (('Genesis', 17, 10), 'MWL', 0, {'lex': 'MWL[', 'ETCBC_parsing': '!!MWL[/'}),
+    (('Genesis', 31, 30), 'NKSPT', 0, {'lex': 'NKSP[', 'vs': 'qal', 'g_vbs': ''}),
+    (('Genesis', 31, 39), '>XVNH', 0, {'lex': 'XWV[', 'vs': 'hif'}),
+    (('Genesis', 3, 9), '>JKH', 0, {'lex': '>JKH', 'g_prs': '', 'prs_ps': 'NA'}),
+    (('Genesis', 14, 20), 'MGN', 0, {'lex': 'MGN/', 'sp': 'subs', 'vs': '', 'vt': 'NA'}),
+    (('Genesis', 25, 8), '<MW', 0, {'lex': '<M/', 'sp': 'subs', 'prs_ps': 'p3'}),
+    (('Genesis', 30, 3), 'BRKJ', 0, {'lex': 'BRK[', 'sp': 'verb', 'vs': 'piel', 'vt': 'inf', 'g_prs': '+J'}),
+    (('Genesis', 49, 24), 'CM', 0, {'lex': 'CM/', 'sp': 'subs'}),
+    (('Genesis', 30, 26), '>TK', 0, {'lex': '>T=='}),
+    (('Genesis', 11, 31), '>TM', 0, {'lex': '>T'}),
+    (('Genesis', 2, 23), '<YMJ', 0, {'nu': 'sg', 'g_nme': '/', 'g_prs': '+J'}),
+    (('Genesis', 47, 19), '>DMTNW', 0, {'nu': 'pl'}),
+    (('Genesis', 49, 25), 'BRKT', 0, {'nu': 'sg'}),
+    (('Genesis', 44, 28), '>MR', 0, {'ps': 'p3', 'gn': 'm'}),
+    (('Genesis', 33, 13), 'JD<', 0, {'ETCBC_parsing': '!J!(JD<['}),
+])
+def test_schorch_genesis_corrections(ref, g_cons, index, features):
+    w = word_in_verse(ref, g_cons, index)
+    assert {f: getattr(F, f).v(w) or '' for f in features} == features
+    assert F.mt_feat.v(w) == ''
+    # Gen 33:13 JD< is a parsing consistency fix without a reference to Schorch, so it has no note.
+    assert bool(F.grammar_note.v(w)) == (ref != ('Genesis', 33, 13))
+
+def test_grammar_note_only_in_genesis():
+    assert {T.sectionFromNode(n)[0] for n, _ in F.grammar_note.items()} == {'Genesis'}
+
+def test_grammar_note_cites_a_page():
+    for n, note in F.grammar_note.items():
+        assert re.search(r'Schorch 2004, pp?\. \d+', note), (n, note)
+
+@pytest.mark.parametrize('ref, g_cons, index, start', [
+    (('Genesis', 3, 16), '>RBH', 0, 'Schorch 2004, pp. 95-96:'),
+    (('Genesis', 8, 10), 'JSP', 0, 'Schorch 2004, p. 108:'),
+    (('Genesis', 32, 18), 'C>LK', 0, 'Schorch 2004, p. 164 (ad Gen 24:47):'),
+    (('Genesis', 49, 26), 'GB<T', 0, 'Schorch 2004, pp. 239-240:'),
+])
+def test_grammar_note_page(ref, g_cons, index, start):
+    assert F.grammar_note.v(word_in_verse(ref, g_cons, index)).startswith(start)
