@@ -1,0 +1,13 @@
+{
+ "pdf": "tal_florentin_SP.pdf",
+ "title": "The Samaritan Pentateuch: An English Translation with a Parallel Annotated Hebrew Text",
+ "author": "Moshe Florentin & Abraham Tal",
+ "sha256": "db109c6b620965c36f7b818ad16846ec7b13b8f8e79ebbbb63131bb2665f8d7a",
+ "pymupdf_version": "1.28.2",
+ "pdf_pages_used": [
+  104,
+  915
+ ],
+ "n_verses": 5833,
+ "n_graphic_words": 82446
+}

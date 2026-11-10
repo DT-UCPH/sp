@@ -36,6 +36,16 @@ The text was provided by the Samaritanus-project based at Martin-Luther-Universi
 
 We have made a small change in the original verse division. Instead of assigning the additions after Genesis 30:36 to the verse numbers 36a, 36b, and 36 c, we group these under verse 36.
 
+### Variants from the Tal & Florentin edition
+
+From version 7.5.0, the dataset contains the readings of Moshe Florentin and Abraham Tal, *The Samaritan Pentateuch: An English Translation with a Parallel Annotated Hebrew Text* (Open Book Publishers, 2024, https://doi.org/10.11647/OBP.0415, licensed [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)), wherever its Hebrew text differs from ours. T&F print MS Nablus 6 (1204 CE), with gaps filled from other manuscripts. Our text is not changed: the T&F readings are annotations on the words, in the features [`var_ft_utf8`](docs/var_ft_utf8.md), [`var_ft`](docs/var_ft.md), [`var_ft_type`](docs/var_ft_type.md) and [`var_ft_span`](docs/var_ft_span.md), and different verse numbers are in [`verse_ft`](docs/verse_ft.md). There are 1,074 differences in 927 verses; most are plene/defective spellings. Example search for all words where T&F have an extra conjunction or lack one:
+
+```
+word var_ft_type=conjunction_waw
+```
+
+The comparison scripts are in [scripts/tal_florentin](scripts/tal_florentin).
+
 ## Get started
 
 This data can be processed by Text-Fabric.

@@ -1,0 +1,9 @@
+{
+ "tf_dir": "../../tf/7.4.1",
+ "dataset_version": "7.4.1",
+ "git_commit": "5c368a7f7b0836cfeb237a1f3346ba52db971394",
+ "text_fabric_version": "13.1.1",
+ "manuscripts": "MS Dublin Chester Beatty Library 751 (Gen 1-Deut 32:36) + MS Garizim 1 (Deut 32:36b-34)",
+ "n_verses": 5841,
+ "n_graphic_words": 82430
+}
