@@ -10,7 +10,7 @@
 @valueType=str
 @version=7.4.1
 @writtenBy=Text-Fabric
-@dateWritten=2026-11-04T18:08:03+00:00Z
+@dateWritten=2026-11-12T08:39:17+00:00Z
 
 1-399393	sign
 399394-399398	book

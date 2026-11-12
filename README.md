@@ -77,7 +77,7 @@ Version
 - 7.2.12 October 2026 addition of phonetic transcription, addition of verbal stem (only Genesis)
 - 7.3.0 October 2026 text correction in Exodus 19:24 (K corrected to LK), addition of missing g_lex of H in Genesis 17:13.
 - 7.4.0 November 2026 corrections in Genesis following Schorch, *Die Vokale des Gesetzes* I (2004): verbal stem, lexeme, part of speech, person/gender/number, and consistency of ETCBC_parsing with g_vbs (see scripts/make_7_4_0.py). The new feature grammar_note gives, for every changed word, the page in Schorch where the reason for the change is found.
-- 7.4.1 November 2026 phono_transcr: 429 of the 1,099 unreadable glyphs (U+FFFD) from the decoding of the Ben-Hayyim scan filled in from identical words elsewhere (see scripts/make_7_4_1.py). The other 670 are listed with their place in the scan in review/phono_fffd_7.4.1.tsv.
+- 7.4.1 November 2026 phono_transcr: 429 of the 1,099 unreadable glyphs (U+FFFD) from the decoding of the Ben-Hayyim scan filled in from identical words elsewhere (see scripts/make_7_4_1.py). The other 670 were read by eye in the scan and filled in from the column 'reading' of review/phono_fffd_7.4.1.tsv; phono_transcr now has no U+FFFD left. Errors noticed in neighbouring words are listed in review/phono_fffd_7.4.1_side.tsv for a later version.
 
 ### Features
 Currently, the following features exist for all books.

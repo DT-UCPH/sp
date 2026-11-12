@@ -12,5 +12,5 @@
 @source=Stefan Schorch in colloboration with Evelyn Burkhardt, Ulrike Hirschfelder, Irina Wandrey and József Zsengellér
 @version=7.4.1
 @writtenBy=Text-Fabric
-@dateWritten=2026-11-04T18:08:05+00:00Z
+@dateWritten=2026-11-12T08:39:19+00:00Z
 

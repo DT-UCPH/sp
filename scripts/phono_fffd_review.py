@@ -114,6 +114,10 @@ if __name__ == '__main__':
 
     os.makedirs(os.path.join(ROOT_DIR, 'review'), exist_ok=True)
     out = os.path.join(ROOT_DIR, 'review', f'phono_fffd_{VERSION}.tsv')
+    if os.path.exists(out):
+        with open(out, encoding='utf8', newline='') as f:
+            read_by_eye = sum(bool(row.get('reading')) for row in csv.DictReader(f, delimiter='\t'))
+        assert not read_by_eye, f'{out} has {read_by_eye} manual readings; not overwriting it'
     found = 0
     with open(out, 'w', encoding='utf8', newline='') as f:
         writer = csv.writer(f, delimiter='\t', lineterminator='\n')

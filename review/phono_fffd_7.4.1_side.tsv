@@ -51,3 +51,17 @@ Genesis	(node 426444)	JR>	wyēre	yēre (w duplicated from prefix)	error	scan age
 Genesis	(node 431835)	BNJ	ā̊ni	bā̊ni	error	scan agent
 Genesis	(node 414062)	LJLH	iīla	līla	error	scan agent
 Genesis	(7 rows: 409023 411968 412539 420221 413374 433484 409979)	prefix + noun	a + ttība etc.	at + tība etc.	boundary	scan agent
+Deuteronomy	10:12	KL	al	kal	error	scan agent (B node 556: afkal)
+Deuteronomy	14:25	KSP	ā̊səf	kā̊səf	error	scan agent (B node 572: akkā̊səf)
+Deuteronomy	14:26	KL	al	kal	error	scan agent (B node 573: afkal)
+Deuteronomy	15:10	KL	al	kal	error	scan agent (B node 579: afkal)
+Deuteronomy	16:14	C<RJK	ārək	šārək	error	scan agent (B node 592: afšārək)
+Deuteronomy	16:18	KL	al	kal	error	scan agent (B node 593: afkal)
+Deuteronomy	18:6	KL	al	kal	error	scan agent (B node 606: afkal)
+Deuteronomy	21:5	CM	am	šam	error	scan agent (B node 611: afšam)
+Deuteronomy	21:17	KL	al	kal	error	scan agent (B node 613: afkal)
+Deuteronomy	23:25	KRM	ā̊rəm	kā̊rəm	error	scan agent (B node 620: afkā̊rəm)
+Deuteronomy	24:19	KL	al	kal	error	scan agent (B node 625: afkal)
+Deuteronomy	28:11	B + PRJ	b + ā̊fīri	bā̊ + fīri	boundary	row 633 (user: keep ā̊fīri in 7.4.1, align later; cf. B=bā̊ PRJ=fīri earlier in verse)
+Deuteronomy	28:40	KL	al	kal	error	scan agent (B node 640: afkal)
+Deuteronomy	28:52	KL	al	kal	error	scan agent (B node 641: afkal)

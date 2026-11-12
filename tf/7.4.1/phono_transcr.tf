@@ -11,7 +11,7 @@
 @valueType=str
 @version=7.4.1
 @writtenBy=Text-Fabric
-@dateWritten=2026-11-04T18:08:03+00:00Z
+@dateWritten=2026-11-12T08:39:17+00:00Z
 
 405427	bā̊
 rā̊šət
@@ -1721,7 +1721,7 @@ qəṣ
 yā̊məm
 w
 yībi
-qen�
+qen
 mi
 fīri
 ā̊
@@ -1730,7 +1730,7 @@ mā̊'nā
 al
 šēmå
 w
-ē�bəl
+ēbəl
 ībi
 gam
 ū
@@ -1835,7 +1835,7 @@ yādātti
 šūmər
 ʿāʾi
 ā̊nā̊ki
-�
+w
 yā̊ʾūmər
 mā̊
 ʿaššītå
@@ -1943,7 +1943,7 @@ yiṣṣå
 qen
 mi
 l
-�ni
+fā̊ni
 šēmå
 w
 yā̊šåb
@@ -2140,7 +2140,7 @@ bā̊rå
 ēluwwəm
 ā̊dåm
 a
-1�dēmot
+fdēmot
 ēluwwəm
 ʿāša
 ūtu
@@ -2168,7 +2168,7 @@ mā̊t
 šēna
 w
 yūləd
-�
+af
 dēmūtu
 wk
 ā̊ṣā̊lā̊mu
@@ -2471,7 +2471,7 @@ yētā̊llåk
 īnok
 at
 ā̊
-ʾēl�wwəm
+ʾēluwwəm
 w
 īninnu
 kī
@@ -2936,7 +2936,7 @@ kal
 b
 ā̊rəṣ
 yigba
-�
+w
 īqimti
 it
 bērīti
@@ -3609,12 +3609,12 @@ yom
 w
 tanna
 a
-�ība
+ttība
 b
 ā̊dəš
 aš
 šē'bī
-�
+af
 ā̊'bā
 ʿā̊šår
 yom
@@ -3927,7 +3927,7 @@ rūməš
 al
 mašfūttīyyimma
 yā̊ṣā̊ʾu
-man�
+man
 at
 tība
 w
@@ -4070,7 +4070,7 @@ yåm
 ab
 yedkimma
 nā̊tåttiyyu
-k�l
+kal
 rēməš
 ēšår
 ū
@@ -4408,7 +4408,7 @@ w
 yēre
 ā̊m
 ā̊bi
-kā̊'nā�
+kā̊'nān
 it
 irbåt
 ā̊biyyu
@@ -4427,7 +4427,7 @@ yēfət
 it
 aš
 šā̊mfla
-�
+w
 yā̊šīmu
 ʿal
 šēkåm
@@ -4518,7 +4518,7 @@ mā̊ʾot
 šēna
 w
 ēmiššəm
-�ēna
+šēna
 w
 yā̊måt
 w
@@ -4565,7 +4565,7 @@ kittəm
 w
 rūdā̊nəm
 miy
-�illa
+yilla
 nibbårrā̊du
 ayyi
 ag
@@ -4644,7 +4644,7 @@ w
 w
 ikkåd
 w
-�allinna
+kallinna
 b
 ā̊rəṣ
 šinniyyår
@@ -4694,7 +4694,7 @@ it
 naftāʾəm
 w
 it
-fi�rā̊səm
+fitrā̊səm
 w
 it
 kaslāʾəm
@@ -4708,7 +4708,7 @@ it
 kaftarrəm
 w
 kā̊'nān
-yall�
+yalləd
 it
 ṣīdon
 bā̊kūru
@@ -4744,19 +4744,19 @@ w
 it
 ā̊
 rbaddi
-�
+w
 wit
 aṣ
 ṣåmri
 w
-�it
+it
 ā̊
 :mitti
 w
 ā̊ʾər
 nā̊fā̊ṣa
 maš'fēt
-�
+ak
 kā̊nānni
 w
 yā̊ʾi
@@ -4861,7 +4861,7 @@ it
 ilmūdåd
 w
 it
-šā̊ləf�
+šā̊ləf
 w
 it
 iṣrīmot
@@ -4897,7 +4897,7 @@ it
 yūbåb
 kal
 illa
-bā̊ni�
+bā̊ni
 yiqṭån
 w
 yā̊ʾi
@@ -4931,7 +4931,7 @@ guwwīyyimma
 miyy
 illa
 nibbårrā̊du
-ayy�
+ayyi
 ag
 guwwəm
 b
@@ -5089,7 +5089,7 @@ it
 ā̊'
 ʾīr
 w
-it�
+it
 am
 magdål
 ʿal
@@ -5153,7 +5153,7 @@ yā̊mi
 šem
 šaš
 mā̊ʾot
-�ēna
+šēna
 w
 yā̊måt
 w
@@ -5240,7 +5240,7 @@ yā̊mi
 šēlåš
 w
 šēlā̊šəm
-�ēna
+šēna
 w
 arba
 mā̊ʾot
@@ -5261,7 +5261,7 @@ yūləd
 it
 fā̊låg
 w
-�
+yī
 ēbår
 ā̊ʾūri
 ūlīdu
@@ -5298,7 +5298,7 @@ fā̊låg
 w
 mā̊t
 šēna
-�
+w
 yūləd
 it
 rēʾu
@@ -5356,14 +5356,14 @@ it
 šēnəm
 w
 mā̊t
-�ēna
+šēna
 w
 yūləd
 bā̊nəm
 w
 bā̊not
 w
-yā̊y�
+yā̊yyu
 kal
 yā̊mi
 rēʾu
@@ -5384,7 +5384,7 @@ w
 mā̊t
 šēna
 w
-�ləd
+yūləd
 it
 nāʾor
 w
@@ -6554,7 +6554,7 @@ sā̊dəm
 w
 yāba
 a
-�ləṭ
+ffēləṭ
 w
 yaggəd
 l
@@ -7125,7 +7125,7 @@ it
 w
 it
 a
-�rizzi
+ffērizzi
 w
 it
 ar
@@ -7559,7 +7559,7 @@ nā̊tåtti
 låk
 w
 al
-zē'r�
+zē'rāk
 ā̊ʾūrək
 it
 ā̊rəṣ
@@ -7598,7 +7598,7 @@ bērīti
 tišmā̊ru
 bīni
 w
-bi�imma
+binkimma
 w
 bin
 zē'rāk
@@ -7786,7 +7786,7 @@ zērāʾu
 w
 al
 yišmāʾəl
-�āmāttək
+šāmāttək
 inna
 barrikti
 ūtu
@@ -7830,7 +7830,7 @@ w
 yēkalla
 al
 dabbər
-it�
+ittu
 w
 yāl
 ēluwwəm
@@ -7854,7 +7854,7 @@ kal
 maqnåt
 kasfu
 kal
-z�år
+zā̊kår
 b
 ēnā̊ši
 bit
@@ -7960,7 +7960,7 @@ yā̊råṣ
 al
 qērā̊ttimma
 m
-i�ta
+iffēta
 ā̊
 ʾol
 w
@@ -8030,7 +8030,7 @@ mā̊ʾēri
 sīm
 qāma
 sā̊lət
-lū�i
+lūši
 w
 ēši
 iggot
@@ -8254,7 +8254,7 @@ bītu
 w
 šā̊mā̊ru
 dērək
-šēmå�
+šēmå
 l
 āššot
 ṣā̊dīqa
@@ -8502,7 +8502,7 @@ lā̊
 b
 ēbor
 ā̊
-ʾi�rəm
+ʾišrəm
 w
 yā̊ʾūmər
 al
@@ -8549,7 +8549,7 @@ am
 mā̊lā̊kkəm
 sidma
 b
-ērə�
+ērəb
 w
 loṭ
 yēšəb
@@ -8648,7 +8648,7 @@ ayye
 ʾēnūšəm
 ēšår
 bāʾu
-īlək�
+īlək
 al
 iīla
 ūṣīyyimma
@@ -9159,7 +9159,7 @@ loṭ
 mit
 tok
 ā̊
-:�a
+:fīka
 b
 ā̊fā̊ku
 it
@@ -9192,7 +9192,7 @@ yā̊šåb
 b
 ā̊mā:ra
 ū
-��
+w
 šitti
 bā̊nūto
 immu
@@ -10586,7 +10586,7 @@ yiqqa
 it
 am
 mā̊kkēlət
-�l'
+al'
 šā̊ṭ
 it
 bēnu
@@ -11215,7 +11215,7 @@ w
 yā̊qåm
 aš
 šā̊di
-�w
+w
 am
 mā:ra
 ēšår
@@ -11237,7 +11237,7 @@ bay
 yā̊məm
 w
 šēmå
-b�rək
+barrək
 it
 åb'rā̊m
 bak
@@ -11530,7 +11530,7 @@ al
 yē'ṣā̊q
 w
 bā
-idda�
+idda
 kī
 ʿaššītå
 ēsəd
@@ -11653,7 +11653,7 @@ w
 mašti
 lā
 w
-mā̊rrə�
+mā̊rrəš
 al'
 dāt
 ā̊
@@ -11887,7 +11887,7 @@ rēgā̊li
 ēšår
 ittu
 w
-�wwā̊šåm
+yuwwā̊šåm
 al
 fā̊no
 l
@@ -12093,7 +12093,7 @@ al
 gā̊mā̊lək
 ēšāʾəb
 ī
-�
+ā̊
 ʾišša
 ēšår
 ū'kī
@@ -12136,7 +12136,7 @@ w
 tūrəd
 kidda
 miy
-yāliy�ya
+yāliyya
 w
 tā̊ʾūmər
 šā̊tå
@@ -12224,7 +12224,7 @@ lā̊
 aggīdu
 lī
 w
-ē�na
+ēfā̊na
 ʿal
 ay
 yammən
@@ -12755,7 +12755,7 @@ bā̊ni
 yišmāʾəl
 af
 šēmūtimma
-�al
+al
 tūldūtimma
 bā̊kor
 yišmāʾəl
@@ -13042,7 +13042,7 @@ kī
 kan
 qā̊rå
 šēmu
-ē�dom
+ēdom
 w
 yā̊ʾūmər
 yā̊:qob
@@ -13730,7 +13730,7 @@ ar'bīm
 w
 yiqqa
 išša
-�t
+it
 yā̊ʾūdət
 bat
 bā̊ʾēri
@@ -13758,7 +13758,7 @@ kī
 zā̊qån
 yē'ṣā̊q
 w
-tā̊kīyyin�a
+tā̊kīyyinna
 īno
 mir
 rā̊ʾot
@@ -13935,7 +13935,7 @@ inna
 šāʾər
 w
 ā̊nā̊ki
-īš�
+īš
 ā̊låq
 ūli
 yēmūšinni
@@ -14160,7 +14160,7 @@ miṣ
 bēni
 al'mān
 tēbarrēkåk
-n�i
+nafši
 w
 yaggəš
 lū
@@ -14198,7 +14198,7 @@ yēbarrēkēʾu
 w
 yā̊ʾūmər
 rēʾu
-r�
+rī
 bēni
 kā̊
 ri
@@ -14409,7 +14409,7 @@ l
 īšåb
 an
 gēbər
-ša�mtiyyu
+šamtiyyu
 låk
 w
 it
@@ -14539,8 +14539,8 @@ tā̊ʾūmər
 īlo
 inna
 īšåb
-ʿ�ā̊yåk
-mit'nām�
+ʿā̊yåk
+mit'nām
 låk
 l
 ā̊rā̊gåk
@@ -14807,7 +14807,7 @@ yallən
 kī
 bā
 a
-�šīməš
+ššīməš
 w
 yiqqa
 miyy
@@ -15152,7 +15152,7 @@ yā̊ʾūmər
 lēmma
 ā̊
 yādāttimma
-it�
+it
 lā̊bån
 ban
 nāʾor
@@ -15327,7 +15327,7 @@ lū
 w
 yībiyyēʾu
 al
-bī�
+bītu
 w
 yēsā̊fər
 lal
@@ -15362,7 +15362,7 @@ ki
 ʿāʾi
 åttå
 w
-ā̊b�ådtā̊ni
+ā̊bådtā̊ni
 innåm
 aggīda
 lī
@@ -15822,7 +15822,7 @@ tā̊ʾūmər
 rāʾəl
 niftā̊li
 ēluwwəm
-niffā̊t�lti
+niffā̊tålti
 am
 ʿāʾūti
 w
@@ -15889,7 +15889,7 @@ bā̊not
 w
 tiqra
 it
-�mu
+šēmu
 ā̊šər
 w
 yā̊låk
@@ -16272,7 +16272,7 @@ lā̊bån
 w
 an
 lā̊
-yē��yi
+yēyyi
 kā̊
 dēbā̊rək
 w
@@ -16415,7 +16415,7 @@ loz
 w
 armon
 w
-yē�ṣål
+yēfā̊ṣål
 bēmma
 fā̊ṣā̊lot
 lā̊bēnot
@@ -16457,7 +16457,7 @@ l
 ištot
 w
 yā̊minna
-a�
+aṣ
 ṣēʾon
 ʿal
 am
@@ -16486,7 +16486,7 @@ w
 kal
 ūm
 af
-�ʾon
+ṣēʾon
 lā̊bån
 w
 yiššåt
@@ -16496,7 +16496,7 @@ al
 baddu
 w
 lā̊
-šā̊ti�a
+šā̊timma
 ʿal
 ṣēʾon
 lā̊bån
@@ -16744,7 +16744,7 @@ mā̊'lā̊k
 ʾēluwwəm
 b
 ēlom
-yā̊:qo�
+yā̊:qob
 w
 ēʾūmər
 innā̊ni
@@ -17820,7 +17820,7 @@ w
 mik
 kal
 ā̊
-�:mət
+:mət
 ēšår
 ʿaššītå
 at
@@ -18130,7 +18130,7 @@ kåf
 yirku
 w
 tā̊qå
-k�
+kåf
 yērək
 yā̊:qob
 b
@@ -18253,7 +18253,7 @@ af
 kåf
 yērək
 yā̊:qob
-�
+af
 gəd
 an
 nēši
@@ -18632,7 +18632,7 @@ il
 ēluwwi
 yišrā̊ʾəl
 w
-tiṣ�ṣå
+tiṣṣå
 dīnå
 bat
 liyyå
@@ -18881,7 +18881,7 @@ l
 lū
 ʿārillå
 kī
-ērīfa�
+ērīfa
 ī
 lā̊nu
 ak
@@ -19079,7 +19079,7 @@ b
 kā̊ʾēbəm
 w
 yiqqāʾu
-šēn���
+šēni
 bā̊ni
 yā̊:qob
 šē'mūn
@@ -19134,7 +19134,7 @@ yibbā̊zu
 ṭåmmāʾu
 ʿāʾūtimma
 it
-�ʾūnimma
+ṣēʾūnimma
 w
 it
 båqrimma
@@ -19190,7 +19190,7 @@ bak
 kā̊nānni
 w
 b
-a�rizzi
+affērizzi
 w
 ā̊ni
 mēti
@@ -19604,13 +19604,13 @@ magdål_ʿā̊dår
 w
 yā̊ʾi
 b
-aš�ən
-yiš�ā̊ʾəl
+aškən
+yišrā̊ʾəl
 b
 ā̊rəṣ
 ā̊'
 ʾī
-�
+w
 yā̊låk
 rēʾūbən
 w
@@ -19636,7 +19636,7 @@ rēʾūbən
 w
 šē'mūn
 w
-l�i
+lībi
 w
 yēʾūda
 w
@@ -19802,7 +19802,7 @@ w
 it
 kal
 nafšot
-bītu�
+bītu
 w
 it
 maqnēʾu
@@ -19822,7 +19822,7 @@ kā̊'nān
 w
 yā̊låk
 miy
-yā̊�əṣ
+yā̊rəṣ
 kā̊'nān
 mif
 fā̊ni
@@ -20976,7 +20976,7 @@ yā̊qā̊mu
 kal
 bā̊no
 w
-ka�l
+kal
 bā̊nūto
 al
 nāʾēmu
@@ -21030,7 +21030,7 @@ yåṭ
 w
 šēmu
 ʿayyā̊re
-�
+w
 wyēre
 šamma
 yēʾūda
@@ -21068,7 +21068,7 @@ it
 ūnån
 w
 tā̊səf
-�d
+ūd
 w
 tā̊låd
 ban
@@ -21255,8 +21255,8 @@ kī
 gā̊dål
 šīlå
 w
-�
-lā̊�
+ī
+lā̊
 nētīna
 lū
 l
@@ -21838,7 +21838,7 @@ w
 īn
 īēš
 miy
-yēnā̊�i
+yēnā̊ši
 ab
 bət
 šamma
@@ -22455,7 +22455,7 @@ w
 yā̊ʾi
 b
 ayyom
-a�
+aš
 šēlīši
 yom
 ūlēdət
@@ -22634,7 +22634,7 @@ ad
 daqqot
 it
 šā̊ba
-a�
+aš
 šabbēləm
 ab
 baryot
@@ -23617,7 +23617,7 @@ yā̊:qob
 al
 bā̊no
 lēmå
-�ittīrēʾu
+tittīrāʾu
 w
 yā̊ʾūmər
 inna
@@ -23656,7 +23656,7 @@ binyā̊məm
 yūsəf
 lā̊
 šalla
-yā̊:q�b
+yā̊:qob
 at
 ʿāʾo
 kī
@@ -23715,7 +23715,7 @@ it
 w
 yakkīrimma
 w
-yitn�kkår
+yitnakkår
 īlīyyimma
 w
 yēdabbər
@@ -23723,7 +23723,7 @@ yēdabbər
 qāšot
 w
 yā̊ʾūmər
-īlīyy�ma
+īlīyyimma
 miy
 yā̊'ʾīn
 bāttimma
@@ -23738,7 +23738,7 @@ išbår
 w
 yakkər
 yūsəf
-�it
+it
 ʿāʾo
 w
 imma
@@ -23786,11 +23786,11 @@ kā̊nəm
 lā̊
 ayyu
 ʿā̊bā̊dək
-�amraggēləm
+amraggēləm
 w
 yā̊ʾūmər
 īlīyyimma
-�lā
+lā̊
 kī
 irbåt
 ā:
@@ -23834,7 +23834,7 @@ dabbirti
 l
 īmor
 amraggēləm
-attim�ma
+attimma
 af
 zēʾot
 tibbā̊nu
@@ -23931,7 +23931,7 @@ attimma
 līku
 w
 ībiyyu
-�t
+it
 šā̊bår
 rā:bon
 battīkimma
@@ -23941,9 +23941,9 @@ it
 aq
 qā̊ṭån
 tībiyyon
-īli�
+īli
 w
-y�ā̊:�ēnu
+yā̊:mēnu
 dēbā̊rīkimma
 w
 lā̊
@@ -23971,7 +23971,7 @@ b
 īlīnu
 w
 lā̊
-šām�ānnu
+šāmānnu
 ʿal
 kan
 bā:
@@ -24304,7 +24304,7 @@ w
 w
 yā̊ʾūmər
 lā̊
-yērå�
+yēråd
 bēni
 immā̊kimma
 kī
@@ -24407,7 +24407,7 @@ fā̊ni
 bilti
 ʿā̊yā̊kimma
 atkimma
-�
+w
 yā̊ʾūmər
 yišrā̊ʾəl
 lēmå
@@ -24455,7 +24455,7 @@ yūda
 nidda
 kī
 yā̊ʾūmər
-ūr�du
+ūrīdu
 it
 ʿā̊yā̊kimma
 w
@@ -24510,7 +24510,7 @@ kī
 ʿatta
 šabnu
 zē
-fāmmā̊ʾəm.�
+fāmmā̊ʾəm
 w
 yā̊ʾūmər
 īlīyyimma
@@ -24564,7 +24564,7 @@ ab
 yēdīkimma
 ūli
 mā̊šā̊ga
-��
+ī
 w
 it
 ʿā̊yā̊kimma
@@ -24807,7 +24807,7 @@ yūṣi
 it
 šē'mūn
 w
-�bi
+yībi
 ā̊'
 ʾīš
 it
@@ -24918,7 +24918,7 @@ ze
 aq
 qā̊ṭån
 ēšår
-ā̊mår�timma
+ā̊mårtimma
 īli
 w
 yā̊ʾūmər
@@ -24932,7 +24932,7 @@ kī
 nikkā̊mā̊ru
 rēmmo
 ʿal
-ʿ�ʾo
+ʿāʾo
 w
 yēbaqqəš
 al
@@ -25017,7 +25017,7 @@ fā̊no
 īlīyyimma
 w
 tirråb
-mā̊'šāt�
+mā̊'šāt
 binyā̊məm
 mim
 mā̊'ēšāt
@@ -25205,7 +25205,7 @@ kan
 ū
 ēšår
 yimmā̊ṣå
-it�
+ittu
 yēyyi
 lī
 ʿābəd
@@ -25406,7 +25406,7 @@ baddu
 l
 immu
 w
-ā̊biy�
+ā̊biyyu
 ā̊ʾēbu
 w
 tā̊ʾūmər
@@ -25498,7 +25498,7 @@ fā̊ni
 ā̊'
 ʾīš
 w
-ā̊�ā̊nu
+ā̊yā̊nu
 aq
 qā̊ṭån
 īninnu
@@ -25578,7 +25578,7 @@ ittā̊nu
 w
 mat
 u
-ʾūrī�u�
+ʾūrīdu
 ʿā̊bā̊dək
 it
 šībåt
@@ -25711,7 +25711,7 @@ fā̊no
 w
 yā̊ʾūmər
 yūsəf
-�l
+al
 ʿāʾo
 gā̊šu
 nā
@@ -26076,14 +26076,14 @@ kā̊
 zēʾot
 ʿā̊šā̊rå
 ēmūrəm
-nā̊šāʾ�m
+nā̊šāʾəm
 miṭ
 ṭob
 ā̊rəṣ
 miṣrəm
 w
 ā̊šår
-i�ttūnot
+ittūnot
 uā̊šāʾot
 bår
 w
@@ -26421,7 +26421,7 @@ bā̊nūto
 šēlā̊šəm
 w
 šēlåš
-�
+w
 ā̊ni
 gåd
 ṣā̊'fūn
@@ -26512,7 +26512,7 @@ w
 nēmmån
 ʿāʾəm
 w
-r�ʾoš
+rēʾoš
 mabbəm
 w
 abbəm
@@ -26536,7 +26536,7 @@ dån
 w
 bā̊ni
 niftā̊li
-yēṣ�ʾəl
+yēṣṣā̊ʾəl
 w
 gūni
 yā̊ṣår
@@ -26905,7 +26905,7 @@ yā̊mi
 ʿayyək
 w
 yā̊ʾūmər
-yā̊:q�b
+yā̊:qob
 al
 fā̊ru
 yā̊mi
@@ -26942,7 +26942,7 @@ w
 yiṣṣå
 mi
 l
-fā̊ni�
+fā̊ni
 fā̊ru
 w
 yūšəb
@@ -27183,7 +27183,7 @@ nēyyi
 ā̊nā̊nnu
 w
 ā̊dā̊mūtīnu
-ʿā̊�dəm
+ʿā̊bā̊dəm
 al
 fā̊ru
 w
@@ -27390,7 +27390,7 @@ miṣrəm
 šēna
 w
 yā̊yyu
-yā̊mi�
+yā̊mi
 yā̊:qob
 šēni
 ʿayyo
@@ -27439,7 +27439,7 @@ tiqbā̊rinni
 bā̊
 miṣrəm
 w
-š�åbti
+šā̊kåbti
 am
 ā̊būti
 w
@@ -27491,7 +27491,7 @@ it
 bā̊no
 immu
 it
-mā̊nā̊�ši
+mā̊nā̊ši
 w
 it
 ifrəm
@@ -27515,7 +27515,7 @@ yā̊šåb
 am
 mēṭå
 w
-yā̊ʾūmər�
+yā̊ʾūmər
 yā̊:qob
 al
 yūsəf
@@ -27620,7 +27620,7 @@ l
 ifrā̊ta
 w
 iqbā̊rå
-šamma�
+šamma
 af
 dērək
 ifrā̊ta
@@ -27647,7 +27647,7 @@ imma
 ēšår
 uā̊tån
 lī
-ēluwwəm�
+ēluwwəm
 b
 ze
 w
@@ -27675,7 +27675,7 @@ w
 yiššåq
 lēmma
 w
-y�ā̊bbəq
+yā̊bbəq
 lēmma
 w
 yā̊ʾūmər
@@ -27721,8 +27721,8 @@ yišrā̊ʾəl
 w
 it
 mā̊nā̊ši
-�
-�mā̊lu
+af
+šēmā̊lu
 miy
 yammən
 yišrā̊ʾəl
@@ -27731,7 +27731,7 @@ yiggåš
 īlo
 w
 yēšalla
-yišrā̊ʾə�l
+yišrā̊ʾəl
 it
 yad
 yammīnu
@@ -27851,7 +27851,7 @@ w
 yā̊ʾūmər
 yūsəf
 al
-ā̊bi�ū
+ā̊biyyu
 lā̊
 ken
 ā̊bi
@@ -27878,7 +27878,7 @@ l
 ām
 w
 gam
-�
+ū
 yigdål
 w
 ēʾūlåm
@@ -27902,7 +27902,7 @@ ayyom
 l
 īmor
 båk
-yibbå�råk
+yibbårråk
 yi
 š
 rā̊ʾəl
@@ -27980,7 +27980,7 @@ iqqåbbā̊ṣu
 w
 šēmāʾu
 bā̊ni
-yā̊:q�b
+yā̊:qob
 w
 šēmāʾu
 al
@@ -28008,7 +28008,7 @@ kī
 maškā̊bi
 ā̊bək
 az
-ʿållål�å
+ʿållåltå
 yā̊ṣuwwi
 ʿā̊lå
 šē'mūn
@@ -28019,12 +28019,12 @@ kallu
 ā̊məs
 makrētīyyimma
 af
-sūd�mma
+sūdimma
 al
 tā̊'bū
 nafši
 w
-�
+af
 qā:limma
 al
 yā̊r
@@ -28053,7 +28053,7 @@ yā̊:qob
 w
 ā̊:fīṣimma
 ab
-yišrā̊ʾə�
+yišrā̊ʾəl
 yēʾūda
 åttå
 yūdok
@@ -28070,7 +28070,7 @@ gor
 aryå
 yēʾūda
 m
-i�ā̊rəf
+iṭṭā̊rəf
 bēni
 ʿālītå
 kā̊rå
@@ -28114,7 +28114,7 @@ ab
 yayyən
 lēbūšu
 w
-�
+af
 dåm
 ēnā̊bəm
 kas
@@ -28127,7 +28127,7 @@ w
 lā̊bən
 šinnəm
 miy
-yēləb�
+yēləb
 zēbūlån
 l
 ūf
@@ -28256,7 +28256,7 @@ miš
 šam
 rāʾi
 ā̊bən
-yišrā̊ʾəl�
+yišrā̊ʾəl
 m
 īl
 ā̊bək
@@ -29212,7 +29212,7 @@ lēnna
 mad'dū
 ʿaššītən
 it
-a�
+ad
 dēbår
 az
 ze
@@ -29349,7 +29349,7 @@ yā̊ləd
 w
 tā̊šəm
 b
-ass�
+assåf
 ʿal
 ašfåt
 ay
@@ -29669,7 +29669,7 @@ yūšīyyinna
 w
 yašqi
 it
-�ʾūnimma
+ṣēʾūnimma
 w
 tābāʾinna
 al
@@ -29706,7 +29706,7 @@ yā̊ʾūmər
 al
 bā̊nūto
 w
-�ayye
+ayye
 lēmå
 zē
 ʿā̊zåbtən
@@ -29745,7 +29745,7 @@ it
 giršåm
 kī
 ā̊mår
-�er
+ger
 ā̊ʾīti
 b
 ā̊rəṣ
@@ -29866,7 +29866,7 @@ nā
 w
 ērēʾi
 it
-�m
+am
 mā̊'rī
 ag
 gā̊dol
@@ -29899,7 +29899,7 @@ mūši
 w
 yā̊ʾūmər
 innā̊ni
-�
+w
 yā̊ʾūmər
 al
 tiqråb
@@ -30217,7 +30217,7 @@ miṣrəm
 al
 ā̊rəṣ
 ak
-kā̊n�nni
+kā̊nānni
 ā̊
 ʾitti
 w
@@ -30350,7 +30350,7 @@ w
 kīli
 zā̊b
 w
-šā̊�mā̊lot
+šā̊mā̊lot
 w
 šamtimma
 ʿal
@@ -30506,11 +30506,11 @@ yišmāʾu
 al
 qol
 ā̊'
-�ūt
+ʾūt
 ar
 rā̊ʾīšon
 w
-ā̊mēn�
+ā̊mēnu
 al
 qol
 ā̊'
@@ -30557,7 +30557,7 @@ yā̊yyu
 al
 dåm
 ab
-�yåbbā̊šåt
+yåbbā̊šåt
 w
 yā̊ʾūmər
 mūši
@@ -30679,7 +30679,7 @@ w
 ēyyi
 am
 fiyyåk
-�
+w
 am
 fiyyu
 u
@@ -30857,7 +30857,7 @@ yābbā̊dā̊ni
 w
 timmā̊ʾən
 al
-ša�[lāʾu
+šallāʾu
 inna
 ā̊nā̊ki
 ā̊rəg
@@ -30944,7 +30944,7 @@ kal
 ā̊
 ʾūtot
 ēšår
-ṣ�ā̊bēʾu
+ṣā̊bēʾu
 w
 yā̊lā̊ku
 mūši
@@ -31049,7 +31049,7 @@ yā̊ʾūmēru
 ēluwwi
 ā̊
 ʾibrəm
-n�qqā̊rå
+niqqā̊rå
 ʿālīnu
 nēlā̊ka
 nā
@@ -31212,7 +31212,7 @@ miyy
 timṣā̊ʾu
 kī
 īn
-niggā̊�å
+niggā̊rå
 miyy
 ēbīdåtkimma
 dēbår
@@ -31644,7 +31644,7 @@ miṣrəm
 mim
 mūtā̊nu
 b
-amma�bår
+ammadbår
 w
 yēdabbər
 šēmå
@@ -32136,7 +32136,7 @@ l
 īmor
 kī
 yēdabbər
-īl�inīma
+īlīkimma
 fā̊ru
 l
 īmor
@@ -32208,7 +32208,7 @@ imma
 årṭåmmi
 miṣrəm
 ab
-lā̊�yyimma
+lā̊ṭīyyimma
 kan
 w
 yašlīku
@@ -32277,7 +32277,7 @@ al'
 nāš
 tiqqa
 ab
-yēdåk�
+yēdåk
 w
 ā̊mårtå
 īlo
@@ -32551,7 +32551,7 @@ kan
 årṭwmmi
 miṣrəm
 ab
-lā̊�yyimma
+lā̊ṭīyyimma
 w
 iyyā̊zåq
 lab
@@ -32818,7 +32818,7 @@ miṣrəm
 w
 tāl
 aṣ
-�får'dā
+ṣēfår'dā
 w
 tēkassi
 it
@@ -32830,7 +32830,7 @@ kan
 årṭåmmi
 miṣrəm
 ab
-lā̊�yyimma
+lā̊ṭīyyimma
 w
 yāllu
 aṣ
@@ -33048,7 +33048,7 @@ yakki
 it
 ʿā̊får
 ā̊
-�rəṣ
+:rəṣ
 w
 tā̊ʾi
 ak
@@ -33176,7 +33176,7 @@ gam
 :dā̊må
 ēšår
 imma
-ʿāliyya�
+ʿāliyya
 w
 ā̊fiīti
 b
@@ -33393,7 +33393,7 @@ al
 šēmå
 ēluwwīnu
 kā̊
-�ēšår
+ʾēšår
 yā̊ʾūmər
 īlīnu
 w
@@ -33467,7 +33467,7 @@ fā̊ru
 w
 yā̊ttår
 al
-šēmå�
+šēmå
 w
 yāš
 šēmå
@@ -33618,7 +33618,7 @@ kā
 it
 ʿammi
 w
-yābbā̊dā̊ni�
+yābbā̊dā̊ni
 kī
 am
 mā̊ʾən
@@ -33833,7 +33833,7 @@ yā̊zzəq
 šēmå
 it
 lab
-fā̊ru�
+fā̊ru
 w
 lā̊
 šā̊ma
@@ -33895,7 +33895,7 @@ tidda
 kī
 īn
 kā̊mūni
-�
+af
 al
 ā̊
 :rəṣ
@@ -34020,7 +34020,7 @@ it
 ʿammi
 w
 yābbā̊dā̊ni
-[19�]kī
+kī
 b
 ab'bām
 az
@@ -34160,7 +34160,7 @@ fā̊ru
 īnəs
 it
 ʿā̊bā̊do
-�
+w
 it
 maqnēʾu
 al
@@ -34371,7 +34371,7 @@ aq
 qūlot
 yā̊dā̊lon
 w
-a�
+ab
 bā̊råd
 lā̊
 yēyyi
@@ -34397,7 +34397,7 @@ fā̊ni
 šēmå
 w
 a
-�šta
+ffišta
 w
 aš
 šāra
@@ -34488,7 +34488,7 @@ dabbər
 ab
 yəd
 wyā̊
-�
+w
 ūmər
 šēmå
 al
@@ -34684,7 +34684,7 @@ al
 it
 ʿammi
 innā̊ni
-m�i
+mībi
 mār
 arbi
 af
@@ -34834,7 +34834,7 @@ w
 b
 ā̊
 b
-ā̊nūtīnu�ṣēʾūnā̊nu
+ṣēʾūnā̊nu
 w
 b
 ā̊båqrā̊nu
@@ -34856,7 +34856,7 @@ kā̊
 itkimma
 w
 it
-ṭ�imma
+ṭåfkimma
 rēʾu
 kī
 rā:
@@ -35036,7 +35036,7 @@ l
 ā̊rron
 w
 yā̊ʾūmər
-ʿā̊�ti
+ʿā̊ṭīti
 al
 šēmå
 ēluwwīkimma
@@ -35484,7 +35484,7 @@ yā̊ṣå
 af
 tok
 ā̊rəṣ
-miṣrəm�
+miṣrəm
 w
 mat
 kal
@@ -35516,9 +35516,9 @@ bīmma
 w
 ēyyā̊tå
 ṣā̊ʾēqa
-gā̊d�alla
+gā̊dalla
 b
-ā̊miṣr�m
+ā̊miṣrəm
 ēšår
 kā̊muwwa
 lā̊
@@ -35547,7 +35547,7 @@ tidda
 ēšår
 yifia
 šēmå
-bin���
+bin
 miṣrəm
 w
 bin
@@ -35718,7 +35718,7 @@ yēyyi
 lā̊kimma
 man
 ak
-kišb�m
+kišbəm
 w
 man
 ā̊
@@ -35728,7 +35728,7 @@ w
 ēyya
 lā̊kimma
 al
-m�ašmā̊rət
+mašmā̊rət
 ʿad
 ar'bā
 ʿā̊šår
@@ -35936,7 +35936,7 @@ rā̊ʾīšon
 tåšbītu
 šā̊r
 mib
-b�tīkimma
+battīkimma
 kī
 kal
 ā̊kəl
@@ -36199,7 +36199,7 @@ yittən
 šēmå
 lā̊kimma
 kā̊
-ʾēš�r
+ʾēšår
 dabbər
 w
 šā̊mårtimma
@@ -36481,7 +36481,7 @@ kī
 lā̊
 ā̊måṣ
 kī
-g�rrēšumma
+garrēšumma
 miṣrəm
 w
 lā̊
@@ -36520,7 +36520,7 @@ yā̊ʾi
 miq
 qəṣ
 šēlā̊šəm
-š�ēna
+šēna
 w
 arba
 mā̊ʾot
@@ -36631,7 +36631,7 @@ atkimma
 ger
 w
 āša
-a�sa
+afsa
 al
 šēmå
 ā̊mol
@@ -36783,11 +36783,11 @@ kā̊nānni
 w
 ā̊
 ʾēmarri
-�
+w
 af
 fērizzi
 w
-�g
+ag
 girgēši
 w
 ā̊
@@ -37305,7 +37305,7 @@ it
 lab
 fā̊ru
 mā̊lək
-miṣi�əm
+miṣrəm
 w
 yirdåf
 ā̊ʾūri
@@ -37358,7 +37358,7 @@ w
 miṣrəm
 nā̊sāʾəm
 ā̊ʾūrīyyimma
-�
+w
 yīrāʾu
 mēʾod
 w
@@ -37413,7 +37413,7 @@ miṣrəm
 kī
 ṭob
 lā̊nu
-ʿāb�
+ʿābod
 it
 miṣrəm
 mim
@@ -38069,7 +38069,7 @@ nā̊:lā̊tåk
 mā̊kon
 al
 šibtåk
-fāʾ�ltå
+fāʾiltå
 šēmå
 m
 aqdåš
@@ -38148,7 +38148,7 @@ w
 rikbu
 rā̊må
 b
-a�yåm
+ayyåm
 w
 yassa
 mūši
@@ -38697,7 +38697,7 @@ låqqēṭu
 w
 yā̊ʾūmər
 mūši
-īlīyy�ma
+īlīyyimma
 īš
 al
 yūtər
@@ -38799,7 +38799,7 @@ mašmā̊rət
 ʿad
 bēqar
 w
-yanniy�
+yanniyyu
 ūtu
 ʿad
 ab
@@ -38915,7 +38915,7 @@ aš
 šē'bī
 w
 yiqrāʾu
-b�t
+bet
 yišrā̊ʾəl
 it
 šēmu
@@ -38975,7 +38975,7 @@ qā
 ʿāt
 w
 tån
-š�mma
+šamma
 mē'lū
 ā̊
 :mår
@@ -39288,13 +39288,13 @@ gēbər
 yišrā̊ʾəl
 w
 kā̊
-�ēšår
+ʾēšår
 yanni
 yēdo
 w
 gēbər
 ʿā̊mā̊ləq
-�
+w
 yēdi
 mūši
 kā̊bā̊dəm
@@ -39344,7 +39344,7 @@ fi
 ā̊rəb
 w
 yā̊ʾūmər
-�må
+šēmå
 al
 mūši
 iktåb
@@ -39547,7 +39547,7 @@ dērək
 w
 yåṣṣīlimma
 šēmå
-�
+w
 yā̊d
 yitru
 ʿal
@@ -39834,7 +39834,7 @@ w
 šamtå
 ʿālīyyimma
 šā̊ri
-ā̊l�əm
+ā̊lā̊fəm
 w
 šā̊ri
 mā̊ʾot
@@ -40107,7 +40107,7 @@ w
 yā̊låk
 lū
 al
-årṣu.�
+årṣu
 b
 ā̊dəš
 aš
@@ -40444,7 +40444,7 @@ ab
 bēqar
 w
 yā̊ʾi
-qūlot�
+qūlot
 w
 bā̊rā̊qəm
 w
@@ -41180,7 +41180,7 @@ yā̊rā̊ttu
 fā̊nīkimma
 al
 bilti
-tēṭṭ�ʾu
+tēṭṭā̊ʾu
 w
 yā̊mmåd
 ʿā
@@ -41476,7 +41476,7 @@ lā̊
 tiggā̊li
 irbā̊tåk
 īlo
-illa�
+illa
 am
 mašfā̊ṭəm
 ēšår
@@ -41510,7 +41510,7 @@ išša
 ū
 w
 yā̊'ṣā̊
-iš�
+ištu
 immu
 am
 ā̊danno
@@ -41686,7 +41686,7 @@ tiqqāʾinnu
 al
 mot
 w
-m�ki
+makki
 ā̊biyyu
 w
 immu
@@ -41734,7 +41734,7 @@ b
 ūṣ
 ʿal
 mā̊šāʾintu
-�
+w
 nā̊qå
 am
 makki
@@ -41759,7 +41759,7 @@ tēt
 yēdu
 mot
 yūmåt
-�
+ak
 am
 yom
 ū
@@ -42096,7 +42096,7 @@ lū
 w
 nimmakkår
 af
-gā̊nåb�
+gā̊nåbtu
 am
 immā̊ṣå
 timmā̊ṣå
@@ -42210,7 +42210,7 @@ ab
 bət
 al
 ā̊
-ʾēluww�m
+ʾēluwwəm
 am
 lā̊
 šalla
@@ -42409,7 +42409,7 @@ kī
 am
 ʿanna
 tānnu
-ūtu�
+ūtu
 kī
 am
 ṣā̊ʾəq
@@ -42452,7 +42452,7 @@ tā̊šīminnu
 nēšək
 am
 ʿā̊bål
-�bål
+tā̊bål
 it
 šā̊mā̊låt
 rēk
@@ -42468,7 +42468,7 @@ kassūtu
 al
 badda
 ī
-šā̊mål�u
+šā̊måltu
 l
 ūru
 b
@@ -42615,7 +42615,7 @@ nēqi
 w
 ṣādəq
 al
-tā̊rå�g
+tā̊råg
 kī
 lā̊
 åṣdəq
@@ -42684,7 +42684,7 @@ kā̊rēmək
 w
 al
 zītək
-šiššåt�
+šiššåt
 yā̊məm
 tēšši
 māššək
@@ -42706,7 +42706,7 @@ bīmtåk
 w
 ag
 gər
-�
+w
 kal
 ēšår
 ā̊mårti
@@ -42719,10 +42719,10 @@ w
 lā̊
 tēzā̊kår
 w
-.l�
-yišš�māʾu
+lā̊
+yiššāmāʾu
 ʿa]
-fiyyåk�
+fiyyåk
 šēlåš
 argā̊ləm
 tāg
@@ -42819,7 +42819,7 @@ gā̊di
 b
 ā̊låb
 immu
-[19�]kī
+kī
 ʿāši
 zēʾot
 kā̊
@@ -42909,7 +42909,7 @@ ag
 girgēši
 w
 a
-�rizzi
+ffērizzi
 w
 ā̊
 ʾibbi
@@ -43275,7 +43275,7 @@ dåm
 w
 yizrā̊qēʾu
 ʿal
-ʿ�
+ʿ
 ām
 w
 yā̊ʾūmər
@@ -43570,7 +43570,7 @@ w
 l
 ā̊šən
 w
-ē�u
+ēšu
 lī
 maqdåš
 w
@@ -43883,7 +43883,7 @@ aṭ
 ʿal
 arba
 a
-�ʾot
+ffāʾot
 ēēšår
 l
 arba
@@ -44057,7 +44057,7 @@ am
 mēnūra
 kaftarrīyyimma
 w
-qānūt�imma
+qānūtimma
 mimminna
 yā̊yyu
 kallå
@@ -44121,7 +44121,7 @@ takkēlət
 w
 argā̊mån
 w
-�'lāt
+tū'lāt
 šā̊ni
 kērūbəm
 māšši
@@ -44134,7 +44134,7 @@ yā̊riyya
 ā̊'
 ʿāt
 šā̊mā̊na
-�
+w
 išrəm
 b
 åmmå
@@ -44150,23 +44150,23 @@ yā̊riyya
 måddå
 ʿāt
 al
-�kal
+kal
 ay
 yā̊riyyot
 w
 amməš
 ay
 yāriyyot
-tāyyinn�
+tā̊yyinna
 ābērot
 āt
 a
 āt
 w
-��məs
-�
-y�
-ariyy�ʿ�tayyi�n�
+amməš
+ay
+yā̊riyyot
+tā̊yyinna
 ā̊bērot
 ʿāt
 al
@@ -44291,7 +44291,7 @@ al
 båd
 w
 it
-..ša�
+šaš
 ay
 yā̊riyyot
 al
@@ -44337,7 +44337,7 @@ aš
 w
 ašēšītå
 qērā̊si
-nāššət�
+nāššət
 ēmiššəm
 w
 ībā̊ttå
@@ -44376,7 +44376,7 @@ w
 ā
 må
 m
-�zze
+izze
 w
 ā̊
 må
@@ -44396,7 +44396,7 @@ sāru
 am
 maškån
 miz
-z�
+ze
 w
 miz
 ze
@@ -44906,7 +44906,7 @@ nīrot
 bin
 ā̊
 ʾirbəm
-yåq�rinna
+yåqṭīrinna
 qiṭṭā̊rət
 tā̊məd
 al
@@ -45006,7 +45006,7 @@ rā̊b
 rā̊bu
 yēyyi
 am
-mazba�
+mazba
 w
 šēlåš
 ammot
@@ -45172,7 +45172,7 @@ b
 išrəm
 w
 ā̊dēnīyyimma
-išrəm�
+išrəm
 nāššət
 bā̊bīyyimma
 w
@@ -45621,7 +45621,7 @@ amšåbbēṣot
 zā̊b
 w
 šitti
-š�šā̊rot
+širšā̊rot
 zā̊b
 ṭā̊ʾor
 amgā̊ballot
@@ -45980,7 +45980,7 @@ māšši
 ā̊rəg
 kā̊
 fi
-tērra�
+tērra
 yēyyi
 lū
 lā̊
@@ -46242,7 +46242,7 @@ w
 allot
 måṣṣot
 bā̊lūlot
-a�
+af
 ā̊mən
 w
 rēqīqi
@@ -47249,7 +47249,7 @@ kal
 år
 ʿal
 a
-�qādəm
+ffēqādəm
 mib
 ban
 išrəm
@@ -47475,10 +47475,10 @@ w
 it
 kal
 kīliyya
-it�
+it
 mazba
 aq
-qiṭṭā̊rət.�
+qiṭṭā̊rət
 w
 it
 mazba
@@ -47540,7 +47540,7 @@ bā̊šår
 lā̊
 yuwwā̊såk
 w
-�
+b
 atkantu
 lā̊
 tēššu
@@ -48073,7 +48073,7 @@ yāššēʾu
 ēgəl
 massīka
 w
-y�ʾū�ēru
+yā̊ʾūmēru
 illa
 ēluwwåk
 yišrā̊ʾəl
@@ -48114,13 +48114,13 @@ yā̊šåb
 ʿā
 m
 l
-ā̊kå�l
+ā̊kål
 w
 šā̊tu
 w
 yā̊qā̊mu
 al
-ṣā̊.ʾəq�
+ṣā̊ʾəq
 w
 yēdabbər
 šēmå
@@ -48164,7 +48164,7 @@ yišrā̊ʾəl
 ʿāllok
 miyy
 ā̊rəṣ
-miṣrəm�
+miṣrəm
 w
 yā̊ʾūmər
 šēmå
@@ -48654,7 +48654,7 @@ mim
 mā̊ʾērət
 w
 yā̊ʾūmər
-mūši�
+mūši
 al
 ʿā
 m
@@ -48670,7 +48670,7 @@ al
 ūli
 ēkā̊fər
 bēd
-ēṭā̊ʾūt�imma
+ēṭā̊ʾūtīkimma
 w
 yā̊šåb
 mūši
@@ -48848,7 +48848,7 @@ it
 ad
 dēbår
 a
-�ra
+rra
 az
 ze
 w
@@ -49701,7 +49701,7 @@ iṭṭəm
 w
 ag
 ā̊
-�
+:səf
 səftēqūfåt
 aš
 šēna
@@ -50074,7 +50074,7 @@ tū'lāt
 šā̊ni
 w
 šēš
-��
+w
 izzəm
 u
 ʾūrot
@@ -50422,7 +50422,7 @@ yēda
 ṭuwwå
 w
 yībiyyu
-miṭṭuwwå�
+miṭṭuwwå
 it
 at
 takkēlət
@@ -50784,7 +50784,7 @@ mā̊ni
 l
 īmor
 īš
-�
+w
 išša
 al
 yēšši
@@ -50805,7 +50805,7 @@ am
 mā̊lā̊ka
 ayyā̊tå
 dem
-�al
+al
 kal
 am
 mā̊lā̊ka
@@ -50831,7 +50831,7 @@ maškån
 yā̊riyyot
 šeš
 amšazzår
-takkēlət�
+takkēlət
 w
 argā̊mån
 w
@@ -50879,11 +50879,11 @@ al
 w
 amməš
 ay
-yā̊riyyo�t
+yā̊riyyot
 ā̊bår
 ʿāt
 al
-ʿ�t
+ʿāt
 w
 yāš
 lā̊lāʾot
@@ -51269,7 +51269,7 @@ aš
 šēnət
 w
 ēmišša
-bar'�m
+bar'yīm
 al
 qērā̊ši
 ṣīla
@@ -51310,7 +51310,7 @@ it
 zā̊b
 battəm
 l
-abbar'�m
+abbar'yīm
 w
 yēṣåbbi
 it
@@ -52133,7 +52133,7 @@ al'
 :ṣər
 qē'līm
 ʿamməš
-ʿā̊šā̊rå�
+ʿā̊šā̊rå
 åmmå
 ʿammūdīyyimma
 šēlā̊ša
@@ -52537,7 +52537,7 @@ it
 fiyyi
 az'
 zā̊b
-�
+w
 qåṣṣā̊ṣu
 fā̊tīləm
 l
@@ -52948,7 +52948,7 @@ w
 yittēnu
 it
 a
-�mmūnəm
+ffāmmūnəm
 ʿal
 šūli
 am
@@ -53694,7 +53694,7 @@ maškån
 miy
 yoṣ
 al
-farēkə�t
+fā̊rēkət
 w
 yārrək
 ʿālo
@@ -53832,7 +53832,7 @@ it
 yēdīyyimma
 w
 it
-rē�ālīyyimma
+rēgā̊līyyimma
 bā̊
 bāʾimma
 al
@@ -53855,7 +53855,7 @@ w
 yīqəm
 it
 ā̊
-�ər
+:ṣər
 sā̊bəb
 al
 maškån
@@ -54486,7 +54486,7 @@ rī
 niy'yā̊
 al
 šēmå
-��
+w
 an
 nūtā̊rət
 man
@@ -54563,7 +54563,7 @@ mēla
 w
 am
 taqrəb
-m�ā̊'nāt
+mā̊'nāt
 bikkūrəm
 al
 šēmå
@@ -54624,7 +54624,7 @@ yaqrībinnu
 al
 fā̊ni
 šēmå
-�
+w
 sā̊måk
 it
 yēdu
@@ -54936,7 +54936,7 @@ ak
 kalyot
 yīsīrinna
 w
-ā̊q�rimma
+ā̊qṭīrimma
 ak
 kā̊ʾən
 am
@@ -55125,7 +55125,7 @@ al
 yēsod
 mazba
 ʿā
-:�la
+:la
 ēšår
 fta
 ā̊ʾol
@@ -55191,7 +55191,7 @@ zēba
 aš
 šēlamməm
 w
-ā̊q�rimma
+ā̊qṭīrimma
 ak
 kā̊ʾən
 ʿal
@@ -55281,9 +55281,9 @@ nuwwāda
 ʿāliyya
 w
 ā̊qrību
-a�'
+aq'
 qāl
-�år
+får
 ban
 bā̊qår
 tā̊məm
@@ -55507,7 +55507,7 @@ fā̊ni
 ī
 w
 lēqa
-a�
+ak
 kā̊ʾən
 mid
 dåm
@@ -55525,7 +55525,7 @@ mazba
 w
 it
 dammu
-yišfw�
+yišfåk
 al
 yēsod
 mazba
@@ -55638,7 +55638,7 @@ yišfåk
 al
 yēsod
 mazba
-�
+ʿ
 ā:la
 w
 it
@@ -55802,8 +55802,8 @@ nēbīlåt
 ʿayyå
 ṭēmiy'yā
 ū
-�
-bn��īlåt
+ab
+nēbīlåt
 bīmma
 ṭēmiy'yā
 ū
@@ -55824,16 +55824,16 @@ kī
 yigga
 af
 ṭē'mā̊t
-ā̊d�åm
+ā̊dåm
 al
 kal
 ṭēmā̊ttu
 ēšår
 yiṭmå
 bā
-�
-wnā̊:lå�
-mimmiå��u
+w
+nā̊:låm
+mimminnu
 u'
 ʾū
 yāda
@@ -55863,7 +55863,7 @@ af
 w
 nā̊:låm
 mimminnu
-�'
+u'
 ʾū
 yāda
 w
@@ -55879,7 +55879,7 @@ yēṭṭi
 l
 āt
 miy
-yi�la
+yilla
 w
 ētbåddå
 it
@@ -55887,9 +55887,9 @@ it
 ʿā̊ṭå
 ʿāliyya
 w
-�i
-�it
-ā̊šā̊�mu
+ībi
+it
+ā̊šā̊mu
 al
 šēmå
 ʿal
@@ -56037,7 +56037,7 @@ qā̊rā̊bā̊nu
 ʾīfa
 sā̊lət
 l
-�ṭåt
+ā̊ṭåt
 lā̊
 yā̊ṣåq
 ʿāliyya
@@ -56118,7 +56118,7 @@ it
 al
 šēmå
 īl
-tā̊m�əm
+tā̊məm
 man
 aṣ
 ṣēʾon
@@ -56264,7 +56264,7 @@ w
 niššāba
 ʿal
 aēšqår
-ʿal��
+ʿal
 āt
 mik
 kal
@@ -56404,7 +56404,7 @@ bēqar
 w
 aš
 am
-mazba�
+mazba
 tūqəd
 bū
 w
@@ -56461,7 +56461,7 @@ al
 mā̊qom
 ṭā̊ʾor
 w
-�
+ā̊
 ʾəš
 ʿal
 am
@@ -56479,7 +56479,7 @@ kā̊ʾən
 bab
 bēqar
 b
-�bbēqar
+abbēqar
 w
 ā̊rək
 ʿāliyya
@@ -57161,7 +57161,7 @@ af
 ṭē'mā̊t
 ā̊dåm
 ū
-�
+bā̊
 bīmma
 ṭēmiy'yā
 ū
@@ -57251,10 +57251,10 @@ dåm
 lā̊
 tā̊ʾūkēlu
 af
-kal�
+kal
 mūšā̊būnīkimma
 l
-ūf�
+ūf
 w
 lab
 bīmma
@@ -57562,14 +57562,14 @@ al
 zē
 ad
 dēbår
-ēš�r
+ēšår
 ṣā̊ba
 šēmå
 l
 āššot
 w
 yaqrəb
-m�ši
+mūši
 it
 ā̊rron
 w
@@ -57753,7 +57753,7 @@ får
 w
 yismā̊ku
 ā̊rron
-�
+w
 bā̊no
 it
 yēdīyyimma
@@ -58453,10 +58453,10 @@ it
 ʿā̊ṭā̊tåk
 w
 it
-ʿā̊lā̊�åk
+ʿā̊lā̊tåk
 w
 kēfår
-bē�åk
+bēddåk
 w
 bēd
 ʿā
@@ -58669,7 +58669,7 @@ it
 ā̊'
 ʾīl
 zēba
-�
+aš
 ēšēlamməm
 ēšår
 l
@@ -58773,7 +58773,7 @@ yā̊ba
 mūši
 w
 ā̊rron
-alā̊��
+al
 ol
 muwwəd
 w
@@ -58945,7 +58945,7 @@ w
 al
 ītā̊mår
 bā̊no
-rā̊š�imma
+rā̊šīkimma
 lā̊
 tifrāʾu
 w
@@ -59133,7 +59133,7 @@ w
 bā̊nək
 nētīnu
 mizzē'bī
-šēlamm�
+šēlammi
 bā̊ni
 yišrā̊ʾəl
 šoq
@@ -59504,7 +59504,7 @@ man
 ā̊'
 ʾūf
 lā̊
-tā̊ʾūk�u
+tā̊ʾūkēlu
 ašqəṣ
 imma
 it
@@ -59759,7 +59759,7 @@ yēkabbəs
 bēgā̊do
 w
 ṭēma
-ʿ�d
+ʿad
 ā̊
 ʾērəb
 ṭēmāʾəm
@@ -59831,7 +59831,7 @@ b
 yiṭmå
 mik
 kal
-k��i
+kīli
 eṣ
 ū
 bēgåd
@@ -60011,7 +60011,7 @@ kal
 ā̊
 :lək
 ʿa[
-�ā̊ʾon
+gā̊ʾon
 w
 kal
 ā̊
@@ -60191,7 +60191,7 @@ yom
 w
 šēlā̊šåt
 yā̊məm
-�iššåb
+tiššåb
 af
 dåm
 ṭā̊rå
@@ -60540,7 +60540,7 @@ b
 ūr
 w
 ī
-ē�a
+ēfīka
 šār
 lā̊bən
 w
@@ -60805,7 +60805,7 @@ ak
 kā̊ʾən
 w
 ēnna
-ē�a
+ēfīka
 šār
 lā̊bən
 bab
@@ -61276,7 +61276,7 @@ bā̊
 bēgåd
 fištəm
 ū
-�
+af
 ē'tåy
 ū
 bā̊
@@ -61425,7 +61425,7 @@ fā̊ša
 an
 nēga
 b
-ā̊b�åd
+ā̊bēgåd
 ū
 af
 šē'tåy
@@ -62557,7 +62557,7 @@ w
 ā̊ʾər
 yiquāʾu
 w
-ṭā̊�u
+ṭā̊ʾu
 it
 ab
 bət
@@ -62571,7 +62571,7 @@ fā̊rå
 b
 abbət
 ā̊ʾūri
-ā̊līṣ�
+ā̊līṣu
 it
 ā̊
 :bā̊nəm
@@ -62617,7 +62617,7 @@ w
 it
 kal
 ʿā̊får
-�b
+ab
 bət
 u
 ʾūṣiyyu
@@ -62637,7 +62637,7 @@ ab
 bət
 kal
 yā̊mi
-asgər�
+asgər
 ūtu
 yiṭmå
 ʿad
@@ -62649,7 +62649,7 @@ aš
 b
 abbət
 yēkabbəs
-bēgā̊do�
+bēgā̊do
 w
 ā̊
 kkəl
@@ -63121,7 +63121,7 @@ lū
 tarrəm
 ū
 šēni
-bā̊�i
+bā̊ni
 yā̊bā̊na
 w
 bā
@@ -63212,7 +63212,7 @@ w
 ṭēmāʾu
 ʿad
 ā̊
-ʾērəb�
+ʾērəb
 w
 išša
 kī
@@ -63264,7 +63264,7 @@ b
 ā̊məm
 w
 ṭēma
-ʿ�d
+ʿad
 ā̊
 ʾērəb
 w
@@ -63379,7 +63379,7 @@ kīli
 ēšår
 tiššåb
 ʿālo
-ṭēmi�
+ṭēmi
 yēyyi
 kā̊
 ṭē'mā̊t
@@ -63395,7 +63395,7 @@ bēgā̊do
 w
 rā̊ṣ
 b
-ā̊m�m
+ā̊məm
 w
 ṭēma
 ʿad
@@ -63449,7 +63449,7 @@ w
 it
 ā̊'
 ʿād
-�āla
+ʿāla
 w
 kā̊fər
 ʿāliyya
@@ -63519,7 +63519,7 @@ w
 yēdabbər
 šēmå
 al
-mūš��
+mūši
 ā̊ʾūri
 mot
 šēni
@@ -63546,7 +63546,7 @@ al
 yā̊'bū
 af
 kal
-�at
+at
 al
 aq
 qā̊dəš
@@ -63565,7 +63565,7 @@ kibbā̊rət
 w
 lā̊
 yēmot
-k�
+kī
 b
 ā̊nån
 irrā̊ʾi
@@ -63700,7 +63700,7 @@ gūrål
 al
 šēmå
 w
-āšē�u
+āšēʾu
 ʿāṭåt
 w
 aš'
@@ -63781,7 +63781,7 @@ w
 nā̊tån
 it
 aq
-qi�ā̊rət
+qiṭṭā̊rət
 ʿal
 ā̊
 ʾəš
@@ -63875,7 +63875,7 @@ w
 kā̊fər
 ʿal
 aq
-�dəš
+qā̊dəš
 miṭ
 ṭē'mā̊t
 bā̊ni
@@ -63900,7 +63900,7 @@ tok
 ṭēmā̊ttimma
 w
 kal
-ā̊�åm
+ā̊dåm
 lā̊
 yēyyi
 b
@@ -63998,7 +63998,7 @@ aš'
 w
 sā̊måk
 ā̊rron
-�t
+it
 šitti
 yēdo
 ʿal
@@ -64037,7 +64037,7 @@ yəd
 ʿāti
 am
 madbā̊rå
-�
+w
 nā̊ša
 aš'
 šīr
@@ -64222,7 +64222,7 @@ ag
 gər
 ag
 går
-a�
+af
 tūkā̊kimma
 kī
 b
@@ -64240,7 +64240,7 @@ kal
 al
 fā̊ni
 šēmå
-�iṭṭā̊ʾēru
+tiṭṭā̊ʾēru
 šåbbåt
 šåbbā̊ton
 ū
@@ -64399,7 +64399,7 @@ niy'yā̊
 w
 yēšā̊ṭṭēʾu
 b
-�ṣ
+ūṣ
 w
 al
 fēta
@@ -64778,7 +64778,7 @@ l
 allēkət
 bēmma
 ā̊ni
-�šēmå
+šēmå
 ēluwwīkimma
 w
 šā̊mårtimma
@@ -65092,7 +65092,7 @@ al
 fā̊nīkimma
 w
 tiṭmå
-�:
+ā̊:
 rəṣ
 w
 lā̊
@@ -65290,7 +65290,7 @@ l
 w
 l
 aggər
-tā̊z�zåb
+tā̊zzåb
 ūtimma
 ā̊ni
 šēmå
@@ -65371,7 +65371,7 @@ at
 ʿammītåk
 lā̊
 tēlåk
-r�kəl
+rēkəl
 b
 ammåk
 w
@@ -65681,7 +65681,7 @@ tēššu
 bā̊
 mašfåṭ
 b
-ā̊mā̊�a
+ā̊mā̊da
 b
 ā̊mašqol
 w
@@ -65762,7 +65762,7 @@ b
 ā̊bən
 w
 ā̊ni
-ittən�
+ittən
 it
 fā̊ni
 bā̊'
@@ -65865,7 +65865,7 @@ fā̊ni
 ban
 nā̊fəš
 ā̊'
-ʾī�
+ʾī
 w
 ā̊kritti
 ūta
@@ -65916,7 +65916,7 @@ yēnāʾəf
 at
 iššåt
 īš
-ēšår�
+ēšår
 yēnāʾəf
 at
 iššåt
@@ -66080,7 +66080,7 @@ mā̊qor
 ā̊
 ʾirbå
 w
-ī�
+ī
 gållā̊tå
 it
 mā̊qor
@@ -66501,7 +66501,7 @@ yiqqa
 ilmēna
 w
 gā̊rūša
-�
+w
 ā̊lā̊lå
 w
 zūna
@@ -66922,7 +66922,7 @@ w
 kī
 yā̊ʾūkəl
 qā̊dəš
-�
+af
 ā̊gā̊ga
 w
 yā̊səf
@@ -67073,7 +67073,7 @@ gā̊råb
 ū
 yallēfət
 lā̊
-taqr�u
+taqrību
 illa
 al
 šēmå
@@ -67439,7 +67439,7 @@ l
 al
 šēmå
 w
-mā̊nāt�
+mā̊nāttu
 šēni
 išrūnəm
 sā̊lət
@@ -67623,7 +67623,7 @@ lā̊
 tēššu
 åqqåt
 ūlåm
-�
+af
 al
 mūšā̊būnīkimma
 al
@@ -68141,7 +68141,7 @@ llå
 ʿāt
 w
 šamtå
-�timma
+ūtimma
 šitti
 mārrēkot
 šaš
@@ -68199,8 +68199,8 @@ al
 bā̊no
 w
 ā̊kā̊luw'wā
-�
-�māqom
+bā̊
+mā̊qom
 qādoš
 kī
 qā̊dəš
@@ -68365,7 +68365,7 @@ b
 ammītu
 kā̊
 ʾēšår
-ʿāš�
+ʿāša
 kan
 iyyāši
 lū
@@ -68640,12 +68640,12 @@ yūbəl
 tēyyi
 lā̊kimma
 lā̊
-ti�rāʾu
+tizrāʾu
 w
 lā̊
 tiqṣā̊ru
 it
-sē�yya
+sēfiyya
 w
 lā̊
 tibṣā̊ru
@@ -69144,8 +69144,8 @@ immåk
 ʿad
 šēnåt
 ay
-yūb�l
-y�bbåd
+yūbəl
+yēbbåd
 immåk
 w
 yiṣṣå
@@ -69180,7 +69180,7 @@ lā̊
 tardi
 bū
 b
-ā̊fr�k
+ā̊fēråk
 w
 yā̊rā̊tå
 miyy
@@ -69232,7 +69232,7 @@ w
 ētnā̊ltimma
 ūtimma
 al
-bā̊n�imma
+bā̊nīkimma
 ā̊ʾūrīkimma
 al
 rēšət
@@ -69358,7 +69358,7 @@ lū
 kā̊
 fi
 šēno
-�šəb
+yīšəb
 it
 gā̊ʾiltu
 kā̊
@@ -69413,7 +69413,7 @@ lā̊kimma
 w
 afsəl
 w
-måṣṣība�
+måṣṣība
 lā̊
 tīqīmu
 lā̊kimma
@@ -69456,7 +69456,7 @@ gā̊šā̊mīkimma
 b
 ēttimma
 w
-�ā̊tā̊na
+nā̊tā̊na
 ā̊
 :rəṣ
 yēbūla
@@ -69635,7 +69635,7 @@ tēgāʾəl
 nā̊feškimma
 al
 bilti
-ʿa�šot
+ʿaššot
 it
 kal
 mēṣā̊būti
@@ -69829,14 +69829,14 @@ uyyåb
 af
 šabri
 lā̊kimma
-må�i
+måṭṭi
 lēm
 w
 ā̊fu
 ʿā̊šår
 inšəm
 lēmmā̊kimma
-�
+af
 tinnor
 ʿād
 w
@@ -69932,7 +69932,7 @@ w
 itkimma
 ēzarri
 b
-ag�uwwəm
+agguwwəm
 w
 ā̊rēqā̊ti
 ā̊ʾūrīkimma
@@ -70432,7 +70432,7 @@ ak
 kā̊ʾən
 w
 ārrək
-�k
+ak
 kā̊ʾən
 ūtu
 bin
@@ -70512,7 +70512,7 @@ w
 al
 fi
 zērāʾu
-zēra�
+zēra
 ā̊mår
 šārəm
 b
@@ -70527,7 +70527,7 @@ ay
 yūbəl
 yaqdəš
 šā̊dēʾu
-�
+k
 ā̊rkåk
 yēqom
 w
@@ -70548,7 +70548,7 @@ kā̊səf
 ʿal
 fī
 aš
-šē�nəm
+šēnəm
 an
 nūtā̊rət
 ʿad
@@ -70996,14 +70996,14 @@ al
 gåd
 ēlīsåf
 ban
-dāwwəl�
+dāwwəl
 [
-1�]�alniftā̊ii
+niftā̊li
 ā̊ʾīra
 ban
 īnån
 illa
-qar�āʾi
+qaryāʾi
 ā̊
 ʾīda
 anšiyyāʾi
@@ -71165,7 +71165,7 @@ māla
 kal
 yā̊ṣå
 ṣā̊ba
-fēqādīyy�imma
+fēqādīyyimma
 al
 måṭṭi
 gåd
@@ -71199,7 +71199,7 @@ māla
 kal
 yā̊ṣå
 ṣā̊ba
-fē�ādīyyimma
+fēqādīyyimma
 al
 måṭṭi
 yēʾūda
@@ -71209,7 +71209,7 @@ w
 ā̊ləf
 w
 šaš
-m�āʾot
+mā̊ʾot
 al
 bā̊ni
 yā̊šīšā̊kår
@@ -71380,7 +71380,7 @@ al
 bət
 ā̊būtimma
 b
-ā̊masfår�
+ā̊masfår
 šēmot
 mib
 ban
@@ -71486,7 +71486,7 @@ al
 måṭṭi
 ʿād
 al
-måṭ�ṭi
+måṭṭi
 bit
 ā̊būtimma
 ayyu
@@ -71984,7 +71984,7 @@ arba
 mā̊ʾot
 kal
 a
-�qādəm
+ffēqādəm
 al
 mā̊:ni
 ifrəm
@@ -72305,7 +72305,7 @@ lī
 mit
 tok
 bā̊ni
-yišrā̊ʾəl�
+yišrā̊ʾəl
 w
 it
 ā̊rron
@@ -72441,7 +72441,7 @@ libni
 w
 ēšāmāʾi
 w
-bā̊n�i
+bā̊ni
 qāt
 al
 mašfūttimma
@@ -73003,7 +73003,7 @@ mūši
 it
 kā̊səf
 a
-�d'wīm
+ffid'wīm
 l
 ā̊rron
 w
@@ -73099,11 +73099,11 @@ it
 w
 nā̊tā̊nu
 ʿālo
-kassu�wwi
+kassuwwi
 ūr
 tāš
 w
-�rā̊šu
+fā̊rā̊šu
 ʿālo
 bēgåd
 kēləl
@@ -73256,7 +73256,7 @@ w
 nā̊tā̊nu
 ʿal
 an
-�moṭ
+moṭ
 w
 daššēnu
 it
@@ -73418,7 +73418,7 @@ al
 l
 īmor
 al
-takrī�u
+takrītu
 it
 šā̊båṭ
 maš'fēt
@@ -73555,7 +73555,7 @@ qē'lī
 w
 it
 mēsək
-�ta�
+fēta
 šār
 ā̊
 :ṣər
@@ -73790,7 +73790,7 @@ fā̊qåd
 mūši
 w
 ā̊rron
-�al
+ʿal
 fī
 šēmå
 ab
@@ -73830,7 +73830,7 @@ w
 yā̊yyu
 fqādīyyimma
 al
-mašfūttim�ma
+mašfūttimma
 al
 bət
 ā̊būtimma
@@ -74088,7 +74088,7 @@ kal
 al'
 māl
 māl
-�
+af
 ēmå
 w
 ā̊šā̊må
@@ -74377,7 +74377,7 @@ ittək
 w
 am
 lā̊
-šā̊�ti
+šā̊ṭīti
 ṭēmiy'yā
 tā̊t
 īšək
@@ -74542,7 +74542,7 @@ mā̊'nā
 it
 ēzā̊kårtå
 w
-�qṭər
+ā̊qṭər
 am
 maz'bā
 w
@@ -74711,7 +74711,7 @@ w
 ēnā̊bəm
 lāʾəm
 w
-ya��ī�əm
+yabbīšəm
 lå
 yā̊ʾūkəl
 kal
@@ -75827,7 +75827,7 @@ bā̊qår
 īl
 ʿād
 kā̊båš
-ʿ�d
+ʿād
 ban
 šēnā̊tu
 l
@@ -75938,7 +75938,7 @@ zē
 qā̊rā̊bån
 ēlīšāma
 ban
-ʿammiyyod�
+ʿammiyyod
 ab
 yom
 aš
@@ -76070,7 +76070,7 @@ bā̊qår
 īl
 ʿād
 kā̊båš
-ʿ�d
+ʿād
 ban
 šēnā̊tu
 l
@@ -76138,7 +76138,7 @@ af
 šā̊mən
 lam
 mā̊'nā
-k�
+kåf
 ʿāt
 ʿā̊šā̊rå
 zā̊b
@@ -76274,7 +76274,7 @@ al
 bā̊ni
 niftā̊li
 ā̊ʾīra
-�ban
+ban
 īnån
 w
 qā̊rā̊bā̊nu
@@ -76307,7 +76307,7 @@ kåf
 ʿā̊šā̊rå
 zā̊b
 mā̊liyya
-qi�ā̊rət
+qiṭṭā̊rət
 får
 ʿād
 ban
@@ -76712,7 +76712,7 @@ kā̊fər
 ʿal
 al
 lībəm
-�
+w
 āmmidtå
 it
 al
@@ -77053,7 +77053,7 @@ kål
 aqqūto
 w
 k
-�ål
+ā̊kål
 mašfā̊ṭo
 tēššu
 ūtu
@@ -77479,7 +77479,7 @@ iškån
 ʿālo
 yā̊nnu
 bā̊ni
-yišr�əl
+yišrā̊ʾəl
 w
 lā̊
 yissāʾu
@@ -77745,7 +77745,7 @@ l
 åb'rā̊m
 al
 yē'ṣā̊q
-�
+w
 al
 yā̊:qob
 al
@@ -78048,7 +78048,7 @@ aṭ
 ā̊'
 ʾū
 ēšår
-�ṭåb
+yīṭåb
 šēmå
 immā̊nu
 w
@@ -78093,7 +78093,7 @@ nā̊sa
 ā̊
 :ron
 w
-y�ʾūmər
+yā̊ʾūmər
 mūši
 qūma
 šēmå
@@ -78718,7 +78718,7 @@ yiṣṣā̊ʾu
 w
 yitnabbu
 b
-am�i
+ammai
 w
 yā̊råṣ
 an'
@@ -79011,9 +79011,9 @@ b
 bū
 lā̊
 ken
-ʿab�i
+ʿabdi
 mūši
-�
+af
 al
 bīti
 nā̊:mən
@@ -79146,10 +79146,10 @@ w
 tissā̊går
 maryåm
 m
-i�yyoṣ
+iyyoṣ
 lam
 mā̊:ni
-šā̊�bā̊t
+šā̊'bāt
 yā̊məm
 w
 ā
@@ -79212,7 +79212,7 @@ al
 tēʾåt
 w
 yiqrā̊bu
-al�
+al
 mūši
 w
 yā̊ʾūmēru
@@ -79233,7 +79233,7 @@ dēbår
 it
 ad
 dērək
-ēšå�
+ēšår
 nēlli
 bā
 w
@@ -79280,7 +79280,7 @@ måṭṭi
 ā̊būto
 tēšalla
 kal
-anši�
+anši
 bēmma
 w
 yēšalla
@@ -79446,7 +79446,7 @@ mā̊
 :rəṣ
 ēēšår
 ū
-yēēšə�
+yēšəb
 bā
 ā
 ṭūba
@@ -79486,7 +79486,7 @@ w
 lēqāttimma
 mi
 fīri
-�:
+ā̊:
 rəṣ
 w
 ay
@@ -79565,7 +79565,7 @@ man
 at
 tīnəm
 l
-ammā̊�om
+ammā̊qom
 ā̊'
 ʾū
 qā̊rā̊ʾu
@@ -79682,8 +79682,8 @@ w
 ā̊
 ʾibbi
 w
-�
-ay�ēbūsi
+ay
+yēbūsi
 w
 ā̊
 ʾēmarri
@@ -79915,7 +79915,7 @@ ze
 inkimma
 mā̊mēnəm
 af
-ī�må
+šēmå
 ēluwwīkimma
 ā̊
 :lək
@@ -80307,7 +80307,7 @@ l
 abbəm
 w
 råb
-ēs�
+ēsəd
 w
 ā̊mət
 nā̊ēša
@@ -80324,7 +80324,7 @@ fūqəd
 ūn
 ā̊bot
 ʿal
-bā̊nə�m
+bā̊nəm
 ʿal
 šēlīšā̊ʾəm
 w
@@ -80343,7 +80343,7 @@ gā̊dål
 isdåk
 w
 kā̊
-�ēšår
+ʾēšår
 nā̊šāttå
 l
 ām
@@ -80391,11 +80391,11 @@ w
 bam
 madbår
 w
-�ēnassu
+yēnassu
 ūti
 zē
 ʿā̊šår
-�mməm
+fāmməm
 w
 lā̊
 šāmāʾu
@@ -80499,7 +80499,7 @@ nā̊m
 am
 lā̊
 kā̊
-ʾē�år
+ʾēšår
 dabbertimma
 b
 ēzni
@@ -80561,7 +80561,7 @@ w
 ībā̊tti
 ūtimma
 w
-�iddāʾu
+yiddāʾu
 it
 ā̊
 :rəṣ
@@ -80747,7 +80747,7 @@ mā̊qom
 kī
 ʿā̊ṭīnu
 w
-y�ʾūmər
+yā̊ʾūmər
 šēmå
 al
 mūši
@@ -80777,7 +80777,7 @@ attimma
 ʿābērəm
 it
 fī
-�må
+šēmå
 w
 ī
 lā̊
@@ -81034,7 +81034,7 @@ al
 kā̊ka
 iyyāši
 l
-aš�or
+aššor
 ā̊'
 ʿād
 ū
@@ -81301,7 +81301,7 @@ bā̊ni
 yišrā̊ʾəl
 w
 l
-ag�ər
+aggər
 ag
 går
 af
@@ -82132,7 +82132,7 @@ kā̊
 mot
 kal
 ā̊
-�dåm
+:dåm
 yēmūton
 illa
 w
@@ -82175,7 +82175,7 @@ nāʾēṣu
 ā̊
 ʾēnā̊šəm
 ā̊
-�illa
+ʾilla
 it
 šēmå
 w
@@ -82534,7 +82534,7 @@ it
 aq
 qiṭṭā̊rət
 w
-yēkā̊�ər�
+yēkā̊fər
 ʿal
 ʿā
 m
@@ -82598,7 +82598,7 @@ yiēšrā̊ʾəl
 w
 qā
 miy
-yēt�ma
+yētimma
 måṭṭi
 måṭṭi
 al
@@ -82676,7 +82676,7 @@ al
 bā̊ni
 yišrā̊ʾəl
 w
-yittēnu�
+yittēnu
 īlo
 kal
 anšiyyāyyimma
@@ -82844,7 +82844,7 @@ it
 ūn
 am
 maqdåš
-�
+w
 åttå
 w
 bā̊nək
@@ -82996,7 +82996,7 @@ az
 zår
 aq
 qā̊råb
-�måt
+yūmåt
 w
 yēdabbər
 šēmå
@@ -83016,7 +83016,7 @@ qā̊dēši
 bā̊ni
 yišrā̊ʾəl
 låk
-nā̊tått�ma
+nā̊tåttimma
 al
 mā̊'šā
 w
@@ -83119,7 +83119,7 @@ kal
 b
 årṣimma
 ēšår
-yībiy�
+yībiyyu
 al
 šēmå
 låk
@@ -83490,7 +83490,7 @@ yēqəb
 w
 ā̊kåltimma
 ūtu
-�
+af
 al
 mā̊qom
 attimma
@@ -83603,7 +83603,7 @@ muwwəd
 mid
 damma
 šā̊ba
-�mməm
+fāmməm
 w
 šā̊råf
 it
@@ -83677,7 +83677,7 @@ rā̊ṣ
 it
 bā̊šā̊ru
 b
-ā̊m�m
+ā̊məm
 w
 ṭēma
 ʿad
@@ -83698,7 +83698,7 @@ yoṣ
 l
 ammā:ni
 b
-�mā̊�om
+ā̊mā̊qom
 ṭā̊ʾor
 w
 ēyyā̊tå
@@ -83915,7 +83915,7 @@ ak
 kīləm
 w
 al
-a�
+an
 nafšot
 ēšår
 ayyu
@@ -84163,7 +84163,7 @@ w
 yirrā̊ʾi
 kā̊bod
 šēmå
-īlīyyimma.�
+īlīyyimma
 w
 yēdabbər
 šēmå
@@ -84223,7 +84223,7 @@ kā̊
 ʾēšår
 ṣā̊bēʾu
 w
-y�qīlu
+yā̊qīlu
 mūši
 w
 ā̊rron
@@ -84267,7 +84267,7 @@ w
 yiṣṣā̊ʾu
 mem
 råbbəm
-�
+w
 tišti
 ā̊
 ʾīda
@@ -84389,7 +84389,7 @@ b
 addēbår
 az
 ze
-[13�]ēli
+ēli
 al
 rēʾoš
 af
@@ -85051,7 +85051,7 @@ it
 ā̊'
 ʾīš
 w
-ā̊bbə�
+ā̊bbəṭ
 al
 nāš
 an
@@ -85427,7 +85427,7 @@ siyyon
 it
 yišrā̊ʾəl
 ʿåbbår
-a�
+af
 gēbūlu
 w
 yā̊ʾūmər
@@ -86173,7 +86173,7 @@ mā̊'lā̊k
 nēṣəb
 bad
 dērək
-�
+w
 arbu
 šā̊lūfa
 ab
@@ -86241,7 +86241,7 @@ l
 w
 yā̊səf
 mā̊'lā̊k
-�må
+šēmå
 ʿābor
 w
 yā̊mmåd
@@ -86294,7 +86294,7 @@ mā̊
 låk
 kī
 akkītā̊ni
-�ē
+zē
 šēlåš
 argā̊ləm
 w
@@ -86547,7 +86547,7 @@ qaryåt_īṣot
 w
 yizba
 bā̊låq
-b�ā̊qår
+bā̊qår
 w
 ṣēʾon
 w
@@ -86623,12 +86623,12 @@ bā̊'lām
 al
 bā̊låq
 ittīṣåb
-�al
+ʿal
 ʿālūtək
 w
 ēlā̊ka
 ūli
-yiqq�ri
+yiqqāri
 ēluwwəm
 al
 qērā̊tti
@@ -86637,7 +86637,7 @@ dabbər
 mā̊
 yarriyyā̊ni
 w
-ā̊ggit�i
+ā̊ggitti
 låk
 w
 yā̊låk
@@ -86999,7 +86999,7 @@ bā̊låq
 al
 bā̊'lām
 gam
-qåb�
+qåb
 lā̊
 tiqqā̊binnu
 w
@@ -87176,7 +87176,7 @@ mā̊
 ā̊ʾūlək
 yā̊:qob
 w
-maškā̊n�tək
+maškā̊nūtək
 yišrā̊ʾəl
 kā̊
 nēlləm
@@ -87414,7 +87414,7 @@ w
 ēyya
 yā̊rišša
 īšåb
-�iyyā̊bo
+iyyā̊bo
 w
 yišrā̊ʾəl
 ʿāši
@@ -87474,7 +87474,7 @@ tūšā̊båk
 w
 yišša
 mā̊šā̊lu
-�
+w
 yā̊ʾūmər
 uwwi
 mī
@@ -87485,7 +87485,7 @@ il
 yūṣiyyimma
 miy
 yəd
-kitt�əm
+kittəm
 yānnu
 ā̊šor
 w
@@ -87658,7 +87658,7 @@ w
 it
 ā̊
 ʾišša
-al�
+al
 qåbbā̊tå
 w
 tiyyā̊ṣår
@@ -87711,7 +87711,7 @@ kallīti
 it
 bā̊ni
 yišrā̊ʾəl
-�
+af
 qēnā̊tti
 alkən
 ēmår
@@ -87912,7 +87912,7 @@ al
 fillu
 maš'fēt
 a
-�lluwwi
+ffilluwwi
 l
 ēṣron
 maš'fēt
@@ -88052,7 +88052,7 @@ gåd
 al
 mašfūttimma
 al
-ṣ�on
+ṣā̊fon
 maš'ft
 aṣ
 ṣā̊fūni
@@ -88399,7 +88399,7 @@ illa
 bā̊ni
 binyā̊məm
 al
-maēš�ūttimma
+mašfūttimma
 w
 fēqā̊dīyyimma
 ēmišša
@@ -88508,7 +88508,7 @@ al
 šillom
 maš'fēt
 aš
-š�llūmi
+šillūmi
 illa
 maš'fūt
 niftā̊li
@@ -88595,7 +88595,7 @@ w
 illa
 fqādi
 al
-l�əm
+lībəm
 al
 mašfūttimma
 al
@@ -88768,7 +88768,7 @@ kī
 šēmå
 lēmma
 mot
-y�mā̊tu
+yūmā̊tu
 bam
 madbår
 w
@@ -89569,7 +89569,7 @@ ar
 rā̊ʾīšon
 maqra
 qā̊dəš
-ka�l
+kal
 mā̊lā̊kåt
 ēbīda
 lā̊
@@ -89747,7 +89747,7 @@ w
 išron
 išron
 l
-akkā̊bå�
+akkā̊båš
 ā̊'
 ʿād
 al
@@ -89885,7 +89885,7 @@ l
 aš
 šē'bī
 az
-z�
+ze
 maqra
 qā̊dəš
 yēyyi
@@ -90406,7 +90406,7 @@ izzəm
 ʿād
 l
 ā̊ṭåt
-mi�
+mi
 l
 båd
 ʿā̊låt
@@ -90498,7 +90498,7 @@ yēšši
 w
 išša
 kī
-ti�ddår
+tiddår
 nēdår
 al
 šēmå
@@ -90725,7 +90725,7 @@ it
 kal
 nēdā̊riyya
 ū
-�t
+it
 kal
 ā̊sā̊riyya
 ēšår
@@ -90890,7 +90890,7 @@ mā̊lēki
 madyån
 ā̊rā̊gu
 ʿal
-ēlā̊līy�imma
+ēlā̊līyyimma
 it
 uwwi
 w
@@ -91024,7 +91024,7 @@ yoṣ
 lam
 mā̊:ni
 w
-yiqṣ�
+yiqṣåf
 mūši
 ʿal
 fēqīdi
@@ -91761,7 +91761,7 @@ kīli
 zā̊b
 ēṣiddå
 w
-�məd
+ṣēməd
 ṭåb'bēt
 ʿāgəl
 w
@@ -91784,7 +91784,7 @@ it
 az'
 zā̊b
 m
-�iyyētimma
+iyyētimma
 kal
 kīli
 māšši
@@ -91942,7 +91942,7 @@ al
 fā̊ni
 īdåt
 yišrā̊ʾəl
-ā̊�əṣ
+ā̊rəṣ
 maqni
 ī
 w
@@ -91970,7 +91970,7 @@ w
 al
 tābbīrā̊nu
 it
-a�
+ay
 yårdån
 w
 yā̊ʾūmər
@@ -92315,7 +92315,7 @@ inna
 al
 šēmå
 w
-d�ʾu
+dāʾu
 ēṭā̊ʾūtīkimma
 ēšår
 timṣå
@@ -92333,7 +92333,7 @@ w
 ay
 yūṣå
 m
-i�imma
+iffīkimma
 tēššon
 w
 yā̊ʾūmēru
@@ -92627,7 +92627,7 @@ yittən
 mūši
 it
 ag
-g�lād
+gā̊'lād
 al
 mā̊kər
 ban
@@ -93009,7 +93009,7 @@ yā̊šā̊mūna
 w
 yā̊nnu
 b
-ā̊m�s�rot
+ā̊mā̊sīrot
 w
 yissāʾu
 mim
@@ -93060,7 +93060,7 @@ bā̊
 madbår
 ṣen
 ī
-q�dəš
+qādəš
 w
 yissāʾu
 miq
@@ -93191,7 +93191,7 @@ gåd
 w
 yissāʾu
 mid
-dībon�
+dībon
 gåd
 w
 yā̊nnu
@@ -93269,9 +93269,9 @@ u
 ʾūreštimma
 it
 kal
-yūšēbi�
+yūšēbi
 ā̊
-�rəṣ
+:rəṣ
 mif
 fā̊nīkimma
 w
@@ -93293,7 +93293,7 @@ tašmīdu
 u
 ʾūreštimma
 it
-�:
+ā̊:
 rəṣ
 w
 yā̊šåbtimma
@@ -93327,7 +93327,7 @@ māṭ
 tā̊'mīṭ
 it
 nā̊:lā̊tu
-�al
+ʿal
 ēšår
 yiṣṣå
 lū
@@ -93450,7 +93450,7 @@ al
 māla_ʿåqråbbəm
 w
 åbbår
-ṣin�nå
+ṣinnå
 w
 ēyya
 tūṣā̊ʾītu
@@ -93568,7 +93568,7 @@ al
 kētəf
 yåm
 kinnā̊rət
-�qidma
+qidma
 w
 yā̊råd
 ag
@@ -93809,7 +93809,7 @@ l
 īmor
 ṣā̊bi
 it
-bā̊ni�
+bā̊ni
 yišrā̊ʾəl
 w
 nā̊tā̊nu
@@ -93824,7 +93824,7 @@ al
 w
 magrəš
 l
-ā:rəm�
+ā:rəm
 sā̊bībūtīyyimma
 tittēnu
 l
@@ -94193,7 +94193,7 @@ rēṣå
 gā̊ʾəl
 ad
 dåm
-�mət
+yīmət
 it
 ar
 rēṣå
@@ -94456,7 +94456,7 @@ am
 af
 dåm
 šafku
-�.
+w
 lā̊
 tēṭåmmiyyu
 it
@@ -94640,7 +94640,7 @@ måṭṭi
 ā̊bīyyinna
 tā̊yyinna
 l
-inšəm�
+inšəm
 w
 lā̊
 tissåb
@@ -94891,7 +94891,7 @@ fnu
 w
 sāʾu
 lā̊kimma
-��
+w
 bāʾu
 år
 ā̊
@@ -95057,9 +95057,9 @@ mā̊ʾot
 ēmiššəm
 w
 šā̊ri
-ʿā̊�ā̊rot
+ʿā̊šā̊rot
 w
-šūṭā̊�rəm
+šūṭā̊rəm
 al
 šā̊bā̊ṭīkimma
 w
@@ -95769,7 +95769,7 @@ it
 ā̊kål
 tašbīru
 miy
-yē�imma
+yētimma
 af
 kā̊səf
 w
@@ -95937,7 +95937,7 @@ af
 yā̊šā̊bu
 ā̊
 :ri
-�l
+al
 fā̊nəm
 w
 bā̊ni
@@ -95991,7 +95991,7 @@ qādəš_birna
 ʿåbbårnu
 it
 nēl
-zā̊�råd
+zā̊råd
 šēlā̊šəm
 w
 šā̊mā̊na
@@ -97089,7 +97089,7 @@ yēʾūša
 w
 azzīqēʾu
 w
-ammī�ʾu
+ammīṣēʾu
 kī
 ū
 yēbbår
@@ -97100,7 +97100,7 @@ m
 az
 ze
 u'
-ʾ�
+ʾū
 yā̊'nīl
 ūtimma
 it
@@ -97185,7 +97185,7 @@ kal
 ā̊'
 ʾīš
 ēšår
-ā̊l�
+ā̊låk
 ā̊ʾūri
 bāl_fūr
 ašmīdu
@@ -97298,7 +97298,7 @@ zēʾot
 ā̊nā̊ki
 nā̊tən
 al
-�nīkimma
+fā̊nīkimma
 ay
 yom
 råq
@@ -97619,7 +97619,7 @@ b
 az
 zēʾot
 īninni
-�åbbår
+ʿåbbår
 it
 ay
 yårdån
@@ -97886,7 +97886,7 @@ kā̊
 šāmāttå
 åtå
 w
-�
+yī
 ū
 an
 nåsså
@@ -98180,7 +98180,7 @@ mol
 bet_fūr
 b
 ā̊rəṣ
-�siyyon
+siyyon
 mā̊lək
 ā̊
 ʾēmarri
@@ -98887,7 +98887,7 @@ w
 yišma
 šēmå
 it
-qo�l
+qol
 dēbā̊rīkimma
 af
 dabberkimma
@@ -99084,7 +99084,7 @@ kā̊
 ʾēšår
 dabbər
 šēmå
-ēluwwi�
+ēluwwi
 ā̊būtək
 låk
 ā̊rəṣ
@@ -99244,7 +99244,7 @@ tā̊bbåd
 w
 af
 šēmu
-tiššā�ba
+tiššāba
 lā̊
 tēlā̊ku
 ā̊ʾūri
@@ -99255,7 +99255,7 @@ miyy
 ʿā
 mməm
 ēšår
-sā̊b�ūnīkimma
+sā̊bībūtīkimma
 kī
 il
 qā̊nå
@@ -99369,7 +99369,7 @@ fā̊ru
 bā̊
 miṣrəm
 w
-�ṣiyyā̊nu
+yūṣiyyā̊nu
 šēmå
 mim
 miṣrəm
@@ -99438,7 +99438,7 @@ ay
 yā̊məm
 w
 l
-i�yūtīnu
+iyyūtīnu
 kay
 yom
 az
@@ -99751,10 +99751,10 @@ l
 ā̊būtək
 w
 ā̊ʾēbåk
-�
+w
 arrēkåk
 w
-�åbbåk
+ā̊råbbåk
 w
 barrək
 fīri
@@ -99962,7 +99962,7 @@ tūkål
 kallūtimma
 mā̊ʾər
 fan
-t�bi
+tirbi
 ʿālək
 ʿayyåt
 aš
@@ -100000,7 +100000,7 @@ fā̊nək
 ʿad
 ašmīdåk
 ūtimma
-�sīli
+afsīli
 ēluwwīyyimma
 tišrā̊fon
 b
@@ -100084,7 +100084,7 @@ bam
 madbår
 al'mān
 ʿannūtåk
-�al
+wal
 nassūtåk
 al'
 dāt
@@ -100424,7 +100424,7 @@ kī
 ā̊båd
 tā̊bbā̊don
 kag
-gu�əm
+guwəm
 ēšår
 šēmå
 mābbəd
@@ -100647,7 +100647,7 @@ am
 w
 b
 ūrəb
-aq�ftimma
+aqṣeftimma
 it
 šēmå
 w
@@ -101468,7 +101468,7 @@ at
 ēluwwåk
 l
 allēkət
-�
+af
 al
 dērēko
 w
@@ -101570,7 +101570,7 @@ w
 ag
 gā̊dol
 w
-a�
+ag
 gibbor
 w
 an
@@ -101882,7 +101882,7 @@ al
 rišta
 lā̊
 kā̊
-r�ṣ
+rəṣ
 miṣrəm
 ī
 ēšår
@@ -102106,7 +102106,7 @@ bā̊mīkimma
 niššāba
 šēmå
 l
-ā̊būt�imma
+ā̊būtīkimma
 al
 tət
 lēmma
@@ -102441,7 +102441,7 @@ nåt1åṣtimma
 it
 mazbāʾūtīyyimma
 w
-šåbbårt�ma
+šåbbårtimma
 it
 måṣṣībūtīyyimma
 w
@@ -102562,7 +102562,7 @@ an
 nā̊:la
 ēšår
 šēmå
-ēluwwīk�ma
+ēluwwīkimma
 nā̊tån
 lā̊kimma
 w
@@ -102744,7 +102744,7 @@ w
 bikkūrot
 båqråk
 w
-�ʾūnåk
+ṣēʾūnåk
 w
 kal
 nēdā̊rək
@@ -102797,7 +102797,7 @@ iššā̊mår
 låk
 fan
 tā̊zzåb
-�t
+it
 al
 lībi
 kal
@@ -102850,7 +102850,7 @@ mib
 båqråk
 w
 m
-iṣ�ʾūnåk
+iṣṣēʾūnåk
 ēšår
 nā̊tån
 šēmå
@@ -103212,7 +103212,7 @@ låm
 ʾēlom
 ā̊'
 ʾū
-�måt
+yūmåt
 kī
 dabbər
 sā̊rå
@@ -103382,7 +103382,7 @@ ra
 az
 ze
 af
-q�båk
+qirbåk
 kī
 tišma
 b
@@ -103472,7 +103472,7 @@ al
 tok
 rā̊bbå
 w
-šā̊r�tå
+šā̊råftå
 b
 ēš
 it
@@ -103712,7 +103712,7 @@ amməm
 kal
 ēšår
 lū
-sā̊n�ər
+sā̊nā̊fər
 w
 qašqēšət
 tā̊ʾūkēlu
@@ -103853,7 +103853,7 @@ tittēninna
 w
 ā̊kēla
 ū
-m�kēra
+makkēra
 lan
 nikri
 kī
@@ -103907,7 +103907,7 @@ w
 bikkūrot
 båqråk
 w
-�ʾūnåk
+ṣēʾūnåk
 al'mān
 tilmåd
 al
@@ -103940,7 +103940,7 @@ bār
 al
 šakkən
 it
-�mu
+šēmu
 šamma
 kī
 yēbarrēki
@@ -103948,7 +103948,7 @@ yēbarrēki
 ēluwwåk
 w
 nā̊tåttå
-�
+ak
 ā̊səf
 w
 ṣårtå
@@ -103970,7 +103970,7 @@ w
 nā̊tåttå
 ak
 kā̊səf
-�
+af
 al
 ēšår
 tā̊wwå
@@ -103978,7 +103978,7 @@ nafšåk
 bā̊
 bā̊qår
 w
-�
+af
 ṣēʾon
 ab
 yayyən
@@ -104162,7 +104162,7 @@ yom
 kī
 šēmå
 ēluwwi
-barrēk�
+barrēkåk
 kā̊
 ʾēšår
 dabbər
@@ -104181,7 +104181,7 @@ af
 guwwəm
 råbbəm
 w
-b�
+båk
 lā̊
 yimšā̊lu
 kī
@@ -104195,7 +104195,7 @@ b
 āt
 šā̊rək
 b
-ā̊r�ṣ
+ā̊rəṣ
 ēšår
 šēmå
 ēluwwåk
@@ -104278,7 +104278,7 @@ kī
 af
 gēlål
 ad
-d�bår
+dēbår
 az
 ze
 yēbarrēkåk
@@ -104288,7 +104288,7 @@ af
 kal
 māššək
 w
-�
+af
 al
 mēšalla
 yēdək
@@ -104344,17 +104344,17 @@ immåk
 w
 kī
 tēšallāʾinnu
-�i
+ifši
 miyy
 immåk
 lā̊
 tēšallāʾinnu
 rīqəm
-�ānnəq
+ʿānnəq
 tānnəq
 lū
 m
-iṣ�ʾūnåk
+iṣṣēʾūnåk
 w
 mig
 girnåk
@@ -104440,7 +104440,7 @@ b
 af
 šal'lāk
 ūtu
-�i
+ifši
 miyy
 immåk
 kī
@@ -104467,13 +104467,13 @@ bā̊
 båqråk
 w
 af
-�ʾūnåk
+ṣēʾūnåk
 az
 zā̊kår
 taqdəš
 al
 šēmå
-ēluww�
+ēluwwåk
 lā̊
 tēbbåd
 bā̊
@@ -104484,7 +104484,7 @@ lā̊
 tiggåz
 it
 bikkor
-�ʾūni
+ṣēʾūnåk
 al
 fā̊ni
 šēmå
@@ -104539,7 +104539,7 @@ lā̊
 tā̊ʾūkəl
 ʿal
 ā̊
-rəṣ�
+rəṣ
 tišfā̊kinnu
 kam
 məm
@@ -104553,7 +104553,7 @@ aššītå
 afsa
 al
 šēmå
-ēluww�
+ēluwwåk
 kī
 b
 ā̊dəš
@@ -104601,7 +104601,7 @@ b
 ēbbā̊zon
 yā̊ṣā̊ttå
 miy
-y�əṣ
+yā̊rəṣ
 miṣrəm
 al'mān
 tēzā̊kår
@@ -104710,7 +104710,7 @@ tā̊ʾūkəl
 måṣṣot
 w
 b
-a�yom
+ayyom
 aš
 šē'bī
 ʿag
@@ -104850,9 +104850,9 @@ ay
 yētom
 w
 ā̊
-lmēna�
+lmēna
 ēšår
-�
+af
 ārək
 šā̊'bāt
 yā̊nīəm
@@ -104935,7 +104935,7 @@ w
 šūṭā̊rəm
 tittən
 låk
-�
+af
 al
 šārək
 ēšår
@@ -105080,7 +105080,7 @@ aš
 šā̊məm
 ēšår
 lā̊
-ṣā̊bītiy�
+ṣā̊bītiyyu
 w
 ā̊ggīdu
 låk
@@ -105088,9 +105088,9 @@ w
 šāmāttå
 w
 dā̊råštå
-ā̊ʾīṭ�åb
-�
-ēun�
+ā̊ʾīṭåb
+w
+ēnna
 ā̊mət
 nā̊kon
 ad
@@ -105106,7 +105106,7 @@ u
 ʾūṣā̊ttå
 it
 ā̊'
-�īš
+ʾīš
 ā̊'
 ʾū
 ū
@@ -105128,7 +105128,7 @@ al
 šārək
 it
 ā̊'
-ʾ�š
+ʾīš
 ū
 it
 ā
@@ -105138,7 +105138,7 @@ sā̊qåltimma
 b
 ā̊bā̊nəm
 w
-mē�
+mētu
 ʿal
 fī
 šēni
@@ -105168,7 +105168,7 @@ l
 īmītu
 w
 yad
-k�l
+kal
 ʿā
 m
 b
@@ -105178,7 +105178,7 @@ bārtå
 ar
 ra
 miq
-q�båk
+qirbåk
 kī
 yifia
 mimmåk
@@ -105239,7 +105239,7 @@ låk
 it
 dēbår
 am
-m��fåṭ�
+mašfåṭ
 w
 ašēšītå
 ʿal
@@ -105257,7 +105257,7 @@ mā̊qom
 ēšår
 bār
 šēmå
-ēluww�
+ēluwwåk
 w
 šā̊mårtå
 l
@@ -105468,7 +105468,7 @@ w
 ēyyā̊tå
 immu
 w
-qā̊r�å
+qā̊rå
 bā
 kal
 yā̊mi
@@ -105645,7 +105645,7 @@ går
 šamma
 w
 bā
-�
+af
 al
 uwwåt
 nafšu
@@ -106037,7 +106037,7 @@ l
 w
 nā̊då
 yēdu
-�
+af
 garzən
 l
 ikråt
@@ -106310,7 +106310,7 @@ b
 l
 ānot
 bū
-�rå
+sā̊rå
 w
 ā̊mā̊du
 šēni
@@ -106788,7 +106788,7 @@ tuwwēbūtimma
 l
 ēluwwīyyimma
 w
-ā̊�timma
+ā̊ṭītimma
 al
 šēmå
 ēluwwīkimma
@@ -106817,7 +106817,7 @@ tā̊ʾūkəl
 u
 ʾūtu
 lā̊
-t�rət
+takrət
 kī
 ā̊
 dåm
@@ -106961,7 +106961,7 @@ al
 w
 al
 barrək
-�
+af
 am
 šēmå
 w
@@ -107161,7 +107161,7 @@ bā̊nəm
 ā̊
 ʾūba
 w
-�š
+aš
 šā̊nuw'wā
 w
 ēyya
@@ -107210,7 +107210,7 @@ tət
 lū
 fī
 šēnəm
-a�
+af
 al
 ēšår
 yimmā̊ṣå
@@ -107503,7 +107503,7 @@ bā̊nəm
 tiqqa
 låk
 al'mān
-�ṭåb
+yīṭåb
 låk
 w
 ā̊riktå
@@ -107969,8 +107969,8 @@ fā̊ṣa
 dukka
 w
 kā̊rot
-aš�ot
-�
+ašfīkot
+af'
 qāl
 šēmå
 lā̊
@@ -108047,7 +108047,7 @@ išma
 al
 bā̊'lām
 w
-y�åk
+yā̊fåk
 šēmå
 ēluwwåk
 låk
@@ -108235,7 +108235,7 @@ af
 ṭob
 lū
 lā̊
-�ninnu
+tūninnu
 lā̊
 tiyya
 qēdīša
@@ -108340,7 +108340,7 @@ mūṣå
 ašfā̊tək
 tišmår
 w
-aš�tå
+aššītå
 kā̊
 ʾēšår
 nā̊dårtå
@@ -108353,7 +108353,7 @@ bā̊
 fiyyåk
 kī
 tā̊'bū
-�
+af
 ā̊rəm
 rēk
 w
@@ -108461,7 +108461,7 @@ lū
 l
 išša
 lā̊
-�kål
+yūkål
 bā̊la
 ar
 rā̊ʾišon
@@ -108504,7 +108504,7 @@ išša
 ʿā̊dā̊ša
 lā̊
 yiṣṣå
-�
+af
 ṣā̊ba
 w
 lā̊
@@ -108626,7 +108626,7 @@ w
 nā̊ša
 bū
 ū
-�ṣi
+yūṣi
 īlək
 it
 ʿā̊
@@ -108726,7 +108726,7 @@ bot
 īš
 b
 ēṭā̊ʾu
-�måt
+yūmåt
 lā̊
 tēṭi
 mašfåṭ
@@ -108785,7 +108785,7 @@ al'mān
 yēbarrēkåk
 šēmå
 ēlwwåk
-�
+af
 al
 māšši
 yēdək
@@ -108845,7 +108845,7 @@ al
 am
 mašfåṭ
 w
-š�ā̊ṭumma
+šā̊fā̊ṭumma
 w
 ā̊ṣdīqu
 it
@@ -109480,7 +109480,7 @@ w
 w
 ā̊mårtå
 al
-fā̊�i
+fā̊ni
 šēmå
 ēluwwåk
 bārti
@@ -109649,7 +109649,7 @@ kal
 mēṣā̊būto
 w
 al
-titå�
+tittåk
 illiyyon
 ʿal
 kal
@@ -110130,7 +110130,7 @@ it
 kal
 mēṣā̊būto
 ēšår
-ā̊n�i
+ā̊nā̊ki
 amṣā̊båk
 ay
 yom
@@ -110156,7 +110156,7 @@ w
 ā̊ššīgok
 kī
 tišma
-�
+af
 qol
 šēmå
 ēluwwåk
@@ -110182,7 +110182,7 @@ bī:mā̊tåk
 ā̊lā̊fək
 w
 ēštā̊rrot
-�ʾūnåk
+ṣēʾūnåk
 bā̊rok
 ṭā̊nnåk
 w
@@ -110258,7 +110258,7 @@ mēṣā̊bot
 ēluwwåk
 w
 ā̊liktå
-�
+af
 dērēko
 w
 rā̊ʾu
@@ -110288,7 +110288,7 @@ fīri
 bī:mā̊tåk
 w
 b
-�ri
+ā̊fīri
 ā̊dā̊mā̊tåk
 ʿal
 ā̊
@@ -110404,7 +110404,7 @@ mēṣā̊būto
 w
 aqqūto
 ēšår
-ā̊�ā̊ki
+ā̊nā̊ki
 amṣā̊båk
 ay
 yom
@@ -110413,9 +110413,9 @@ bāʾu
 ʿālək
 kal
 aq
-qā̊lā̊io�
+qā̊lā̊lot
 ā̊
-�iila
+ʾilla
 w
 ā̊ššīgok
 ā̊ror
@@ -110456,7 +110456,7 @@ af
 ṣiyyā̊tåk
 yēšalla
 šēmå
-b�
+båk
 it
 am
 mirra
@@ -110481,7 +110481,7 @@ ad
 abbīdåk
 mā̊ʾər
 m
-i�ā̊ni
+iffā̊ni
 rā
 māllēlək
 ēšår
@@ -110695,7 +110695,7 @@ w
 lā̊
 yēšob
 låk
-�ʾūnåk
+ṣēʾūnåk
 nētīnot
 l
 iyyā̊bək
@@ -110847,7 +110847,7 @@ tū'lāt
 zītəm
 yā̊yyu
 låk
-�
+af
 al
 gēbūlåk
 w
@@ -111075,7 +111075,7 @@ kal
 w
 åṣṣår
 låk
-�
+af
 al
 šārək
 af
@@ -111471,7 +111471,7 @@ dērək
 lā̊kimma
 lā̊
 tūsīfon
-�d
+ūd
 al
 rā̊ʾūta
 w
@@ -111617,7 +111617,7 @@ kī
 šēmå
 ēluwwīkimma
 w
-t�bāʾu
+tābāʾu
 al
 am
 mā̊qom
@@ -111819,7 +111819,7 @@ it
 šiqqūṣīyyimma
 w
 it
-gill�līyyimma
+gillūlīyyimma
 iṣ
 w
 ā̊bən
@@ -111959,7 +111959,7 @@ az
 ze
 w
 ā̊mår
-a�
+ad
 dor
 ā̊
 ʾēron
@@ -112757,7 +112757,7 @@ kī
 ēluwwåk
 ū
 ā̊
-lə�
+lək
 immåk
 lā̊
 yarrēfåk
@@ -112800,7 +112800,7 @@ tət
 lēmma
 w
 åttå
-tā̊nīli�na
+tā̊nīlinna
 ūtimma
 w
 šēmå
@@ -112847,7 +112847,7 @@ w
 al
 kal
 zā̊qīni
-yišrā̊ʾəl�
+yišrā̊ʾəl
 w
 yēṣā̊ba
 mūši
@@ -112936,7 +112936,7 @@ bā̊nīyyimma
 ēšår
 lā̊
 yādāʾu
-wyišmāʾu�
+wyišmāʾu
 w
 lā̊mā̊du
 al
@@ -113029,7 +113029,7 @@ zā̊na
 ā̊ʾūri
 ēluwwi
 nēkår
-�
+ā̊
 rəṣ
 ēšår
 ū
@@ -113039,7 +113039,7 @@ af
 qirbu
 w
 ā̊zā̊būni
-�
+w
 īfīru
 it
 bērīti
@@ -113086,7 +113086,7 @@ af
 qirbi
 mā̊ṣā̊ʾūni
 ar
-rāʾo�t
+rāʾot
 ā̊
 ʾilla
 w
@@ -113106,7 +113106,7 @@ ar'
 rā
 ēšår
 ʿāšu
-k�
+kī
 fā̊nu
 al
 ēluwwəm
@@ -113591,7 +113591,7 @@ rəṣ
 yakīlēʾu
 tēnūfåt
 šā̊di
-�nīqēʾu
+yīnīqēʾu
 dā̊båš
 mis
 sīla
@@ -113641,7 +113641,7 @@ yiṭṭåš
 w
 yēnabbēlu
 ṣor
-yēšuww�ttu
+yēšuwwāttu
 yaqniyyēʾu
 b
 azzarrəm
@@ -113693,7 +113693,7 @@ mā̊
 ā̊ʾērītimma
 kī
 dor
-ē�ot
+ēfīkot
 imma
 bā̊nəm
 lā̊
@@ -113735,7 +113735,7 @@ yēbūla
 tēlā̊ʾəṭ
 mūsā̊di
 ā̊rəm
-�sēfa
+ā̊sēfa
 ʿālīyyimma
 rāʾot
 w
@@ -113747,7 +113747,7 @@ rāb
 lēmu
 rēšåf
 qēṭåf
-�ērā̊rəm
+mērā̊rəm
 w
 šan
 bīmot
@@ -113838,7 +113838,7 @@ kā̊
 ṣūrimma
 w
 iyyā̊bīnu
-fallā̊l�m
+fallā̊ləm
 kī
 mig
 gā̊fən
@@ -113926,7 +113926,7 @@ w
 yā̊zzā̊rūkimma
 wyā̊yyu
 ʿālīkimma
-sitra�
+sitra
 rēʾu
 ʿatta
 kī
@@ -113943,7 +113943,7 @@ w
 ā̊yyi
 māʾiṣti
 w
-ā̊�ā̊ki
+ā̊nā̊ki
 irfa
 w
 īn
@@ -114005,7 +114005,7 @@ dåm
 yiqqåm
 w
 nēqåm
-�šəb
+yīšəb
 al
 ṣårro
 w
@@ -114124,7 +114124,7 @@ l
 ā̊
 ʾibrəm
 a
-�ze
+zze
 år
 nā̊ba
 ēšår
@@ -114292,7 +114292,7 @@ rā̊ši
 m
 yāddu
 šā̊bā̊ṭi
-yiš�ā̊ʾəl
+yišrā̊ʾəl
 yī
 rēʾūbən
 w
@@ -114442,13 +114442,13 @@ tēbuwwåt
 šīməš
 w
 mim
-m�
-gəd�gārū�ī
+mēgəd
+gā̊rūšī
 yē'rīm
 w
 mir
 rēʾoš
-ā̊�
+ā̊ri
 qēdəm
 w
 mim
@@ -114522,7 +114522,7 @@ yåmməm
 yīnåq
 w
 šā̊fūni
-ṭā̊mūni�
+ṭā̊mūni
 ūl
 w
 al
@@ -114697,7 +114697,7 @@ fasga
 ēšår
 ʿal
 fā̊ni
-yā̊riy�
+yā̊riyyu
 w
 yarriyyēʾu
 šēmå

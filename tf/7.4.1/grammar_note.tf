@@ -11,7 +11,7 @@
 @valueType=str
 @version=7.4.1
 @writtenBy=Text-Fabric
-@dateWritten=2026-11-04T18:08:02+00:00Z
+@dateWritten=2026-11-12T08:39:17+00:00Z
 
 406550	Schorch 2004, p. 89: <YM "bone" in the singular
 406714	Schorch 2004, p. 92: PRJ "fruit" in the plural

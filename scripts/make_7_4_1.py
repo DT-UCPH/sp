@@ -14,10 +14,15 @@ A word is filled in automatically only when all of these hold:
   (a base character with its combining marks, or a combining mark alone);
 - that value is also the most frequent value for that g_cons + ETCBC_parsing, and not a tie.
 
-The rest are left as they are and listed for reading by eye in the scan
-(scripts/phono_fffd_review.py). Slots, nodes and all other features do not change.
+The other 670 were listed for reading by eye in the scan (scripts/phono_fffd_review.py) and read
+manually; their readings are in the column 'reading' of review/phono_fffd_7.4.1.tsv and are filled
+in from there. Errors seen in neighbouring words during that reading are not fixed here; they are
+listed in review/phono_fffd_7.4.1_side.tsv.
+
+Slots, nodes and all other features do not change.
 """
 import collections
+import csv
 import os
 import re
 
@@ -27,6 +32,7 @@ ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TF_FOLDER = os.path.join(ROOT_DIR, 'tf')
 OLD_VERSION = '7.4.0'
 NEW_VERSION = '7.4.1'
+REVIEW_FILE = os.path.join(ROOT_DIR, 'review', 'phono_fffd_7.4.1.tsv')
 
 SKIP_META = {'dateWritten', 'writtenBy'}
 FFFD = '�'
@@ -88,6 +94,19 @@ def propose_fills(F):
     return fills, rest
 
 
+def read_manual_readings(path=REVIEW_FILE):
+    """Return {word: (old value, reading)} from the column 'reading' of the review file."""
+    readings = {}
+    with open(path, encoding='utf8', newline='') as f:
+        for row in csv.DictReader(f, delimiter='\t'):
+            w = int(row['node'])
+            reading = row['reading']
+            assert reading and reading == reading.strip() and FFFD not in reading, (w, reading)
+            assert w not in readings, w
+            readings[w] = (row['phono_transcr'], reading)
+    return readings
+
+
 if __name__ == '__main__':
     old_location = os.path.join(TF_FOLDER, OLD_VERSION)
     feature_names = sorted(f[:-3] for f in os.listdir(old_location) if f.endswith('.tf') and f != '.tf')
@@ -113,7 +132,17 @@ if __name__ == '__main__':
     # Counts measured on 7.4.0: 1,099 words with U+FFFD, 429 filled in, 670 left for review.
     assert len(fills) == 429, len(fills)
     assert remaining == len(rest) == 670, (remaining, len(rest))
-    print(f'{len(fills)} words filled in, {remaining} words with U+FFFD left for review')
+    print(f'{len(fills)} words filled in automatically, {remaining} words with U+FFFD left')
+
+    readings = read_manual_readings()
+    assert set(readings) == set(rest), (set(readings) ^ set(rest))
+    for w, (old, reading) in readings.items():
+        assert phono[w] == old, (w, phono[w], old)
+        phono[w] = reading
+
+    remaining = sum(FFFD in (v or '') for v in phono.values())
+    assert remaining == 0, remaining
+    print(f'{len(readings)} words filled in from the manual readings in {os.path.relpath(REVIEW_FILE, ROOT_DIR)}')
 
     meta_data = {f: read_metadata(os.path.join(old_location, f'{f}.tf')) for f in feature_names}
 
