@@ -11,7 +11,7 @@ latest_data_folder = sorted(os.listdir(os.path.join(ROOT_DIR, TF_FOLDER)), key=l
 
 TF = Fabric(locations=os.path.join(ROOT_DIR, TF_FOLDER, latest_data_folder))
 api = TF.load('''
-    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt vs ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing typ function mt_feat grammar_note
+    otype g_cons_raw g_cons g_cons_utf8 lex gloss language g_pfm g_vbs g_lex g_vbe g_nme g_uvf g_prs sp vt vs ps nu gn prs_nu prs_ps prs_gn trailer ETCBC_parsing typ function mt_feat grammar_note phono_transcr
 ''')
 api.loadLog()
 api.makeAvailableIn(globals())
@@ -488,3 +488,21 @@ def test_grammar_note_cites_a_page():
 ])
 def test_grammar_note_page(ref, g_cons, index, start):
     assert F.grammar_note.v(word_in_verse(ref, g_cons, index)).startswith(start)
+
+#Unreadable glyphs (U+FFFD) in phono_transcr (data version 7.4.1)
+#U+FFFD marks a glyph in the Ben-Hayyim scan that the decoder could not read. 7.4.1 fills in 429 of
+#the 1,099 words; the other 670 are listed in review/phono_fffd_7.4.1.tsv for reading by eye.
+#Lower the maximum whenever readings from the review list are added.
+MAX_PHONO_FFFD = 670
+
+def test_phono_transcr_fffd_does_not_increase():
+    assert sum('\ufffd' in (F.phono_transcr.v(w) or '') for w in F.otype.s('word')) <= MAX_PHONO_FFFD
+
+@pytest.mark.parametrize('ref, g_cons, index, phono', [
+    (('Genesis', 4, 3), '>DMH', 0, ':dā̊må'),
+    (('Genesis', 48, 17), '>PRJM', 0, 'ifrəm'),
+    (('Leviticus', 25, 38), '>LHJM', 0, 'ēluwwəm'),
+    (('Deuteronomy', 14, 8), 'T>KLW', 0, 'tā̊ʾūkēlu'),
+])
+def test_phono_transcr_fffd_filled_in(ref, g_cons, index, phono):
+    assert F.phono_transcr.v(word_in_verse(ref, g_cons, index)) == phono

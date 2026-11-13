@@ -41,7 +41,12 @@ Feature|Feature type|Data type|Available on nodes|Description|Examples
 [`sign`](sign.md#readme)|[`Node`](featuresbytype.md#node)|[`String`](featuresbydatatype.md#string)|[`sign`](featuresbynodetype.md#sign) |consonantal letter|` ` `י` `ו` `ה`
 [`sp`](sp.md#readme)|[`Node`](featuresbytype.md#node)|[`String`](featuresbydatatype.md#string)|[`word`](featuresbynodetype.md#word) |part of speech|`subs` `prep` `verb` `conj`
 [`trailer`](trailer.md#readme)|[`Node`](featuresbytype.md#node)|[`String`](featuresbydatatype.md#string)|[`word`](featuresbynodetype.md#word) |interword material|` ` ``
+[`var_ft`](var_ft.md#readme)|[`Node`](featuresbytype.md#node)|[`String`](featuresbydatatype.md#string)|[`word`](featuresbynodetype.md#word) |Tal & Florentin reading, transliterated|`>BWTJK` `LDWRTJKM` `THJJNH` `XQT`
+[`var_ft_span`](var_ft_span.md#readme)|[`Node`](featuresbytype.md#node)|[`Integer`](featuresbydatatype.md#integer)|[`word`](featuresbynodetype.md#word) |number of word nodes the Tal & Florentin reading replaces|`1` `2` `3` `5`
+[`var_ft_type`](var_ft_type.md#readme)|[`Node`](featuresbytype.md#node)|[`String`](featuresbydatatype.md#string)|[`word`](featuresbynodetype.md#word) |kind of difference with Tal & Florentin|`plene_defective` `other` `conjunction_waw` `guttural_interchange`
+[`var_ft_utf8`](var_ft_utf8.md#readme)|[`Node`](featuresbytype.md#node)|[`String`](featuresbydatatype.md#string)|[`word`](featuresbynodetype.md#word) |Tal & Florentin reading (Hebrew)|`אבותיך` `לדורתיכם` `תהיינה` `חקת`
 [`verse`](verse.md#readme)|[`Node`](featuresbytype.md#node)|[`Integer`](featuresbydatatype.md#integer)|[`verse`](featuresbynodetype.md#verse) |verse number|`1` `4` `5` `6`
+[`verse_ft`](verse_ft.md#readme)|[`Node`](featuresbytype.md#node)|[`String`](featuresbydatatype.md#string)|[`verse`](featuresbynodetype.md#verse) |verse number in Tal & Florentin, where different|`20:12` `5:16`
 [`vt`](vt.md#readme)|[`Node`](featuresbytype.md#node)|[`String`](featuresbydatatype.md#string)|[`word`](featuresbynodetype.md#word) |verbal tense|`NA` `impf` `perf` `infc`
 
 

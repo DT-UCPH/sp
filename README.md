@@ -36,6 +36,16 @@ The text was provided by the Samaritanus-project based at Martin-Luther-Universi
 
 We have made a small change in the original verse division. Instead of assigning the additions after Genesis 30:36 to the verse numbers 36a, 36b, and 36 c, we group these under verse 36.
 
+### Variants from the Tal & Florentin edition
+
+From version 7.5.0, the dataset contains the readings of Moshe Florentin and Abraham Tal, *The Samaritan Pentateuch: An English Translation with a Parallel Annotated Hebrew Text* (Open Book Publishers, 2024, https://doi.org/10.11647/OBP.0415, licensed [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)), wherever its Hebrew text differs from ours. T&F print MS Nablus 6 (1204 CE), with gaps filled from other manuscripts. Our text is not changed: the T&F readings are annotations on the words, in the features [`var_ft_utf8`](docs/var_ft_utf8.md), [`var_ft`](docs/var_ft.md), [`var_ft_type`](docs/var_ft_type.md) and [`var_ft_span`](docs/var_ft_span.md), and different verse numbers are in [`verse_ft`](docs/verse_ft.md). There are 1,074 differences in 927 verses; most are plene/defective spellings. Example search for all words where T&F have an extra conjunction or lack one:
+
+```
+word var_ft_type=conjunction_waw
+```
+
+The comparison scripts are in [scripts/tal_florentin](scripts/tal_florentin).
+
 ## Get started
 
 This data can be processed by Text-Fabric.
@@ -77,6 +87,7 @@ Version
 - 7.2.12 October 2026 addition of phonetic transcription, addition of verbal stem (only Genesis)
 - 7.3.0 October 2026 text correction in Exodus 19:24 (K corrected to LK), addition of missing g_lex of H in Genesis 17:13.
 - 7.4.0 November 2026 corrections in Genesis following Schorch, *Die Vokale des Gesetzes* I (2004): verbal stem, lexeme, part of speech, person/gender/number, and consistency of ETCBC_parsing with g_vbs (see scripts/make_7_4_0.py). The new feature grammar_note gives, for every changed word, the page in Schorch where the reason for the change is found.
+- 7.4.1 November 2026 phono_transcr: 429 of the 1,099 unreadable glyphs (U+FFFD) from the decoding of the Ben-Hayyim scan filled in from identical words elsewhere (see scripts/make_7_4_1.py). The other 670 are listed with their place in the scan in review/phono_fffd_7.4.1.tsv.
 
 ### Features
 Currently, the following features exist for all books.
